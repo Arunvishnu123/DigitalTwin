@@ -1,0 +1,33 @@
+{
+  "name": "smart-building-application",
+  "version": "1.0.0",
+  "description": "Smart Building Application",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "author": "Arun",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@xeokit/xeokit-sdk": "^2.2.5-beta-3",
+    "asciify-image": "^0.1.8",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "fs": "^0.0.1-security",
+    "html-webpack-plugin": "^3.2.0",
+    "request": "^2.79.0",
+    "rimraf": "^2.6.3",
+    "vue": "^2.6.7",
+    "vue-loader": "^15.6.4",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.7",
+    "webpack": "^4.29.5",
+    "vue-router": "^3.2.0",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
