@@ -1,6 +1,8 @@
 <template>
-<canvas id="myCanvas"></canvas>
-<canvas id="mySectionPlanesOverviewCanvas"></canvas>
+<div>
+    <canvas id="myCanvas"></canvas>
+    <canvas id="sectionPlanesOverviewCanvas"></canvas>
+</div>
 </template>
 
 <script>
@@ -16,7 +18,7 @@ export default {
             canvasId: "myCanvas",
         });
         display3d.display3d(viewer)
-        sectionview.sectionview(viewer,"mySectionPlanesOverviewCanvas")
+       // sectionview.sectionview(viewer, "sectionPlanesOverviewCanvas")
     },
 };
 </script>

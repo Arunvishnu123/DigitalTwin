@@ -17,5 +17,5 @@ export function sectionview(viewer, id) {
         pos: [2.30, 4.46, 14.93],
         dir: [0.0, -0.09, -0.79]
     });
-
+  
 }

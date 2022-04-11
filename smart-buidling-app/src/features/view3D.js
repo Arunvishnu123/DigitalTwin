@@ -17,5 +17,5 @@ export function display3d(viewer) {
         src: 'src/assets/MINES.xkt',
         edges: true
     });
-s
+
 }
