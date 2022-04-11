@@ -1,9 +1,9 @@
 import {
     
-    XKTLoaderPlugin
+    XKTLoaderPlugin, StoreyViewsPlugin,math
 } from "@xeokit/xeokit-sdk/";
 
-export function display3d(viewer) {
+export function display3d(viewer,test) {
    
 
     viewer.camera.eye = [-3.933, 2.855, 27.018];
@@ -12,10 +12,21 @@ export function display3d(viewer) {
 
     const xktLoader = new XKTLoaderPlugin(viewer);
 
-    xktLoader.load({
+    const model = xktLoader.load({
         id: "myModel",
         src: 'src/assets/MINES.xkt',
-        edges: true
+        edges: true,
+        backfaces: true
     });
 
+    viewer.cameraControl.followPointer = true;
+
+    viewer.scene.highlightMaterial.fill = false;
+    viewer.scene.highlightMaterial.fillAlpha = 0.3;
+    viewer.scene.highlightMaterial.edgeColor = [1, 1, 0];
+    
+    const storeyViewsPlugin = new StoreyViewsPlugin(viewer);
+
+    
+   
 }

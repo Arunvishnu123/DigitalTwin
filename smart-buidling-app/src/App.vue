@@ -1,7 +1,7 @@
 <template>
 <div>
     <canvas id="myCanvas"></canvas>
-    <canvas id="sectionPlanesOverviewCanvas"></canvas>
+    <div id="storeys"></div>
 </div>
 </template>
 
@@ -17,8 +17,8 @@ export default {
         const viewer = new Viewer({
             canvasId: "myCanvas",
         });
-        display3d.display3d(viewer)
-       // sectionview.sectionview(viewer, "sectionPlanesOverviewCanvas")
+        display3d.display3d(viewer,"storeys")
+        sectionview.sectionview(viewer, "sectionPlanesOverviewCanvas")
     },
 };
 </script>
@@ -47,4 +47,16 @@ body {
     right: 10px;
     z-index: 200000;
 }
+#storeys {
+            position: absolute;
+            left: 10px;
+            top: 60px;
+            margin-top: 20px;
+            overflow-y: scroll;
+            height: calc(100% - 120px);
+            margin-bottom: 10px;
+            width: 320px;
+            pointer-events: all;
+            opacity: 0.8;
+        }
 </style>
