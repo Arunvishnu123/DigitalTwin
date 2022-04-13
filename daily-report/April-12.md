@@ -1,5 +1,5 @@
 -  checkin - 9:30 am
--  checkout - 5:30 pm
+-  checkout - 6:10 pm
 
 # work done today 
 * Different possibilities for displaying the section view of the 3d model is checked

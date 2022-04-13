@@ -1,7 +1,7 @@
 <template>
 <div>
-    <canvas id="myCanvas"></canvas>
-    <div id="storeys"></div>
+    <router-link to="/" ><canvas id="myCanvas"></canvas></router-link>
+  <router-view></router-view>
 </div>
 </template>
 
