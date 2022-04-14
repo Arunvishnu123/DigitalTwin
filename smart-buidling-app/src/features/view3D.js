@@ -1,9 +1,9 @@
 import {
     
-    XKTLoaderPlugin, StoreyViewsPlugin,math
+    XKTLoaderPlugin
 } from "@xeokit/xeokit-sdk/";
 
-export function display3d(viewer,test) {
+export function display3d(viewer) {
    
 
     viewer.camera.eye = [-3.933, 2.855, 27.018];
@@ -20,12 +20,11 @@ export function display3d(viewer,test) {
     });
 
     viewer.cameraControl.followPointer = true;
-
     viewer.scene.highlightMaterial.fill = false;
     viewer.scene.highlightMaterial.fillAlpha = 0.3;
     viewer.scene.highlightMaterial.edgeColor = [1, 1, 0];
     
-    const storeyViewsPlugin = new StoreyViewsPlugin(viewer);
+ 
 
     
    
