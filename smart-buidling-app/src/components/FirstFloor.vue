@@ -8,10 +8,13 @@
 
 <script>
 import * as floorView from "../features/floorView"
+import {
+    Viewer
+} from "@xeokit/xeokit-sdk/";
 export default {
     mounted() {
         const viewer = new Viewer({
-            canvasId: "myCanvas",
+            canvasId: "Canvas",
         });
 
         floorView.floorView("3_b98WEDT7feUaJ_WJeW_M", viewer)
