@@ -1,16 +1,13 @@
 <template>
 <div>
-    <Display3d />
+    <router-view></router-view>  
 </div>
 </template>
 
 <script>
-import Display3d from "./components/View3DModel.vue"
-export default {
-    components: {
-        Display3d
-    }
 
+export default {
+   
 }
 </script>
 

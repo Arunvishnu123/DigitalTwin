@@ -2,6 +2,7 @@
 <div>
     <canvas id="Canvas">
     </canvas>
+     
 </div>
 </template>
 
