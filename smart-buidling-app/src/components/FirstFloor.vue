@@ -1,13 +1,11 @@
 <template>
 <div>
-    <canvas id="Canvas">
-    </canvas>
-     
+    <canvas id="Canvas"> </canvas>
 </div>
 </template>
 
 <script>
-import * as floorView from "../features/floorView"
+import * as floorView from "../features/floorView";
 import {
     Viewer
 } from "@xeokit/xeokit-sdk/";
@@ -17,11 +15,16 @@ export default {
             canvasId: "Canvas",
         });
 
-        floorView.floorView("3_b98WEDT7feUaJ_WJeW_M", viewer)
-    }
-}
+        floorView.floorView("3_b98WEDT7feUaJ_WJeW_M", viewer);
+    },
+};
 </script>
 
 <style scoped>
-
+#Canvas {
+    height:300px; 
+    position: absolute;
+    background: lightblue;
+    background-image: linear-gradient(lightblue, white);
+}
 </style>
