@@ -3,6 +3,7 @@
     <canvas id="myCanvas"></canvas>
     <canvas id="NavCubeCanvas"></canvas>
     <canvas id="AxisGizmoCanvas"></canvas>
+      <router-link to="/gg">gg</router-link>
 </div>
 </template>
 
@@ -32,7 +33,7 @@ export default {
         new AxisGizmoPlugin(viewer, {
             canvasId: "AxisGizmoCanvas",
         });
-        window.viewer = viewer;
+      window.viewer = viewer;
     },
 };
 </script>

@@ -13,7 +13,7 @@ export default {
             canvasId: "myCanvas",
         });
 
-        floorView.floorView("3_b98WEDT7feUaJ_WJeW_M",viewer)
+        floorView.floorView("3_b98WEDT7feUaJ_WJeW_M", viewer)
     }
 }
 </script>

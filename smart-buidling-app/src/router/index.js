@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-
+import App from "../App.vue"
 Vue.use(VueRouter);
-import App from "../App.vue";
+import first from "../components/View3DModel.vue";
 
 const routes = [
     {
@@ -11,6 +11,11 @@ const routes = [
       name: "App",
       component: App
     },
+    {
+      path:"/gg",
+      name:"test",
+      component:first
+    }
 ]
 
 const router = new VueRouter({
