@@ -9,28 +9,28 @@
 <script>
 import {
     Viewer,
-    NavCubePlugin,AxisGizmoPlugin
+    NavCubePlugin,
+    AxisGizmoPlugin
 } from "@xeokit/xeokit-sdk/";
-import * as display3d from "../features/view3D"
+import * as display3d from "../features/view3D";
 
 export default {
-
     mounted() {
         const viewer = new Viewer({
             canvasId: "myCanvas",
         });
-        display3d.display3d(viewer)
+        display3d.display3d(viewer);
 
         new NavCubePlugin(viewer, {
             canvasId: "NavCubeCanvas",
             // color: "lightblue",
-            visible: true, // Initially visible (default)
-            cameraFly: true, // Fly camera to each selected axis/diagonal
-            cameraFitFOV: 45, // How much field-of-view the scene takes once camera has fitted it to view
-            cameraFlyDuration: 0.5 // How long (in seconds) camera takes to fly to each new axis/diagonal
+            visible: true,
+            cameraFly: true,
+            cameraFitFOV: 45,
+            cameraFlyDuration: 0.5,
         });
         new AxisGizmoPlugin(viewer, {
-            canvasId: "AxisGizmoCanvas"
+            canvasId: "AxisGizmoCanvas",
         });
         window.viewer = viewer;
     },

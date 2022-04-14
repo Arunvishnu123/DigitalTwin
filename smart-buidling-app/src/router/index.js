@@ -5,7 +5,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 import App from "../App.vue";
 
-const routes1 = [
+const routes = [
     {
       path: "/test",
       name: "App",
@@ -16,13 +16,7 @@ const routes1 = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-    routes:[
-      {
-        path: "/test",
-        name: "App",
-        component: App
-      },
-  ],
+   routes 
   });
 
 
