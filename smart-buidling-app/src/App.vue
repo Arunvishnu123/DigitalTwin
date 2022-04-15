@@ -16,9 +16,9 @@ html,
 body {
     margin: 0;
     height: 100%;
-    
+
     position: relative;
-      overflow-y: hidden; 
-  overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 </style>

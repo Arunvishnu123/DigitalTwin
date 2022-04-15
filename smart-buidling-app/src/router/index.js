@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import test1 from "../components/SecondFloor.vue"
 import DModel from "../views/display3d.vue";
-import te from "../components/test.vue"
+
 import FloorView from "../views/FloorView.vue"
 import h from "../views/FirstFloor.vue"
 
@@ -14,11 +14,7 @@ const routes = [
     name: "3DModel",
     component: DModel
   },
-  {
-    path: "/sdf",
-    name: "3D",
-    component: te
-  },
+
   {
     path: "/floorview",
     name: "floorview",

@@ -17,6 +17,7 @@ import {
     SectionPlanesPlugin
 } from "@xeokit/xeokit-sdk/";
 export default {
+
     mounted() {
         const viewer = new Viewer({
             canvasId: "Canvas",
@@ -58,12 +59,6 @@ export default {
         });
         window.viewer = viewer;
     },
-    methods: {
-        view() {
-            const eye = this.viewer.camera.eye
-            console.log(eye)
-        }
-    }
 
 };
 </script>

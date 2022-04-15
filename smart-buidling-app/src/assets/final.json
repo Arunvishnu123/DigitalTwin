@@ -2,7 +2,7 @@
   "id": "220211",
   "projectId": "3_b98WEDT7feUaJ_ZiNzuj",
   "author": "",
-  "createdAt": "2022-04-11T11:53:52",
+  "createdAt": "2022-04-15T06:58:07",
   "schema": "IFC2X3",
   "creatingApplication": "20200210_1400(x64) - Exporter 20.2.12.1 - Alternate UI 20.2.12.1",
   "metaObjects": [
@@ -373,18 +373,6 @@
       "parent": "3_b98WEDT7feUaJ_WJe3S2"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIp2q",
-      "name": "Ramp:Rampe d'accès entrée:1400150",
-      "type": "IfcRamp",
-      "parent": "3_b98WEDT7feUaJ_WJe3S2"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOt_uIp2q",
-      "name": "Ramp:Rampe d'accès entrée:1400150",
-      "type": "IfcRamp",
-      "parent": "2wXpq_8MrCaejSOtsuIp2q"
-    },
-    {
       "id": "2wXpq_8MrCaejSOtsuIpEf",
       "name": "Rampe esc.:Rampe esc.:1400395",
       "type": "IfcStair",
@@ -395,6 +383,18 @@
       "name": "Rampe esc.:Rampe esc.:1400395",
       "type": "IfcStair",
       "parent": "2wXpq_8MrCaejSOtsuIpEf"
+    },
+    {
+      "id": "0wBO5XjzLFnu_ikJXrDJDj",
+      "name": "Ramp:Rampe d'accès entrée:1413651",
+      "type": "IfcRamp",
+      "parent": "3_b98WEDT7feUaJ_WJe3S2"
+    },
+    {
+      "id": "0wBO5XjzLFnu_ikJfrDJDj",
+      "name": "Ramp:Rampe d'accès entrée:1413651",
+      "type": "IfcRamp",
+      "parent": "0wBO5XjzLFnu_ikJXrDJDj"
     },
     {
       "id": "3_b98WEDT7feUaJ_WJe22_",
@@ -1093,7 +1093,7 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "2NtMJSgxf5MQOM2NPq0BLU",
+      "id": "2YY4Qofw56ExfmuFnuxAbj",
       "name": "Floor:Générique - Marche gradin:292907:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1105,13 +1105,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "0HeW2yWCn6Fx3OHU4uxTAR",
+      "id": "0heSuPMKTAsg_3GRzRV_Bi",
       "name": "Floor:Générique - Marche gradin:293344:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "382xNE6krFzASwhKoMJ0gj",
+      "id": "3vxr10SirDABGP7WH_r2N0",
       "name": "Floor:Générique - Marche gradin:293344:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1123,13 +1123,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "1LH$y7sp5BvvoeHGbKaZhY",
+      "id": "26e5RddZ9FuAzsLZ7R0S1O",
       "name": "Floor:Générique - Marche gradin:293399:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "0aX720FBD3nAPzNCVUkXDZ",
+      "id": "2SrcozZ7jE_h0KMLmeVMGT",
       "name": "Floor:Générique - Marche gradin:293399:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1141,13 +1141,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "0OifH2vB95thZo_h33yuky",
+      "id": "3UvWYjhI5CBBhTEsKx0y5v",
       "name": "Floor:Générique - Marche gradin:293491:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "2a4H2zq6v1gPht8VmDWYqZ",
+      "id": "0HhlYXrtj83RZKb0A8jYl1",
       "name": "Floor:Générique - Marche gradin:293491:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1159,13 +1159,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "2YeuyPXpT9LxA6RtovW7kg",
+      "id": "2YpgTaFbj82BSI97ElgPNL",
       "name": "Floor:Générique - Marche gradin:293573:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "2wv9EjDrL9dPc9JLh83Iym",
+      "id": "14rQ4lUwjBFxPwRLkfXRUz",
       "name": "Floor:Générique - Marche gradin:293573:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1177,13 +1177,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "20P7q$0dn9XBN0hbr5YawT",
+      "id": "2PbXq4XnDBaOxy0nlOTB7Q",
       "name": "Floor:Générique - Marche gradin:293627:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "26qYs1eZfC8ucVlAYs9f13",
+      "id": "3iWFRjMNf3RR1SxoQZz8Lf",
       "name": "Floor:Générique - Marche gradin:293627:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1195,13 +1195,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "37p76cU8zBqg$CVcTuXlbH",
+      "id": "1VN8go1KnEWObu7F1hyoaS",
       "name": "Floor:Générique - Marche gradin:293679:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "1K_QAeXffD9uXNoxl7TMqH",
+      "id": "3tHNAleg92ghLcjgFG04Sl",
       "name": "Floor:Générique - Marche gradin:293679:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -1213,13 +1213,13 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "19a1gfoEH0YwuWiMe8sKyF",
+      "id": "13mXUfgrbCRxA8uxb_eUVs",
       "name": "Floor:Générique - Marche gradin:293730:2",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "11ije7agj7PQkv$39j_RXA",
+      "id": "0HjEs86gfB5xPQ581nVyfn",
       "name": "Floor:Générique - Marche gradin:293730:3",
       "type": "IfcSlab",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
@@ -2617,78 +2617,6 @@
       "parent": "3j4jTpVHD55uGl92DlN6Jj"
     },
     {
-      "id": "3x72Jv95H4fPLJCyIM9$f8",
-      "name": "Poutre rectangulaire - Béton:30 x 45ht:885018",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fA",
-      "name": "Poutre rectangulaire - Béton:30 x 45ht:885020",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fC",
-      "name": "Poutre rectangulaire - Béton:30 x 45ht:885022",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fE",
-      "name": "Poutre rectangulaire - Béton:30 x 45ht:885024",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fG",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:885026",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fI",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:885028",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fK",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:885030",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fM",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:885032",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fO",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:885034",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$fQ",
-      "name": "Poutre rectangulaire - Béton:30 x 45ht:885036",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$y5",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:886053",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "3x72Jv95H4fPLJCyIM9$yK",
-      "name": "Poutre rectangulaire - Béton:20 x 30ht:886068",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
       "id": "3RoOm16i14EfXhPT2fqS1T",
       "name": "Tierce (R):1.23m x 2.04m:937352",
       "type": "IfcDoor",
@@ -3019,33 +2947,9 @@
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIpZm",
-      "name": "Barres carrées:SQ 120:1398034",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIpZ8",
-      "name": "Barres carrées:SQ 120:1398058",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIpZL",
-      "name": "Barres carrées:SQ 120:1398071",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIpYc",
-      "name": "Barres carrées:SQ 120:1398084",
-      "type": "IfcBeam",
-      "parent": "3_b98WEDT7feUaJ_WJe22_"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIphX",
-      "name": "Barres carrées:SQ 120:1398531",
-      "type": "IfcBeam",
+      "id": "1I17bk3nD8SOWOtaOsrNtt",
+      "name": "Model Lines:1399955",
+      "type": "IfcAnnotation",
       "parent": "3_b98WEDT7feUaJ_WJe22_"
     },
     {
@@ -8953,12 +8857,6 @@
       "parent": "3_b98WEDT7feUaJ_WJeWog"
     },
     {
-      "id": "3x$o66KOb0mRMnez4qivWY",
-      "name": "Double (R):1.20 m x 2.04 m:772427",
-      "type": "IfcDoor",
-      "parent": "3_b98WEDT7feUaJ_WJeWog"
-    },
-    {
       "id": "3x$o66KOb0mRMnez4qivZ9",
       "name": "Double (R):1.20 m x 2.04 m:772512",
       "type": "IfcDoor",
@@ -10849,7 +10747,7 @@
       "parent": "3_b98WEDT7feUaJ_WJeWog"
     },
     {
-      "id": "16k$lXyub1sReiqCYrHidx",
+      "id": "2OjGE5U010Ix2_fUwOsQ9z",
       "name": "Basic Wall:Doublages ep 65 mm:1292828",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeWog"
@@ -10939,7 +10837,7 @@
       "parent": "3_b98WEDT7feUaJ_WJeWog"
     },
     {
-      "id": "3XlefApibB6xP0azDDbCzR",
+      "id": "3aKwR6qWzEDeBwMpV5tv8m",
       "name": "Basic Wall:Doublages ep 70 mm:1293824",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeWog"
@@ -11494,6 +11392,456 @@
       "id": "25TY4L8hXDjR5iTzcKHVZx",
       "name": "Model Text:600mm Arial:1401010",
       "type": "IfcBuildingElementProxy",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVjF",
+      "name": "Tableau:150 x 80:1405421",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVXi",
+      "name": "Bureau simple:Standard:1405646",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVXj",
+      "name": "Chaise à roulette:Simple:1405647",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVag",
+      "name": "Bureau simple:Standard:1405832",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVah",
+      "name": "Chaise à roulette:Simple:1405833",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVaf",
+      "name": "Bureau simple:Standard:1405835",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVak",
+      "name": "Chaise à roulette:Simple:1405836",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVbO",
+      "name": "Bureau simple:Standard:1405946",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVbP",
+      "name": "Chaise à roulette:Simple:1405947",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVbU",
+      "name": "Bureau simple:Standard:1405948",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVbV",
+      "name": "Chaise à roulette:Simple:1405949",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVxn",
+      "name": "Bureau simple:Standard:1406035",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVxs",
+      "name": "Chaise à roulette:Simple:1406036",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVxt",
+      "name": "Bureau simple:Standard:1406037",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVxq",
+      "name": "Chaise à roulette:Simple:1406038",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVuo",
+      "name": "Bureau simple:Standard:1406096",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVup",
+      "name": "Chaise à roulette:Simple:1406097",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVum",
+      "name": "Bureau simple:Standard:1406098",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVun",
+      "name": "Chaise à roulette:Simple:1406099",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVur",
+      "name": "Tableau:150 x 80:1406103",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$c",
+      "name": "Bureau simple:Standard:1406276",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$d",
+      "name": "Chaise à roulette:Simple:1406277",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$a",
+      "name": "Bureau simple:Standard:1406278",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$b",
+      "name": "Chaise à roulette:Simple:1406279",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$P",
+      "name": "Bureau simple:Standard:1406331",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$U",
+      "name": "Chaise à roulette:Simple:1406332",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$V",
+      "name": "Bureau simple:Standard:1406333",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnV$S",
+      "name": "Chaise à roulette:Simple:1406334",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVy6",
+      "name": "Bureau simple:Standard:1406372",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVy7",
+      "name": "Chaise à roulette:Simple:1406373",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVy4",
+      "name": "Bureau simple:Standard:1406374",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "1qa4NNgIf4iPU6$0WFnVy5",
+      "name": "Chaise à roulette:Simple:1406375",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoxT",
+      "name": "Tableau:248 x 124:1406429",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuorB",
+      "name": "Bureau simple:Standard:1406539",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuorC",
+      "name": "Chaise à roulette:Simple:1406540",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuom1",
+      "name": "Bureau simple:Standard:1406721",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuom2",
+      "name": "Chaise à roulette:Simple:1406722",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuooo",
+      "name": "Bureau simple:Standard:1406898",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoop",
+      "name": "Chaise à roulette:Simple:1406899",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoor",
+      "name": "Bureau simple:Standard:1406901",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoos",
+      "name": "Chaise à roulette:Simple:1406902",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoEg",
+      "name": "Bureau simple:Standard:1407146",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoEh",
+      "name": "Chaise à roulette:Simple:1407147",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoFK",
+      "name": "Bureau simple:Standard:1407188",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoFL",
+      "name": "Chaise à roulette:Simple:1407189",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoFM",
+      "name": "Bureau simple:Standard:1407190",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuoFN",
+      "name": "Chaise à roulette:Simple:1407191",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8C",
+      "name": "Bureau simple:Standard:1407244",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8D",
+      "name": "Chaise à roulette:Simple:1407245",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8E",
+      "name": "Bureau simple:Standard:1407246",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8F",
+      "name": "Chaise à roulette:Simple:1407247",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8G",
+      "name": "Bureau simple:Standard:1407248",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8H",
+      "name": "Chaise à roulette:Simple:1407249",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8I",
+      "name": "Bureau simple:Standard:1407250",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo8J",
+      "name": "Chaise à roulette:Simple:1407251",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo92",
+      "name": "Bureau simple:Standard:1407298",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo93",
+      "name": "Chaise à roulette:Simple:1407299",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo94",
+      "name": "Bureau simple:Standard:1407300",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo95",
+      "name": "Chaise à roulette:Simple:1407301",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo96",
+      "name": "Bureau simple:Standard:1407302",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo97",
+      "name": "Chaise à roulette:Simple:1407303",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo98",
+      "name": "Bureau simple:Standard:1407304",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo99",
+      "name": "Chaise à roulette:Simple:1407305",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo9C",
+      "name": "Armoire - 2 portes:1200 mm x 450 mm:1407308",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo4c",
+      "name": "Tableau:248 x 124:1407526",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo78",
+      "name": "Bureau simple:Standard:1407688",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo79",
+      "name": "Chaise à roulette:Simple:1407689",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7A",
+      "name": "Bureau simple:Standard:1407690",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7B",
+      "name": "Chaise à roulette:Simple:1407691",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7C",
+      "name": "Bureau simple:Standard:1407692",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7D",
+      "name": "Chaise à roulette:Simple:1407693",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7E",
+      "name": "Bureau simple:Standard:1407694",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo7F",
+      "name": "Chaise à roulette:Simple:1407695",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo03",
+      "name": "Meuble bas - 2 Portes:900mm x 450mm:1407747",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeWog"
+    },
+    {
+      "id": "32F6FQLZX42g79mppNuo0c",
+      "name": "Meuble bas - 2 Portes:900mm x 450mm:1407782",
+      "type": "IfcFurnishingElement",
       "parent": "3_b98WEDT7feUaJ_WJeWog"
     },
     {
@@ -19423,12 +19771,6 @@
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
-      "id": "2Xmfyetuj4kuH9azg5WXV8",
-      "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:501039",
-      "type": "IfcWindow",
-      "parent": "3_b98WEDT7feUaJ_WJeW$O"
-    },
-    {
       "id": "3jCF_vWGrBp8fFUHonBelE",
       "name": "Mur - Moulure décorative appui 10:Murs 36:503554",
       "type": "IfcWall",
@@ -22849,6 +23191,78 @@
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
+      "id": "3x72Jv95H4fPLJCyIM9$f8",
+      "name": "Poutre rectangulaire - Béton:30 x 45ht:885018",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fA",
+      "name": "Poutre rectangulaire - Béton:30 x 45ht:885020",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fC",
+      "name": "Poutre rectangulaire - Béton:30 x 45ht:885022",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fE",
+      "name": "Poutre rectangulaire - Béton:30 x 45ht:885024",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fG",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:885026",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fI",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:885028",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fK",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:885030",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fM",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:885032",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fO",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:885034",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$fQ",
+      "name": "Poutre rectangulaire - Béton:30 x 45ht:885036",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$y5",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:886053",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "3x72Jv95H4fPLJCyIM9$yK",
+      "name": "Poutre rectangulaire - Béton:20 x 30ht:886068",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
       "id": "32CY_vzSPDKhKk0ujf8ef4",
       "name": "Compound Ceiling:Quadrillage 600 x 600 mm:898924",
       "type": "IfcCovering",
@@ -23479,7 +23893,7 @@
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
-      "id": "3_d8zsA5b4_hEZaiCYhPjN",
+      "id": "2eqmWHq3j2eOWMv_JMcZNW",
       "name": "Basic Wall:Générique - Béton 73 cm:1312833",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
@@ -23539,13 +23953,13 @@
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
-      "id": "3XFq4qEPj4FxiYCR$JziOy",
+      "id": "1w3gCoHKz7lORBkzk68a4C",
       "name": "Basic Wall:Générique - Béton 73 cm:1314401",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
-      "id": "2tvKvqPDr4qfqMobd7zPRt",
+      "id": "0P9t2t7$T4IODXMckoEH3M",
       "name": "Basic Wall:Doublages ep 90 mm:1314583",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
@@ -24169,64 +24583,100 @@
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyq",
+      "id": "0nE4lwtJLCMf21yITjzgyr",
       "name": "Assembled Stair:Stair:1391455 Stringer 1",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyr",
+      "id": "0nE4lwtJLCMf21yITjzgyg",
       "name": "Assembled Stair:Stair:1391455 Stringer 2",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyg",
+      "id": "0nE4lwtJLCMf21yITjzgyh",
       "name": "Assembled Stair:Stair:1391455 Stringer 3",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyh",
+      "id": "0nE4lwtJLCMf21yITjzgye",
       "name": "Assembled Stair:Stair:1391455 Stringer 4",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgye",
+      "id": "0nE4lwtJLCMf21yITjzgyf",
       "name": "Assembled Stair:Stair:1391455 Stringer 5",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyf",
+      "id": "0nE4lwtJLCMf21yITjzgyk",
       "name": "Assembled Stair:Stair:1391455 Stringer 6",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyk",
+      "id": "0nE4lwtJLCMf21yITjzgyl",
       "name": "Assembled Stair:Stair:1391455 Stringer 7",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyl",
+      "id": "0nE4lwtJLCMf21yITjzgyi",
       "name": "Assembled Stair:Stair:1391455 Stringer 8",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzgy5"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyi",
-      "name": "Assembled Stair:Stair:1391455 Stringer 9",
-      "type": "IfcMember",
-      "parent": "0nE4lwtJLCMf21yITjzgy5"
+      "id": "2wXpq_8MrCaejSOtsuIpZm",
+      "name": "Barres carrées:SQ 120:1398034",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzgyj",
-      "name": "Assembled Stair:Stair:1391455 Stringer 10",
-      "type": "IfcMember",
-      "parent": "0nE4lwtJLCMf21yITjzgy5"
+      "id": "2wXpq_8MrCaejSOtsuIpZ8",
+      "name": "Barres carrées:SQ 120:1398058",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "2wXpq_8MrCaejSOtsuIpZL",
+      "name": "Barres carrées:SQ 120:1398071",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "2wXpq_8MrCaejSOtsuIpYc",
+      "name": "Barres carrées:SQ 120:1398084",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "2wXpq_8MrCaejSOtsuIphX",
+      "name": "Barres carrées:SQ 120:1398531",
+      "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKdbC",
+      "name": "Basic Wall:Doublages ep 90 mm:1408697",
+      "type": "IfcWallStandardCase",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKdZ_",
+      "name": "Basic Wall:Doublages ep 90 mm:1408779",
+      "type": "IfcWallStandardCase",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKeHF",
+      "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:1409978",
+      "type": "IfcWindow",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
     {
       "id": "2E_cmeIJn1_gltefr7C0Kv",
@@ -24237,6 +24687,12 @@
     {
       "id": "0nE4lwtJLCMf21yITjzgyW",
       "name": "Railing:Remplissage Inférieur Tole:1391482",
+      "type": "IfcRailing",
+      "parent": "3_b98WEDT7feUaJ_WJeW$O"
+    },
+    {
+      "id": "0bG13Ek5D8xgIIjm2QDDpa",
+      "name": "Railing:Remplissage Inférieur Tole:1413011",
       "type": "IfcRailing",
       "parent": "3_b98WEDT7feUaJ_WJeW$O"
     },
@@ -25880,7 +26336,7 @@
     },
     {
       "id": "1jMGJTzbX0Gu65H0cXPmCE",
-      "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:437433",
+      "name": "3 vantaux - 3 imposte - Ouvert:1.65m x 1.8 m:437433",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
@@ -26062,12 +26518,6 @@
       "id": "3QH2hssRH9$Q482U2YgjhC",
       "name": "Doors_Accessories_Colcom_Hydraulic-Hinge-Biloba-8011SF:Glass Thickness 8.0 mm:499664",
       "type": "IfcFurnishingElement",
-      "parent": "3_b98WEDT7feUaJ_WJeW$i"
-    },
-    {
-      "id": "2Xmfyetuj4kuH9azg5WX1H",
-      "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:501037",
-      "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
     {
@@ -29227,13 +29677,13 @@
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
     {
-      "id": "2PcF0u0GfF7fLIqa1H0IJp",
+      "id": "1Ke28WImv6FvPwLQUm9Yhn",
       "name": "Basic Wall:Générique - Béton 73 cm:1332150",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
     {
-      "id": "2PkBQoCND3y8yM4wrytWjT",
+      "id": "0DP2SKtjv479uhMLzPq3VC",
       "name": "Basic Wall:Générique - Béton 73 cm:1333021",
       "type": "IfcWallStandardCase",
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
@@ -29857,64 +30307,88 @@
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$2",
+      "id": "0bG13Ek5D8xgIIjm2QDCES",
       "name": "Assembled Stair:Stair:1391497 Stringer 1",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$3",
+      "id": "0bG13Ek5D8xgIIjm2QDCER",
       "name": "Assembled Stair:Stair:1391497 Stringer 2",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$0",
+      "id": "0bG13Ek5D8xgIIjm2QDCEQ",
       "name": "Assembled Stair:Stair:1391497 Stringer 3",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$1",
+      "id": "0bG13Ek5D8xgIIjm2QDCEP",
       "name": "Assembled Stair:Stair:1391497 Stringer 4",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$6",
+      "id": "0bG13Ek5D8xgIIjm2QDCEO",
       "name": "Assembled Stair:Stair:1391497 Stringer 5",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$7",
+      "id": "0bG13Ek5D8xgIIjm2QDCE7",
       "name": "Assembled Stair:Stair:1391497 Stringer 6",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$4",
+      "id": "0bG13Ek5D8xgIIjm2QDCE6",
       "name": "Assembled Stair:Stair:1391497 Stringer 7",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$5",
+      "id": "0bG13Ek5D8xgIIjm2QDCE5",
       "name": "Assembled Stair:Stair:1391497 Stringer 8",
       "type": "IfcMember",
       "parent": "0nE4lwtJLCMf21yITjzg$J"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$w",
-      "name": "Assembled Stair:Stair:1391497 Stringer 9",
-      "type": "IfcMember",
-      "parent": "0nE4lwtJLCMf21yITjzg$J"
+      "id": "0WvMP6WrbFdvk$X_XvKeFb",
+      "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:1410064",
+      "type": "IfcWindow",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
     {
-      "id": "0nE4lwtJLCMf21yITjzg$x",
-      "name": "Assembled Stair:Stair:1391497 Stringer 10",
-      "type": "IfcMember",
-      "parent": "0nE4lwtJLCMf21yITjzg$J"
+      "id": "0WvMP6WrbFdvk$X_XvKeAB",
+      "name": "Armoire - 2 portes:1200 mm x 450 mm:1410430",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKe87",
+      "name": "Tableau:248 x 124:1410546",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKe5v",
+      "name": "Table ronde - Réunion:Avec chaises:1410700",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKe2B",
+      "name": "Armoire - 2 portes:1200 mm x 450 mm:1410942",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
+    },
+    {
+      "id": "0WvMP6WrbFdvk$X_XvKe$u",
+      "name": "Bureau d'angle:2000 x 1200 mm:1411085",
+      "type": "IfcFurnishingElement",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
     {
       "id": "2E_cmeIJn1_gltefr7C0LR",
@@ -29925,6 +30399,12 @@
     {
       "id": "0nE4lwtJLCMf21yITjzg$_",
       "name": "Railing:Remplissage Inférieur Tole:1391524",
+      "type": "IfcRailing",
+      "parent": "3_b98WEDT7feUaJ_WJeW$i"
+    },
+    {
+      "id": "0bG13Ek5D8xgIIjm2QDCFv",
+      "name": "Railing:Remplissage Inférieur Tole:1413262",
       "type": "IfcRailing",
       "parent": "3_b98WEDT7feUaJ_WJeW$i"
     },
@@ -33709,12 +34189,6 @@
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
-      "id": "2ap5tE8DzDLPPI511HKnjY",
-      "name": "Mur - Moulure décorative appui 36:Murs 36:1288117",
-      "type": "IfcWall",
-      "parent": "3_b98WEDT7feUaJ_WJeW_M"
-    },
-    {
       "id": "09DHfDPXH8$fjhSYyE0Esq",
       "name": "Sèche main:Fixé au mur:1353672",
       "type": "IfcFurnishingElement",
@@ -33752,7 +34226,7 @@
     },
     {
       "id": "0a_hlvWo11kemlZznb3mg6",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1354497",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.3m:1354497",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
@@ -33764,31 +34238,25 @@
     },
     {
       "id": "0a_hlvWo11kemlZznb3mpD",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355082",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.3m:1355082",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
       "id": "0a_hlvWo11kemlZznb3mm5",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355138",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.00m:1355138",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
       "id": "0a_hlvWo11kemlZznb3mmw",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355197",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.00m:1355197",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
       "id": "0a_hlvWo11kemlZznb3m_I",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355285",
-      "type": "IfcWindow",
-      "parent": "3_b98WEDT7feUaJ_WJeW_M"
-    },
-    {
-      "id": "0a_hlvWo11kemlZznb3m$X",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355366",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.3m:1355285",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
@@ -33800,19 +34268,13 @@
     },
     {
       "id": "0a_hlvWo11kemlZznb3mzF",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355464",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.3m:1355464",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
       "id": "0a_hlvWo11kemlZznb3mw2",
       "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355525",
-      "type": "IfcWindow",
-      "parent": "3_b98WEDT7feUaJ_WJeW_M"
-    },
-    {
-      "id": "0a_hlvWo11kemlZznb3mx6",
-      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.2m:1355585",
       "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
@@ -34927,62 +35389,50 @@
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoFz",
+      "id": "0bG13Ek5D8xgIIjm2QDC9K",
       "name": "Assembled Stair:Stair:1396240 Stringer 1",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF2",
+      "id": "0bG13Ek5D8xgIIjm2QDC9J",
       "name": "Assembled Stair:Stair:1396240 Stringer 2",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF3",
+      "id": "0bG13Ek5D8xgIIjm2QDC9I",
       "name": "Assembled Stair:Stair:1396240 Stringer 3",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF0",
+      "id": "0bG13Ek5D8xgIIjm2QDC9H",
       "name": "Assembled Stair:Stair:1396240 Stringer 4",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF1",
+      "id": "0bG13Ek5D8xgIIjm2QDC9G",
       "name": "Assembled Stair:Stair:1396240 Stringer 5",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF6",
+      "id": "0bG13Ek5D8xgIIjm2QDC9V",
       "name": "Assembled Stair:Stair:1396240 Stringer 6",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF7",
+      "id": "0bG13Ek5D8xgIIjm2QDC9U",
       "name": "Assembled Stair:Stair:1396240 Stringer 7",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
     {
-      "id": "2wXpq_8MrCaejSOtsuIoF4",
+      "id": "0bG13Ek5D8xgIIjm2QDC9T",
       "name": "Assembled Stair:Stair:1396240 Stringer 8",
-      "type": "IfcMember",
-      "parent": "2wXpq_8MrCaejSOtsuIoFo"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIoF5",
-      "name": "Assembled Stair:Stair:1396240 Stringer 9",
-      "type": "IfcMember",
-      "parent": "2wXpq_8MrCaejSOtsuIoFo"
-    },
-    {
-      "id": "2wXpq_8MrCaejSOtsuIoFA",
-      "name": "Assembled Stair:Stair:1396240 Stringer 10",
       "type": "IfcMember",
       "parent": "2wXpq_8MrCaejSOtsuIoFo"
     },
@@ -34990,6 +35440,30 @@
       "id": "2wXpq_8MrCaejSOtsuIpbx",
       "name": "Barres carrées:SQ 120:1397913",
       "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJeW_M"
+    },
+    {
+      "id": "2KpAPkqij2zBT9rVW1EEvd",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 0.4 - Plein:1411461",
+      "type": "IfcWindow",
+      "parent": "3_b98WEDT7feUaJ_WJeW_M"
+    },
+    {
+      "id": "2KpAPkqij2zBT9rVW1EEs7",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 0.4 - Plein:1411685",
+      "type": "IfcWindow",
+      "parent": "3_b98WEDT7feUaJ_WJeW_M"
+    },
+    {
+      "id": "2KpAPkqij2zBT9rVW1EEl0",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 0.4 - Plein:1412130",
+      "type": "IfcWindow",
+      "parent": "3_b98WEDT7feUaJ_WJeW_M"
+    },
+    {
+      "id": "2KpAPkqij2zBT9rVW1EEet",
+      "name": "1 vantail - Fixe - Intérieur:0.50m x 1.3m:1412565",
+      "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
     {
@@ -35001,6 +35475,12 @@
     {
       "id": "2wXpq_8MrCaejSOtsuIoF9",
       "name": "Railing:Remplissage Inférieur Tole:1396267",
+      "type": "IfcRailing",
+      "parent": "3_b98WEDT7feUaJ_WJeW_M"
+    },
+    {
+      "id": "0bG13Ek5D8xgIIjm2QDCFi",
+      "name": "Railing:Remplissage Inférieur Tole:1413275",
       "type": "IfcRailing",
       "parent": "3_b98WEDT7feUaJ_WJeW_M"
     },
@@ -37501,6 +37981,12 @@
       "parent": "3_b98WEDT7feUaJ_WJecOD"
     },
     {
+      "id": "2ap5tE8DzDLPPI511HKnjY",
+      "name": "Mur - Moulure décorative appui 36:Murs 36:1288117",
+      "type": "IfcWall",
+      "parent": "3_b98WEDT7feUaJ_WJecOD"
+    },
+    {
       "id": "220vmuXI9FmeprvHGGQAL7",
       "name": "3 vantaux - 3 imposte:1.65m x 1.8 m:1290514",
       "type": "IfcWindow",
@@ -38188,6 +38674,12 @@
       "id": "2wXpq_8MrCaejSOtsuIpue",
       "name": "Barres carrées:SQ 120:1397706",
       "type": "IfcBeam",
+      "parent": "3_b98WEDT7feUaJ_WJecOD"
+    },
+    {
+      "id": "0bG13Ek5D8xgIIjm2QDDmI",
+      "name": "1 vantail - Fixe - Intérieur:0.9m x 0.90m:1412965",
+      "type": "IfcWindow",
       "parent": "3_b98WEDT7feUaJ_WJecOD"
     },
     {

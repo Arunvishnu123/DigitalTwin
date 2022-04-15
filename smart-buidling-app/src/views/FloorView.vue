@@ -5,22 +5,21 @@
             <splitpanes :push-other-panes="false">
                 <pane>
                     <w-app>
-                        <div>
-                            <w-tag @click="test()" xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Entresol</w-tag>
-                         <entresol-floor></entresol-floor>
-                        </div>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 6</w-tag>
+                        <sixth-floor></sixth-floor>
+                    </w-app>
+                </pane>
+
+                <pane>
+                    <w-app>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 5</w-tag>
+                        <fifth-floor></fifth-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - RDC</w-tag>
-                    <rdc-floor></rdc-floor>
-                    </w-app>
-                </pane>
-                <pane>
-                    <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - SSOL</w-tag>
-                        <ssol-floor></ssol-floor>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 4</w-tag>
+                        <fourth-floor></fourth-floor>
                     </w-app>
                 </pane>
             </splitpanes>
@@ -29,8 +28,8 @@
             <splitpanes :push-other-panes="false">
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 1</w-tag>
-                        <first-floor></first-floor>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 3</w-tag>
+                        <third-floor></third-floor>
                     </w-app>
                 </pane>
                 <pane>
@@ -41,8 +40,8 @@
                 </pane>
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 3</w-tag>
-                        <third-floor></third-floor>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 1</w-tag>
+                        <first-floor></first-floor>
                     </w-app>
                 </pane>
             </splitpanes>
@@ -51,20 +50,22 @@
             <splitpanes :push-other-panes="false">
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 4</w-tag>
-                        <fourth-floor></fourth-floor>
+                        <div>
+                            <w-tag @click="test()" xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Entresol</w-tag>
+                            <entresol-floor></entresol-floor>
+                        </div>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 5</w-tag>
-                        <fifth-floor></fifth-floor>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - RDC</w-tag>
+                        <RDCFloor />
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
-                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 6</w-tag>
-                        <sixth-floor></sixth-floor>
+                        <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - SSOL</w-tag>
+                        <SSOLFloor />
                     </w-app>
                 </pane>
             </splitpanes>
@@ -79,17 +80,17 @@ import {
     Pane
 } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
-import FirstFloor from "../components/FirstFloor.vue"
-import SecondFloor from "../components/SecondFloor.vue"
-import ThirdFloor from "../components/ThirdFloor.vue"
-import FourthFloor from "../components/FourthFlour.vue"
-import FifthFloor from "../components/FifthFloor.vue"
-import SixthFloor from "../components/SixthFloor.vue"
-import EntresolFloor from "../components/EntresolFloor.vue"
-import RDCFloor from "../components/RDCFloor.vue"
-import SSOLFloor from "../components/SSOLFloor.vue"
+import FirstFloor from "../components/FirstFloor.vue";
+import SecondFloor from "../components/SecondFloor.vue";
+import ThirdFloor from "../components/ThirdFloor.vue";
+import FourthFloor from "../components/FourthFlour.vue";
+import FifthFloor from "../components/FifthFloor.vue";
+import SixthFloor from "../components/SixthFloor.vue";
+import EntresolFloor from "../components/EntresolFloor.vue";
+import RDCFloor from "../components/RDCFloor.vue";
+import SSOLFloor from "../components/SSOLFloor.vue";
 
-import router from "../router/index"
+import router from "../router/index";
 export default {
     components: {
         Splitpanes,
@@ -102,15 +103,15 @@ export default {
         SixthFloor,
         EntresolFloor,
         RDCFloor,
-        SSOLFloor
+        SSOLFloor,
     },
     methods: {
         test() {
-            console.log("test")
-            router.push("/firstfloor")
-        }
-    }
-}
+            console.log("test");
+            router.push("/firstfloor");
+        },
+    },
+};
 </script>
 
 <style scoped>
