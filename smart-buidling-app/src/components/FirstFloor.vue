@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 #Canvas {
-    top: 40px;
+    top: 50px;
     height: 300px;
     position: absolute;
     background: lightblue;

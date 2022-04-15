@@ -7,18 +7,20 @@
                     <w-app>
                         <div>
                             <w-tag @click="test()" xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Entresol</w-tag>
-                            <first-floor></first-floor>
+                         <entresol-floor></entresol-floor>
                         </div>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - RDC</w-tag>
+                    <rdc-floor></rdc-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - SSOL</w-tag>
+                        <ssol-floor></ssol-floor>
                     </w-app>
                 </pane>
             </splitpanes>
@@ -28,16 +30,19 @@
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 1</w-tag>
+                        <first-floor></first-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 2</w-tag>
+                        <second-floor></second-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 3</w-tag>
+                        <third-floor></third-floor>
                     </w-app>
                 </pane>
             </splitpanes>
@@ -47,16 +52,19 @@
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 4</w-tag>
+                        <fourth-floor></fourth-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 5</w-tag>
+                        <fifth-floor></fifth-floor>
                     </w-app>
                 </pane>
                 <pane>
                     <w-app>
                         <w-tag xl height="1.5em" class="floor1 mr4" bg-color="primary">Section View - Floor 6</w-tag>
+                        <sixth-floor></sixth-floor>
                     </w-app>
                 </pane>
             </splitpanes>
