@@ -58,6 +58,12 @@ export default {
         });
         window.viewer = viewer;
     },
+    methods: {
+        view() {
+            const eye = this.viewer.camera.eye
+            console.log(eye)
+        }
+    }
 
 };
 </script>

@@ -30,7 +30,7 @@ const routes = [
     component:test1
   },
   {
-    path:"/firstfloor",
+    path:"/d",
     name:"firstfloor",
     component:h
   }
@@ -39,7 +39,8 @@ const routes = [
 const router = new VueRouter({
   routes,
   mode: "history",
-// base: process.env.BASE_URL,
+  history: true,
+ base: process.env.BASE_URL,
 
 });
 

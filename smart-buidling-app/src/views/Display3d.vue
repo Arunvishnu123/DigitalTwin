@@ -10,11 +10,17 @@
 
             <Display3d />
 
-            <w-drawer v-model="openDrawer" :[position]="true">
+            <w-drawer class="dialogbox" v-model="openDrawer" :[position]="true">
                 <w-button @click="openDrawer = false" sm outline round absolute icon="wi-cross">
                 </w-button>
-            </w-drawer>
+                <w-flex>
+                   
+                    <w-button class="floorview grow">
+                        Floor View
+                    </w-button>
+                </w-flex>
 
+            </w-drawer>
         </w-flex>
     </w-app>
 </div>
@@ -27,13 +33,13 @@ export default {
         Display3d,
     },
     data: () => ({
-        openDrawer: false
+        openDrawer: false,
     }),
     computed: {
         position() {
-            return this.openDrawer || 'right'
-        }
-    }
+            return this.openDrawer || "right";
+        },
+    },
 };
 </script>
 
@@ -41,11 +47,23 @@ export default {
 .label {
     width: 100%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    z-index: 200001;
 }
 
 .bnavbar {
     left: -800px;
     top: -30px;
     size: 30px;
+    z-index: 200001;
+}
+
+.dialogbox {
+    z-index: 200001;
+}
+
+.floorview {
+    position: absolute;
+    top: 40px;
+    width: 100%;
 }
 </style>

@@ -14,7 +14,8 @@ export function floorView(objectID, viewer) {
         metaModelSrc: "src/assets/final.json",
         edges: true
     });
-
+    const eye = viewer.camera.eye 
+    console.log(eye)
     const storeyViewsPlugin = new StoreyViewsPlugin(viewer);
 
     model.on("loaded", () => {

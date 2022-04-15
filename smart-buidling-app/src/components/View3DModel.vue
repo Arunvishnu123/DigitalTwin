@@ -3,7 +3,8 @@
     <canvas id="myCanvas"></canvas>
     <canvas id="NavCubeCanvas"></canvas>
     <canvas id="AxisGizmoCanvas"></canvas>
-  
+    <button @click="view()" class="test2"> Arun  </button>
+
 </div>
 </template>
 
@@ -11,18 +12,25 @@
 import {
     Viewer,
     NavCubePlugin,
-    AxisGizmoPlugin
+    AxisGizmoPlugin,ViewCullPlugin
 } from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
 
 export default {
+     data: () => ({
+        viewer:null,
+    }),
     mounted() {
-        const viewer = new Viewer({
+        this.viewer = new Viewer({
             canvasId: "myCanvas",
         });
-        display3d.display3d(viewer);
+        // const viewCullPlugin = new ViewCullPlugin(this.viewer , {
+        //     maxTreeDepth: 20
+        // });
 
-        new NavCubePlugin(viewer, {
+        display3d.display3d(this.viewer );
+
+        new NavCubePlugin(this.viewer , {
             canvasId: "NavCubeCanvas",
             // color: "lightblue",
             visible: true,
@@ -30,24 +38,29 @@ export default {
             cameraFitFOV: 45,
             cameraFlyDuration: 0.5,
         });
-        new AxisGizmoPlugin(viewer, {
+        new AxisGizmoPlugin(this.viewer , {
             canvasId: "AxisGizmoCanvas",
         });
-      window.viewer = viewer;
+        window.viewer = this.viewer ;
     },
+
+     methods: {
+        view() {
+            const eye = this.viewer.camera.eye
+            const  look = this.viewer.camera.look
+            const up = this.viewer.camera.up
+            console.log("eye" , eye)
+            console.log("look", look)
+            console.log("up", up)
+        }
+    }
 };
 </script>
 
 <style scoped>
-body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    user-select: none;
-}
 
 #myCanvas {
-    top:34px;
+    top: 0px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -60,7 +73,8 @@ body {
     width: 250px;
     height: 250px;
     bottom: 100px;
-    left: 1300px;
+    left: 1450px;
+    top:645px;
     z-index: 200000;
 }
 
@@ -69,7 +83,12 @@ body {
     width: 250px;
     height: 250px;
     bottom: 100px;
-    left: 50px;
+    left: 30px;
+    top:645px;
     z-index: 200000;
+}
+.test2{
+    position: relative;
+    top:-10px
 }
 </style>
