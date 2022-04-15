@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import test1 from "../components/SecondFloor.vue"
 import DModel from "../views/display3d.vue";
 import te from "../components/test.vue"
-import g from "../views/FloorView.vue"
+import FloorView from "../views/FloorView.vue"
 import h from "../views/FirstFloor.vue"
 
 Vue.use(VueRouter);
@@ -20,9 +20,9 @@ const routes = [
     component: te
   },
   {
-    path: "/sdf",
-    name: "3Dsdghf",
-    component: g
+    path: "/floorview",
+    name: "floorview",
+    component: FloorView
   },
   {
     path:"/floor",
@@ -30,7 +30,7 @@ const routes = [
     component:test1
   },
   {
-    path:"/d",
+    path:"/firstfloor",
     name:"firstfloor",
     component:h
   }

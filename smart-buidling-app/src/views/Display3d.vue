@@ -14,12 +14,8 @@
                 <w-button @click="openDrawer = false" sm outline round absolute icon="wi-cross">
                 </w-button>
                 <w-flex>
-                   
-                    <w-button class="floorview grow">
-                        Floor View
-                    </w-button>
+                    <w-button @click="goToFloorView()" class="floorview grow"> Floor View </w-button>
                 </w-flex>
-
             </w-drawer>
         </w-flex>
     </w-app>
@@ -28,6 +24,7 @@
 
 <script>
 import Display3d from "../components/View3DModel.vue";
+import router from "../router/index"
 export default {
     components: {
         Display3d,
@@ -40,6 +37,11 @@ export default {
             return this.openDrawer || "right";
         },
     },
+    methods: {
+        goToFloorView() {
+            router.push("/floorview")
+        }
+    }
 };
 </script>
 

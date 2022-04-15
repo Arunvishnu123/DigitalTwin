@@ -3,10 +3,10 @@ import { StoreyViewsPlugin, XKTLoaderPlugin }
 
 export function floorView(objectID, viewer) {
 
-    viewer.camera.eye = [-2.56, 8.38, 8.27];
-    viewer.camera.look = [13.44, 3.31, -14.83];
-    viewer.camera.up = [0.10, 0.98, -0.14];
-    viewer.camera.orbitPitch(20);
+    // viewer.camera.eye = [-2.56, 8.38, 8.27];
+    // viewer.camera.look = [13.44, 3.31, -14.83];
+    // viewer.camera.up = [0.10, 0.98, -0.14];
+  
     const xktLoader = new XKTLoaderPlugin(viewer);
     const model = xktLoader.load({
         id: "myModel",
@@ -27,6 +27,6 @@ export function floorView(objectID, viewer) {
                 useObjectStates: false
             });
 
-        }, 1000);
+        }, 10);
     });
 }
