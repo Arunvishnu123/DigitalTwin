@@ -1,7 +1,7 @@
 <template>
 <div>
     <canvas id="Canvas1"> </canvas>
-        <button @click="view()" class="test2"> Arun  </button>
+    <button @click="view()" class="test2"> Arun </button>
 </div>
 </template>
 
@@ -20,13 +20,11 @@ export default {
         viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
 
         floorView.floorView("3_b98WEDT7feUaJ_WJeWog", viewer);
-        viewer.scene.on("tick", function () {
-            viewer.scene.camera.orbitYaw(0.3);
-        });
-viewer.scene.edgeMaterial.edges = false;
- viewer.scene.on("tick", function () {
-            viewer.scene.camera.orbitYaw(0.3);
-        });
+
+        viewer.scene.edgeMaterial.edges = false;
+        //  viewer.scene.on("tick", function () {
+        //             viewer.scene.camera.orbitYaw(0.3);
+        //         });
     },
 
 };
@@ -39,8 +37,9 @@ viewer.scene.edgeMaterial.edges = false;
     background: lightblue;
     background-image: linear-gradient(lightblue, white);
 }
-.test2{
+
+.test2 {
     position: relative;
-    top:-10px
+    top: -10px
 }
 </style>

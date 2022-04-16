@@ -23,9 +23,9 @@ export default {
     ];
     floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", viewer);
     viewer.scene.edgeMaterial.edges = false;
-    viewer.scene.on("tick", function () {
-      viewer.scene.camera.orbitYaw(0.3);
-    });
+    // viewer.scene.on("tick", function () {
+    //   viewer.scene.camera.orbitYaw(0.3);
+    // });
   },
 };
 </script>

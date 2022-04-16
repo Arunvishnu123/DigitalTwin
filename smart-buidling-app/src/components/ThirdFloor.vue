@@ -20,9 +20,9 @@ export default {
         viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
         floorView.floorView("3_b98WEDT7feUaJ_WJeW$O", viewer);
         viewer.scene.edgeMaterial.edges = false;
-         viewer.scene.on("tick", function () {
-            viewer.scene.camera.orbitYaw(0.3);
-        });
+        //  viewer.scene.on("tick", function () {
+        //     viewer.scene.camera.orbitYaw(0.3);
+        // });
     },
 };
 </script>

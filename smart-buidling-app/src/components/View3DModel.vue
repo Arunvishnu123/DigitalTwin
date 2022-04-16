@@ -3,8 +3,6 @@
     <canvas id="myCanvas"></canvas>
     <canvas id="NavCubeCanvas"></canvas>
     <canvas id="AxisGizmoCanvas"></canvas>
-    <button @click="view()" class="test2"> Arun  </button>
-
 </div>
 </template>
 
@@ -73,8 +71,8 @@ export default {
     width: 250px;
     height: 250px;
     bottom: 100px;
-    left: 1450px;
-    top:645px;
+    left: 1250px;
+    top:545px;
     z-index: 200000;
 }
 
@@ -84,7 +82,7 @@ export default {
     height: 250px;
     bottom: 100px;
     left: 30px;
-    top:645px;
+    top:545px;
     z-index: 200000;
 }
 .test2{
