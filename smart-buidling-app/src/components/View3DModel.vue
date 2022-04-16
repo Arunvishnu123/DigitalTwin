@@ -13,6 +13,7 @@ import {
     AxisGizmoPlugin,ViewCullPlugin
 } from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
+import * as selectObjects from "../features/selectObjects"
 
 export default {
      data: () => ({
@@ -25,8 +26,10 @@ export default {
         // const viewCullPlugin = new ViewCullPlugin(this.viewer , {
         //     maxTreeDepth: 20
         // });
+          this.viewer.scene.edgeMaterial.edges = false;
 
         display3d.display3d(this.viewer );
+        selectObjects.selectObects(this.viewer);
 
         new NavCubePlugin(this.viewer , {
             canvasId: "NavCubeCanvas",

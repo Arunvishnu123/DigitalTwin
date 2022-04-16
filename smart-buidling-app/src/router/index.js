@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/dsd",
     name: "3DModel",
     component: DModel
   },
