@@ -1,6 +1,8 @@
 export function selectObects(viewer) {
     var lastEntity = null;
-
+    viewer.scene.highlightMaterial.edgeColor = [1, 1, 0];
+    viewer.scene.highlightMaterial.fill = true;
+    viewer.scene.highlightMaterial.edges = true;
     viewer.scene.input.on("mousemove", function (coords) {
 
         var hit = viewer.scene.pick({

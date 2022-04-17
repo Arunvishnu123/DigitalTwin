@@ -7,7 +7,6 @@
             <w-button @click="openDrawer = 'left'" class="bnavbar">
                 <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>
             </w-button>
-
             <Display3d />
 
             <w-drawer class="dialogbox" v-model="openDrawer" :[position]="true">
