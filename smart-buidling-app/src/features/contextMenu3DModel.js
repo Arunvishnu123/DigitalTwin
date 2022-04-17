@@ -1,7 +1,7 @@
 import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
-
+ import "../assets/xeokit-context-menu.css"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
