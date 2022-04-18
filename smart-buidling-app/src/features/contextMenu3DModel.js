@@ -51,25 +51,11 @@ export function contextMenu3dModel(viewer) {
         var hit = viewer.scene.pick({
             canvasPos: e.canvasPos
         });
+        canvasContextMenu.context = { // Must set context before showing menu
+            viewer: viewer
+        };
 
-        if (hit && hit.entity.isObject) {
-
-            objectContextMenu.context = { // Must set context before showing menu
-                viewer: viewer,
-                treeViewPlugin: treeView,
-                entity: hit.entity
-            };
-
-            objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
-
-        } else {
-
-            canvasContextMenu.context = { // Must set context before showing menu
-                viewer: viewer
-            };
-
-            canvasContextMenu.show(e.pagePos[0], e.pagePos[1]);
-        }
+        canvasContextMenu.show(e.pagePos[0], e.pagePos[1]);
 
         e.event.preventDefault();
     });
