@@ -4,20 +4,20 @@ import {
 import "../assets/xeokit-context-menu.css"
 
 export function contextMenu3dModel(viewer) {
-    const canvasContextMenu = new ContextMenu({
-        enabled: true,
-        context: {
-            viewer: viewer
-        },
+    const objectContextMenu = new ContextMenu({
         items: [
             [
                 {
-                    title: "Hide All",
-                    getEnabled: function (context) {
-                        return (context.viewer.scene.numVisibleObjects > 0);
+                    getTitle: (context) => {
+                         console.log("gettitle",context)
+                        return context.viewer.localeService.translate("objectContextMenu.inspectProperties") || "Inspect Properties";
                     },
-                    doAction: function (context) {
-                        context.viewer.scene.setObjectsVisible(context.viewer.scene.visibleObjectIds, false);
+                    doAction: (context) => {
+                        console.log("doactioncontext",context)
+                        const objectId = context.entity.id;
+                        console.log(objectId)
+                        console.log(context.viewer.metaScene.metaObjects[objectId]);
+                        console.log("test")
                     }
                 },
                 {
@@ -51,22 +51,18 @@ export function contextMenu3dModel(viewer) {
         var hit = viewer.scene.pick({
             canvasPos: e.canvasPos
         });
+  
         if (hit && hit.entity.isObject) {
-            
-console.log("test")
-        }
-            else {
 
-        canvasContextMenu.context = { // Must set context before showing menu
-            viewer: viewer
-        };
+            objectContextMenu.context = { // Must set context before showing menu
+                viewer: viewer,
+                entity: hit.entity
+            };
 
-        canvasContextMenu.show(e.pagePos[0], e.pagePos[1]);
+             objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
+         }
 
         e.event.preventDefault();
-    }
-
     });
-    
 
 }

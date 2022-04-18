@@ -16,6 +16,7 @@ import {
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects"
 import * as test from "../features/contextMenu3DModel"
+import * as t from "../features/contextMenuObject"
 
 export default {
     data: () => ({
@@ -32,6 +33,7 @@ export default {
         test.contextMenu3dModel(this.viewer)
         display3d.display3d(this.viewer);
         selectObjects.selectObects(this.viewer);
+        t.contextMenu3dModel(this.viewer)
 
         new NavCubePlugin(this.viewer, {
             canvasId: "NavCubeCanvas",
