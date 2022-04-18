@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import store from "../store/index"
 import Display3d from "../components/View3DModel.vue";
 import router from "../router/index"
 export default {
@@ -38,7 +39,7 @@ export default {
     },
     methods: {
         goToFloorView() {
-            router.push("/floorview")
+            store.dispatch("viewFloorView")
         }
     }
 };

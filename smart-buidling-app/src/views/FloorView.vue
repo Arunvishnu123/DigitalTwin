@@ -89,6 +89,7 @@ import SixthFloor from "../components/SixthFloor.vue";
 import EntresolFloor from "../components/EntresolFloor.vue";
 import RDCFloor from "../components/RDCFloor.vue";
 import SSOLFloor from "../components/SSOLFloor.vue";
+import store from "../store/index"
 
 import router from "../router/index";
 export default {
@@ -108,7 +109,7 @@ export default {
     methods: {
         test() {
             console.log("test");
-            router.push("/firstfloor");
+            store.dispatch("viewFirstFloor")
         },
     },
 };

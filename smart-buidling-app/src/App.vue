@@ -1,19 +1,20 @@
 <template>
 <div>
     <router-view></router-view>
-    <display-3d v-if="viewDisplay3d"></display-3d>
+    <display-3d v-if="$store.state.viewDisplay3d"></display-3d>
+    <floor-view v-if ="$store.state.viewFloorView"></floor-view>
+    <first-floor v-if ="$store.state.viewFirstFloor"></first-floor>
 </div>
 </template>
 
 <script>
+
 import Display3d from "./views/Display3d.vue"
 import FirstFloor from "./views/FirstFloor.vue"
 import FloorView from "./views/FloorView.vue"
 export default {
     data: () => ({
-        viewDisplay3d: true,
-        viewFloorView: false,
-        viewFirstFloor: false
+       
     }),
     components: {
         Display3d,
