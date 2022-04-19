@@ -12,6 +12,8 @@ export function floorView(objectID, viewer) {
         id: "myModel",
         src: "src/assets/MINES.xkt",
         metaModelSrc: "src/assets/final.json",
+        excludeTypes: ["IfcSpace"],
+        objectDefaults: {},
         edges: true
     });
     const eye = viewer.camera.eye

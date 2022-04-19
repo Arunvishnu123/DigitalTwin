@@ -52,21 +52,21 @@ export function contextMenu3dModel(viewer) {
             canvasPos: e.canvasPos
         });
         if (hit && hit.entity.isObject) {
-            
-console.log("test")
+
+            console.log("test")
         }
-            else {
+        else {
 
-        canvasContextMenu.context = { // Must set context before showing menu
-            viewer: viewer
-        };
+            canvasContextMenu.context = { // Must set context before showing menu
+                viewer: viewer
+            };
 
-        canvasContextMenu.show(e.pagePos[0], e.pagePos[1]);
+            canvasContextMenu.show(e.pagePos[0], e.pagePos[1]);
 
-        e.event.preventDefault();
-    }
+            e.event.preventDefault();
+        }
 
     });
-    
+
 
 }

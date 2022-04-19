@@ -11,7 +11,7 @@ import {
     Viewer,
     NavCubePlugin,
     AxisGizmoPlugin,
-    ViewCullPlugin
+
 } from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects"
@@ -26,9 +26,6 @@ export default {
         this.viewer = new Viewer({
             canvasId: "myCanvas",
         });
-        // const viewCullPlugin = new ViewCullPlugin(this.viewer , {
-        //     maxTreeDepth: 20
-        // });
         this.viewer.scene.edgeMaterial.edges = false;
         test.contextMenu3dModel(this.viewer)
         display3d.display3d(this.viewer);
@@ -37,7 +34,7 @@ export default {
 
         new NavCubePlugin(this.viewer, {
             canvasId: "NavCubeCanvas",
-            // color: "lightblue",
+            //color: "lightblue",
             visible: true,
             cameraFly: true,
             cameraFitFOV: 45,
@@ -57,7 +54,8 @@ export default {
             console.log("eye", eye)
             console.log("look", look)
             console.log("up", up)
-        }
+        },
+       
     }
 };
 </script>
@@ -77,8 +75,8 @@ export default {
     width: 250px;
     height: 250px;
     bottom: 100px;
-    left: 1250px;
-    top: 545px;
+    left: 1550px;
+    top: 745px;
     z-index: 200000;
 }
 
@@ -88,13 +86,9 @@ export default {
     height: 250px;
     bottom: 100px;
     left: 30px;
-    top: 545px;
+    top: 745px;
     z-index: 200000;
 }
 
-.test2 {
-    position: relative;
-    top: -10px
-}
 
 </style>

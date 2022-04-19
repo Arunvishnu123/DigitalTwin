@@ -1,35 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import test1 from "../components/SecondFloor.vue"
-import DModel from "../views/display3d.vue";
 
-import FloorView from "../views/FloorView.vue"
-import h from "../views/FirstFloor.vue"
-
+import Display3d from "../views/Display3d.vue"
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/dsd",
+    path: "/",
     name: "3DModel",
-    component: DModel
+    component: Display3d
   },
 
-  {
-    path: "/floorview",
-    name: "floorview",
-    component: FloorView
-  },
-  {
-    path:"/floor",
-    name:"floorwisedisplay",
-    component:test1
-  },
-  {
-    path:"/firstfloor",
-    name:"firstfloor",
-    component:h
-  }
+ 
 ]
 
 const router = new VueRouter({
