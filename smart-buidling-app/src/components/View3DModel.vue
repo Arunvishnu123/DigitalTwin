@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { Viewer } from "@xeokit/xeokit-sdk/";
+import { Viewer , DirLight,} from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextMenu3DModel";
@@ -28,6 +28,7 @@ export default {
     });
 
 
+ 
 
     store.state.viewer.scene.edgeMaterial.edges = false;
     ContextMenuCanvas.contextMenu3dModel(store.state.viewer);
