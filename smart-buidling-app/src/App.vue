@@ -15,7 +15,7 @@ export default {
 html,
 body {
   margin: 0;
-  height: 100%;
+  height: 10%;
   overflow-y: hidden;
   overflow-x: hidden;
 }

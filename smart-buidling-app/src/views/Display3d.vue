@@ -1,11 +1,11 @@
 <template>
 <div>
-    <w-app>
-        <w-flex column>
+    
+        
             <nav-bar></nav-bar>
             <Display3d />
-        </w-flex>
-    </w-app>
+    
+    
 </div>
 </template>
 

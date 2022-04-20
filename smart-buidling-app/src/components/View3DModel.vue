@@ -63,8 +63,8 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: lightblue;
-  background-image: linear-gradient(lightblue, white);
+  background: rgb(0, 5, 7);
+  background-image: linear-gradient(lightblue, rgb(56, 54, 54));
 }
 
 #NavCubeCanvas {

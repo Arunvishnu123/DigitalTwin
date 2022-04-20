@@ -2,9 +2,12 @@
 <div>
     <w-app>
         <w-drawer class="dialogbox" v-model="$store.state.openDrawer" :[position]="true">
-            <w-button class="cross" @click="$store.state.openDrawer = false" sm outline round absolute icon="wi-cross">
-            </w-button>
-            <w-flex> </w-flex>
+             
+            <w-flex column>  
+                <w-tag xl height="2em" class="label1" bg-color="primary">Features</w-tag>
+                <w-button class="cross" @click="$store.state.openDrawer = false" bg-color="white" outline absolute round icon="wi-cross">
+                </w-button>
+            </w-flex>
         </w-drawer>
     </w-app>
 </div>
@@ -30,6 +33,18 @@ export default {
 }
 
 .dialogbox {
-    z-index: 200001;
+    z-index: 200002;
+}
+
+.cross {
+    position: absolute;
+    z-index: auto;
+    top:5px                        
+}
+
+.label1 {
+    position: absolute;
+    z-index: auto;
+    width: 100%;
 }
 </style>

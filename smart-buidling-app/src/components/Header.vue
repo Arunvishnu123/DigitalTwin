@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-app>
+    <w-app class="main">
         <w-tag xl height="2em" class="label mr4" bg-color="primary">Three Dimensional View of Ecole Des Mines in Saint-Etienne</w-tag>
         <w-button @click="$store.state.openDrawer = 'left'" class="bnavbar">
             <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>
@@ -47,5 +47,9 @@ export default {
     position: absolute;
     top: 40px;
     width: 100%;
+}
+.main{
+    height: 100%;
+    overflow: hidden;
 }
 </style>
