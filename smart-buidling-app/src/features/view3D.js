@@ -25,6 +25,7 @@ export function display3d(viewer) {
         src: 'src/assets/MINES.xkt',
         edges: true,
         backfaces: true,
+        saoEnabled: true,
         metaModelSrc: "src/assets/final.json",
         excludeTypes: ["IfcSpace"],
         objectDefaults: {},
