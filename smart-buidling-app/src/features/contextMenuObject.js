@@ -2,16 +2,14 @@ import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
 import "../assets/xeokit-context-menu.css"
+import * as FloorView from "../features/floorView";
 
-export function contextMenu3dModel(viewer) {
+export function contextMenu3dModel(model,viewer) {
     const objectContextMenu = new ContextMenu({
         items: [
             [
                 {
-                    getTitle: (context) => {
-                         console.log("gettitle",context)
-                        return context.viewer.localeService.translate("objectContextMenu.inspectProperties") || "Inspect Properties";
-                    },
+                    title: "Inspect Properties",
                     doAction: (context) => {
                         console.log("doactioncontext",context)
                         const objectId = context.entity.id;
@@ -21,16 +19,10 @@ export function contextMenu3dModel(viewer) {
                     }
                 },
                 {
-                    title: "Show All",
-                    getEnabled: function (context) {
-                        const scene = context.viewer.scene;
-                        return (scene.numVisibleObjects < scene.numObjects);
-                    },
+                    title: "IsolateFloor",
                     doAction: function (context) {
-                        const scene = context.viewer.scene;
-                        scene.setObjectsVisible(scene.objectIds, true);
-                        scene.setObjectsXRayed(scene.xrayedObjectIds, false);
-                        scene.setObjectsSelected(scene.selectedObjectIds, false);
+                       
+                      console.log("testzsdfdsfs")
                     }
                 }
             ],

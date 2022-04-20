@@ -10,8 +10,8 @@ export function display3d(viewer) {
 
         objectDefaults: { // <<----- Only override color of IfcSpace elements, keep other original IFC colors
 
-            IfcSpace: {
-               
+            IfcSpace: {     
+
             },
 
             IfcWindow: {
@@ -33,4 +33,6 @@ export function display3d(viewer) {
     viewer.scene.highlightMaterial.fill = false;
     viewer.scene.highlightMaterial.fillAlpha = 0.3;
     viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
+
+return model 
 }

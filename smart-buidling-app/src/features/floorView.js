@@ -1,23 +1,8 @@
-import { StoreyViewsPlugin, XKTLoaderPlugin }
+import { StoreyViewsPlugin}
     from "@xeokit/xeokit-sdk/";
 
-export function floorView(objectID, viewer) {
+export function floorView(objectID, viewer,model) {
 
-    // viewer.camera.eye = [-2.56, 8.38, 8.27];
-    // viewer.camera.look = [13.44, 3.31, -14.83];
-    // viewer.camera.up = [0.10, 0.98, -0.14];
-
-    const xktLoader = new XKTLoaderPlugin(viewer);
-    const model = xktLoader.load({
-        id: "myModel",
-        src: "src/assets/MINES.xkt",
-        metaModelSrc: "src/assets/final.json",
-        excludeTypes: ["IfcSpace"],
-        objectDefaults: {},
-        edges: true
-    });
-    const eye = viewer.camera.eye
-    console.log(eye)
     const storeyViewsPlugin = new StoreyViewsPlugin(viewer);
 
     model.on("loaded", () => {

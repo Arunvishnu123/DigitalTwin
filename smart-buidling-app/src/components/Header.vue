@@ -33,7 +33,7 @@ export default {
 }
 
 .bnavbar {
-    left: -900px;
+    left: -800px;
     top: -30px;
     size: 30px;
     z-index: 200001;
