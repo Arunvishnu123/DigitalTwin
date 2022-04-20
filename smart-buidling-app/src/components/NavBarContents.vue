@@ -6,9 +6,10 @@
                 <w-tag xl height="2em" class="label1" bg-color="primary">Floor Selection</w-tag>
                 <w-button class="cross" @click="$store.state.openDrawer = false" bg-color="white" outline absolute round icon="wi-cross">
                 </w-button>
+                <w-radios class = "checkboxes" v-model="$store.state.selection" :items="radioItems">
+                </w-radios>
 
-                <w-checkboxes  class="checkboxes" bg-color="red" v-model="$store.state.selection" :items="checkboxes"></w-checkboxes>
-               <w-button   @click="floorView()" :loading="button2loading"  class="updateButton">Update Model</w-button>
+                <w-button @click="floorView()" :loading="button2loading" class="updateButton">Update Model</w-button>
             </w-flex>
         </w-drawer>
     </w-app>
@@ -19,62 +20,62 @@
 import store from "../store/index";
 export default {
     data: () => ({
-         button2loading: false,
-        selection: [],
-        checkboxes: [{
-                label: "SSOL",
-                value: 1,
+        button2loading: false,
+        election: 1,
+        radioItems: [{
+                label: 'SSOL',
+                value: 1
             },
             {
-                label: "RDL",
-                value: 2,
+                label: 'RDC',
+                value: 2
             },
             {
-                label: "ENTRESOL",
-                value: 3,
+                label: 'ENTRESOL',
+                value: 3
             },
             {
-                label: "FIRST FLOOR",
-                value: 4,
+                label: 'FIRST FLOOR',
+                value: 4
             },
             {
-                label: "SECOND FLOOR",
-                value: 5,
+                label: 'SECOND FLOOR',
+                value: 5
             },
             {
-                label: "THIRD FLOOR",
-                value: 6,
+                label: 'THIRD FLOOR',
+                value: 6
             },
             {
-                label: "FOURTH FLOOR",
-                value: 7,
+                label: 'FOURTH FLOOR',
+                value: 7
             },
             {
-                label: "FIFTH FLOOR",
-                value: 8,
+                label: 'FIFTH FLOOR',
+                value: 8
             },
+            {
+                label: 'SIXTH FLOOR',
+                value: 9
+            }
 
-            {
-                label: "SIXTH FLOOR",
-                value: 9,
-            },
-        ],
+        ]
     }),
     computed: {
         position() {
             return store.state.openDrawer || "right";
         },
     },
-    methods:{
-        floorView(){
+    methods: {
+        floorView() {
             this.buttonDoLoading(2)
             store.dispatch("createFloorView")
-    
+
         },
-        buttonDoLoading (id) {
-    this[`button${id}loading`] = true
-    setTimeout(() => (this[`button${id}loading`] = false), 3000)
-  }
+        buttonDoLoading(id) {
+            this[`button${id}loading`] = true
+            setTimeout(() => (this[`button${id}loading`] = false), 3000)
+        }
     }
 };
 </script>
@@ -103,15 +104,15 @@ export default {
 }
 
 .checkboxes {
-    position:absolute;
-    top:50px;
+    position: absolute;
+    top: 50px;
     width: 100%;
-    left:30px
-}
-.updateButton{
-    position:absolute;
-    top:260px;
-    width:100%
+    left: 30px
 }
 
+.updateButton {
+    position: absolute;
+    top: 260px;
+    width: 100%
+}
 </style>

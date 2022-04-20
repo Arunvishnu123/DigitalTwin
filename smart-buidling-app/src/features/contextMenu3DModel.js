@@ -2,6 +2,7 @@ import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
 import "../assets/xeokit-context-menu.css"
+import store from "../store/index"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
@@ -31,16 +32,20 @@ export function contextMenu3dModel(viewer) {
                         scene.setObjectsVisible(scene.objectIds, true);
                         scene.setObjectsXRayed(scene.xrayedObjectIds, false);
                         scene.setObjectsSelected(scene.selectedObjectIds, false);
+                        store.state.selection = 0
                     }
                 }
             ],
             [
                 {
-                    title: "View Fit All",
+                    title: "Intial View",
                     doAction: function (context) {
-                        context.viewer.cameraFlight.flyTo({
-                            aabb: context.viewer.scene.getAABB()
-                        });
+                        viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
+                        viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
+                        viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
+                        // context.viewer.cameraFlight.flyTo({
+                        //     aabb: context.viewer.scene.getAABB()
+                        // });
                     }
                 }
             ]
