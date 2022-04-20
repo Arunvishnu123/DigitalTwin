@@ -1,31 +1,32 @@
 export function selectObects(viewer) {
     var lastEntity = null;
-    viewer.scene.highlightMaterial.edgeColor = [1, 1, 0];
-    viewer.scene.highlightMaterial.fill = true;
-    viewer.scene.highlightMaterial.edges = true;
-    viewer.scene.input.on("mousemove", function (coords) {
+    var lastColorize = null;
 
-        var hit = viewer.scene.pick({
-            canvasPos: coords
-        });
+    viewer.cameraControl.on("hover", (pickResult) => {
 
-        if (hit) {
+        console.log(pickResult.entity.id);
 
-            if (!lastEntity || hit.entity.id !== lastEntity.id) {
-
-                if (lastEntity) {
-                    lastEntity.highlighted = false;
-                }
-
-                lastEntity = hit.entity;
-                hit.entity.highlighted = true;
-            }
-        } else {
+        if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
 
             if (lastEntity) {
-                lastEntity.highlighted = false;
-                lastEntity = null;
+                lastEntity.colorize = lastColorize;
             }
+
+            lastEntity = pickResult.entity;
+        
+
+            pickResult.entity.colorize = [1.0, 1.0, 1.0];
         }
     });
+
+    viewer.cameraControl.on("hoverOff", (e) => {
+
+        if (lastEntity) {
+            lastEntity.colorize = lastColorize;
+        }
+
+        lastEntity = null;
+        lastColorize = null;
+    });
+
 }

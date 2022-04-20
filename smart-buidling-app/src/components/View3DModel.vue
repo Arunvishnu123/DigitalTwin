@@ -23,32 +23,32 @@ export default {
     model:null
   }),
   mounted() {
-    this.viewer = new Viewer({
+    store.state.viewer = new Viewer({
       canvasId: "myCanvas",
     });
 
-    store.state.viewer = this.viewer;
 
-    this.viewer.scene.edgeMaterial.edges = false;
-    ContextMenuCanvas.contextMenu3dModel(this.viewer);
+
+    store.state.viewer.scene.edgeMaterial.edges = false;
+    ContextMenuCanvas.contextMenu3dModel(store.state.viewer);
     // display 3d model
-     this.model = display3d.display3d(this.viewer);
-    selectObjects.selectObects(this.viewer);
-    ContextMenu3DModel.contextMenu3dModel(this.model, this.viewer);
+     store.state.model = display3d.display3d(store.state.viewer);
+    selectObjects.selectObects(store.state.viewer);
+    ContextMenu3DModel.contextMenu3dModel(this.model, store.state.viewer);
 
     // NavCuve visualization
-    NavCube.navCubeView("NavCubeCanvas", this.viewer);
+    NavCube.navCubeView("NavCubeCanvas", store.state.viewer);
     // Axis visualization
-    AxisView.viewAxis("AxisGizmoCanvas", this.viewer);
-    //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.     model);
-    window.viewer = this.viewer;
+    AxisView.viewAxis("AxisGizmoCanvas", store.state.viewer);
+    //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.model);
+    window.viewer = store.state.viewer;
   },
 
   methods: {
     view() {
-      const eye = this.viewer.camera.eye;
-      const look = this.viewer.camera.look;
-      const up = this.viewer.camera.up;
+      const eye = store.state.viewer.camera.eye;
+     // const look = this.viewer.camera.look;
+      //const up = this.viewer.camera.up;
       console.log("eye", eye);
       console.log("look", look);
       console.log("up", up);

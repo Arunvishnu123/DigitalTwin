@@ -9,11 +9,18 @@ const store = new Vuex.Store({
     openDrawer: false,
 
     // 3d model viewer 
-    viewer: null
+    viewer: null,
+    model:null,
+
+    //floor wise selection 
+    selection:null
   },
   actions: {
   
-
+createFloorView(){
+  console.log(this.state.selection)
+  floorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.state.viewer,this.state.model);
+}
   }
 })
 export default store;

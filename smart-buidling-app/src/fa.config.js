@@ -3,7 +3,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { faUser, faBars,faBuilding } from '@fortawesome/free-solid-svg-icons'
-import { faUserCircle, faCheckCircle } from '@fortawesome/free-regular-svg-icons'
+import { faUserCircle, faCheckCircle} from '@fortawesome/free-regular-svg-icons'
+
 
 library.add(
   faUser,
@@ -11,6 +12,7 @@ library.add(
   faUserCircle,
   faCheckCircle,
   faBars
+
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon); // registered globallys
