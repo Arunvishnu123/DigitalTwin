@@ -19,7 +19,10 @@ const store = new Vuex.Store({
     contextMenuSelection: false,
 
     //context menu object
-    objectContextMenu:null
+    objectContextMenu:null,
+
+    //temperature montioring open drawer
+    tempdisplay : false
   },
   actions: {
 

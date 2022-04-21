@@ -15,7 +15,7 @@ export function contextMenufirstFloor(viewer) {
                         return "Temperature";
                     },
                     doAction: (context) => {
-                       store.state.testDialog = true
+                        store.state.tempdisplay = true
                         
                     }
                 },
