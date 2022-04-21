@@ -32,16 +32,16 @@ export default {
         store.state.viewer.scene.edgeMaterial.edges = false;
 
         store.state.viewer.scene.sao.enabled  = true
-        new AmbientLight(store.state.viewer.scene, {
-            color: [0.9, 0.9, 0.9],
-            intensity: 0.9
-        });
-        new DirLight(store.state.viewer.scene, {
-            dir: [0.8, -.5, -0.5],
-            color: [0.67, 0.67, 1.0],
-            intensity: 0.7,
-            space: "world"
-        });
+        // new AmbientLight(store.state.viewer.scene, {
+        //     color: [1, 1, 1],
+        //     intensity: 0.9
+        // });
+        // new DirLight(store.state.viewer.scene, {
+        //     dir: [0.8, -.5, -0.5],
+        //     color: [1, 1, 1.0],
+        //     intensity: 0.7,
+        //     space: "world"
+        // });
 
         ContextMenuCanvas.contextMenu3dModel(store.state.viewer);
         // display 3d model

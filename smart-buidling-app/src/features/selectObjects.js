@@ -15,7 +15,7 @@ export function selectObects(viewer) {
             lastEntity = pickResult.entity;
         
 
-            pickResult.entity.colorize = [1.0, 1.0, 1.0];
+            pickResult.entity.colorize = [0, 1.0, 1.0];
         }
     });
 

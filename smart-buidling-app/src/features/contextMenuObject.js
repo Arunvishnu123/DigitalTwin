@@ -2,7 +2,7 @@ import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
 import "../assets/xeokit-context-menu.css"
-import * as FloorView from "../features/floorView";
+import store from "../store/index"
 
 export function contextMenu3dModel(model,viewer) {
     const objectContextMenu = new ContextMenu({
@@ -17,13 +17,6 @@ export function contextMenu3dModel(model,viewer) {
                         console.log(context.viewer.metaScene.metaObjects[objectId]);
                         console.log("test")
                     }
-                },
-                {
-                    title: "IsolateFloor",
-                    doAction: function (context) {
-                       
-                      console.log("testzsdfdsfs")
-                    }
                 }
             ],
             [
@@ -35,7 +28,43 @@ export function contextMenu3dModel(model,viewer) {
                         });
                     }
                 }
-            ]
+            ],
+            [
+                {
+                    title: "Hide",
+                    doAction: function (context) {
+                        context.entity.visible = false;
+                    }
+                },
+                {
+                    title: "Hide Others",
+                    doAction: function (context) {
+                        const viewer = context.viewer;
+                        const scene = viewer.scene;
+                        const entity = context.entity;
+                        const metaObject = viewer.metaScene.metaObjects[entity.id];
+                        if (!metaObject) {
+                            return;
+                        }
+                        scene.setObjectsVisible(scene.visibleObjectIds, false);
+                        metaObject.withMetaObjectsInSubtree((metaObject) => {
+                            const entity = scene.objects[metaObject.id];
+                            if (entity) {
+                                entity.visible = true;
+                            }
+                        }); 
+                    }
+                },
+                {
+                    title: "Hide All",
+                    getEnabled: function (context) {
+                        return (context.viewer.scene.visibleObjectIds.length > 0);
+                    },
+                    doAction: function (context) {
+                        context.viewer.scene.setObjectsVisible(context.viewer.scene.visibleObjectIds, false);
+                    }
+                }
+            ],
         ]
     });
     viewer.cameraControl.on("rightClick", function (e) {
