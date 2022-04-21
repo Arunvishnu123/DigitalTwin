@@ -3,9 +3,10 @@ import {
 } from "@xeokit/xeokit-sdk/";
 import "../assets/xeokit-context-menu.css"
 import store from "../store/index"
+import * as ContextMenuParameters from "../features/contextMenuParameters";
 
 export function contextMenu3dModel(model, viewer) {
-    const objectContextMenu = new ContextMenu({
+    store.state.objectContextMenu = new ContextMenu({
         items: [
             [
                 {
@@ -148,23 +149,65 @@ export function contextMenu3dModel(model, viewer) {
                     }
                 }
             ],
-           
+
+            [
+
+                {
+
+                    getTitle: (context) => {
+                        return "Fourth Floor";
+                    },
+
+                    doAction: function (context) {
+
+                    },
+
+                    items: [
+
+                        [
+
+                            {
+                                getTitle: (context) => {
+                                    return "Room No - 421"
+                                },
+
+                                doAction: function (context) {
+                                    store.state.objectContextMenu.enabled = false
+                                    ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
+                                    viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
+                                    viewer.camera.look = [1838784.212
+                                        , 17.40368311
+                                        , -5156525.627
+                                    ];
+                                    viewer.camera.up = [-0.040127462
+                                        , 0.990154669
+                                        , -0.134102643
+                                    ];
+                                }
+                            },
+
+
+                        ]
+                    ]
+                }
+            ]
+
         ]
     });
     viewer.cameraControl.on("rightClick", function (e) {
-
+    console.log("ee", e)
         var hit = viewer.scene.pick({
             canvasPos: e.canvasPos
         });
 
         if (hit && hit.entity.isObject) {
 
-            objectContextMenu.context = { // Must set context before showing menu
+            store.state.objectContextMenu.context = { // Must set context before showing menu
                 viewer: viewer,
                 entity: hit.entity
             };
 
-            objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
+            store.state.objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
         }
 
         e.event.preventDefault();

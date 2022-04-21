@@ -5,7 +5,7 @@ import "../assets/xeokit-context-menu.css"
 import store from "../store/index"
 
 export function contextMenufirstFloor(viewer) {
-    const objectContextMenu = new ContextMenu({
+    const parameterContextMenu = new ContextMenu({
 
         items: [
             [
@@ -32,11 +32,14 @@ export function contextMenufirstFloor(viewer) {
             ],
             [
                 {
-                    title: "View Fit All",
+                    title: "Reset View",
                     doAction: function (context) {
-                        context.viewer.cameraFlight.flyTo({
-                            aabb: context.viewer.scene.getAABB()
-                        });
+                        viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
+                        viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
+                        viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
+                        parameterContextMenu.enabled = false
+                        store.state.objectContextMenu.enabled = true
+                       
                     }
                 }
             ]
@@ -47,16 +50,16 @@ export function contextMenufirstFloor(viewer) {
         var hit = viewer.scene.pick({
             canvasPos: e.canvasPos
         });
+                       
+    
 
-        if (hit && hit.entity.isObject) {
-
-            objectContextMenu.context = { // Must set context before showing menu
+        parameterContextMenu.context = { // Must set context before showing menu
                 viewer: viewer,
                 entity: hit.entity
             };
 
-            objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
-        }
+            parameterContextMenu.show(e.pagePos[0], e.pagePos[1]);
+        
 
         e.event.preventDefault();
 

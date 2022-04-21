@@ -16,6 +16,7 @@ import store from "../store/index";
 import * as FloorView from "../features/floorView";
 import * as NavCube from "../features/navCube";
 import * as AxisView from "../features/axisView";
+import * as ContextMenuParameters from "../features/contextMenuParameters"
 
 export default {
   data: () => ({
@@ -48,7 +49,14 @@ export default {
     // display 3d model
     store.state.model = display3d.display3d(store.state.viewer);
     selectObjects.selectObects(store.state.viewer);
-    ContextMenu3DModel.contextMenu3dModel(this.model, store.state.viewer);
+    if(store.state.contextMenuSelection == false){
+    ContextMenu3DModel.contextMenu3dModel(store.state.model, store.state.viewer);
+    } else {
+        ContextMenuParameters.contextMenufirstFloor(store.state.viewer)
+        //ContextMenu3DModel.contextMenu3dModel(this.model, store.state.viewer);
+    }
+
+
 
     // NavCuve visualization
     NavCube.navCubeView("NavCubeCanvas", store.state.viewer);
