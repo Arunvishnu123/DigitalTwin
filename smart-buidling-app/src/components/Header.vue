@@ -1,7 +1,7 @@
 <template>
 <div>
     <w-app class="main">
-        <w-tag xl height="2em" class="label mr4" bg-color="primary">Three Dimensional View of Ecole Des Mines in Saint-Etienne</w-tag>
+        <w-tag xl height="2em" class="label mr4" bg-color="primary">Ecole Des Mines in Saint-Etienne</w-tag>
         <w-button @click="$store.state.openDrawer = 'left'" class="bnavbar">
             <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>
         </w-button>

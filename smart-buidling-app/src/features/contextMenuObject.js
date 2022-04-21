@@ -4,14 +4,14 @@ import {
 import "../assets/xeokit-context-menu.css"
 import store from "../store/index"
 
-export function contextMenu3dModel(model,viewer) {
+export function contextMenu3dModel(model, viewer) {
     const objectContextMenu = new ContextMenu({
         items: [
             [
                 {
                     title: "Inspect Properties",
                     doAction: (context) => {
-                        console.log("doactioncontext",context)
+                        console.log("doactioncontext", context)
                         const objectId = context.entity.id;
                         console.log(objectId)
                         console.log(context.viewer.metaScene.metaObjects[objectId]);
@@ -52,7 +52,7 @@ export function contextMenu3dModel(model,viewer) {
                             if (entity) {
                                 entity.visible = true;
                             }
-                        }); 
+                        });
                     }
                 },
                 {
@@ -151,6 +151,33 @@ export function contextMenu3dModel(model,viewer) {
                     }
                 }
             ],
+            [
+                {
+                    title: "Reset View",
+                    doAction: function (context) {
+                        viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
+                        viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
+                        viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
+                        // context.viewer.cameraFlight.flyTo({
+                        //     aabb: context.viewer.scene.getAABB()
+                        // });
+                    }
+                }
+            ],
+
+            [
+                {
+                    title: "Capture Current View",
+                    doAction: function (context) {
+                        const eye = store.state.viewer.camera.eye;
+                        const look = store.state.viewer.camera.look;
+                        const up = store.state.viewer.camera.up;
+                        console.log("eye", eye);
+                        console.log("look", look);
+                        console.log("up", up);
+                    }
+                }
+            ]
         ]
     });
     viewer.cameraControl.on("rightClick", function (e) {
@@ -158,7 +185,7 @@ export function contextMenu3dModel(model,viewer) {
         var hit = viewer.scene.pick({
             canvasPos: e.canvasPos
         });
-  
+
         if (hit && hit.entity.isObject) {
 
             objectContextMenu.context = { // Must set context before showing menu
@@ -166,8 +193,8 @@ export function contextMenu3dModel(model,viewer) {
                 entity: hit.entity
             };
 
-             objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
-         }
+            objectContextMenu.show(e.pagePos[0], e.pagePos[1]);
+        }
 
         e.event.preventDefault();
     });
