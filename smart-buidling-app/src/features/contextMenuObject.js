@@ -63,6 +63,92 @@ export function contextMenu3dModel(model,viewer) {
                     doAction: function (context) {
                         context.viewer.scene.setObjectsVisible(context.viewer.scene.visibleObjectIds, false);
                     }
+                },
+                {
+                    title: "Show All",
+                    getEnabled: function (context) {
+                        const scene = context.viewer.scene;
+                        return (scene.numVisibleObjects < scene.numObjects);
+                    },
+                    doAction: function (context) {
+                        const scene = context.viewer.scene;
+                        scene.setObjectsVisible(scene.objectIds, true);
+                        scene.setObjectsXRayed(scene.xrayedObjectIds, false);
+                        scene.setObjectsSelected(scene.selectedObjectIds, false);
+                        store.state.selection = 0
+                    }
+                }
+            ],
+            [
+                {
+                    getTitle: (context) => {
+                        return context.viewer.localeService.translate("objectContextMenu.xray") || "X-Ray";
+                    },
+                    getEnabled: (context) => {
+                        return (!context.entity.xrayed);
+                    },
+                    doAction: (context) => {
+                        const entity = context.entity;
+                        entity.xrayed = true;
+                        entity.pickable = context.bimViewer.getConfig("xrayPickable");
+                    }
+                },
+                {
+                    getTitle: (context) => {
+                        return context.viewer.localeService.translate("objectContextMenu.xrayOthers") || "X-Ray Others";
+                    },
+                    doAction: (context) => {
+                        const viewer = context.viewer;
+                        const scene = viewer.scene;
+                        const entity = context.entity;
+                        const metaObject = viewer.metaScene.metaObjects[entity.id];
+                        if (!metaObject) {
+                            return;
+                        }
+                        scene.setObjectsVisible(scene.objectIds, true);
+                        scene.setObjectsXRayed(scene.objectIds, true);
+                        if (!context.bimViewer.getConfig("xrayPickable")) {
+                            scene.setObjectsPickable(scene.objectIds, false);
+                        }
+                        metaObject.withMetaObjectsInSubtree((metaObject) => {
+                            const entity = scene.objects[metaObject.id];
+                            if (entity) {
+                                entity.xrayed = false;
+                                entity.pickable = true;
+                            }
+                        });
+                    }
+                },
+                {
+                    getTitle: (context) => {
+                        return context.viewer.localeService.translate("objectContextMenu.xrayAll") || "X-Ray All";
+                    },
+                    getEnabled: (context) => {
+                        const scene = context.viewer.scene;
+                        return (scene.numXRayedObjects < scene.numObjects);
+                    },
+                    doAction: (context) => {
+                        const scene = context.viewer.scene;
+                        scene.setObjectsVisible(scene.objectIds, true);
+                        if (!context.bimViewer.getConfig("xrayPickable")) {
+                            scene.setObjectsPickable(scene.objectIds, false);
+                        }
+                        scene.setObjectsXRayed(scene.objectIds, true);
+                    }
+                },
+                {
+                    getTitle: (context) => {
+                        return context.viewer.localeService.translate("objectContextMenu.xrayNone") || "X-Ray None";
+                    },
+                    getEnabled: (context) => {
+                        return (context.viewer.scene.numXRayedObjects > 0);
+                    },
+                    doAction: (context) => {
+                        const scene = context.viewer.scene;
+                        const xrayedObjectIds = scene.xrayedObjectIds;
+                        scene.setObjectsPickable(xrayedObjectIds, true);
+                        scene.setObjectsXRayed(xrayedObjectIds, false);
+                    }
                 }
             ],
         ]
