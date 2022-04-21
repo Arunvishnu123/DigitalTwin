@@ -40,13 +40,56 @@ export function contextMenu3dModel(viewer) {
                 {
                     title: "Intial View",
                     doAction: function (context) {
-                        viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
-                        viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
-                        viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
+                        context.viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
+                        context.viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
+                        context.viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
                         // context.viewer.cameraFlight.flyTo({
                         //     aabb: context.viewer.scene.getAABB()
                         // });
                     }
+                }
+            ],
+            [ // Group
+
+                // Per-object emphasis effects
+
+                { // Item
+
+                    getTitle: (context) => {
+                        return "Fourth Floor";
+                    },
+
+                    doAction: function (context) {
+                        // Does nothing
+                    },
+
+                    items: [ // Sub-menu
+
+                        [ // Group
+
+                            // Show/hide object
+
+                            {
+                                getTitle: (context) => {
+                                    return "Room No - 421"
+                                },
+
+                                doAction: function (context) {
+                                    viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
+                                    viewer.camera.look = [1838784.212
+                                        , 17.40368311
+                                        , -5156525.627
+                                    ];
+                                    viewer.camera.up = [-0.040127462
+                                        , 0.990154669
+                                        , -0.134102643
+                                    ];
+                                }
+                            },
+
+
+                        ]
+                    ]
                 }
             ]
         ]

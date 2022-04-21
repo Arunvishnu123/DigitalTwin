@@ -82,20 +82,7 @@ export function contextMenu3dModel(model, viewer) {
             [
                 {
                     getTitle: (context) => {
-                        return context.viewer.localeService.translate("objectContextMenu.xray") || "X-Ray";
-                    },
-                    getEnabled: (context) => {
-                        return (!context.entity.xrayed);
-                    },
-                    doAction: (context) => {
-                        const entity = context.entity;
-                        entity.xrayed = true;
-                        entity.pickable = context.bimViewer.getConfig("xrayPickable");
-                    }
-                },
-                {
-                    getTitle: (context) => {
-                        return context.viewer.localeService.translate("objectContextMenu.xrayOthers") || "X-Ray Others";
+                        return context.viewer.localeService.translate("objectContextMenu.xrayOthers") || "X-Ray";
                     },
                     doAction: (context) => {
                         const viewer = context.viewer;
@@ -117,23 +104,6 @@ export function contextMenu3dModel(model, viewer) {
                                 entity.pickable = true;
                             }
                         });
-                    }
-                },
-                {
-                    getTitle: (context) => {
-                        return context.viewer.localeService.translate("objectContextMenu.xrayAll") || "X-Ray All";
-                    },
-                    getEnabled: (context) => {
-                        const scene = context.viewer.scene;
-                        return (scene.numXRayedObjects < scene.numObjects);
-                    },
-                    doAction: (context) => {
-                        const scene = context.viewer.scene;
-                        scene.setObjectsVisible(scene.objectIds, true);
-                        if (!context.bimViewer.getConfig("xrayPickable")) {
-                            scene.setObjectsPickable(scene.objectIds, false);
-                        }
-                        scene.setObjectsXRayed(scene.objectIds, true);
                     }
                 },
                 {
@@ -177,7 +147,8 @@ export function contextMenu3dModel(model, viewer) {
                         console.log("up", up);
                     }
                 }
-            ]
+            ],
+           
         ]
     });
     viewer.cameraControl.on("rightClick", function (e) {
