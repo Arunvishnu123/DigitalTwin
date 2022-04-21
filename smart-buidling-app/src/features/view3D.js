@@ -10,7 +10,7 @@ export function display3d(viewer) {
 
         objectDefaults: { // <<----- Only override color of IfcSpace elements, keep other original IFC colors
 
-            IfcSpace: {     
+            IfcSpace: {
 
             },
 
@@ -30,14 +30,17 @@ export function display3d(viewer) {
         saoEnabled: true,
         metaModelSrc: "src/assets/final.json",
         excludeTypes: ["IfcSpace"],
-        objectDefaults: {IfcSlab: {
-            colorize: [0.337255, 0.303922, 0.870588], // Blue
-        }},
+        objectDefaults: {
+            IfcSlab: {
+                colorize: [150, 146, 146], // Blue
+            },
+    
+        },
     });
-    viewer.cameraControl.followPointer = true;
-    viewer.scene.highlightMaterial.fill = false;
-    viewer.scene.highlightMaterial.fillAlpha = 0.3;
-    viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
+viewer.cameraControl.followPointer = true;
+viewer.scene.highlightMaterial.fill = false;
+viewer.scene.highlightMaterial.fillAlpha = 0.3;
+viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
 
 return model 
 }
