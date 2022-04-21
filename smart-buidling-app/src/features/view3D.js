@@ -17,7 +17,11 @@ export function display3d(viewer) {
             IfcWindow: {
                 pickable: false,
                 opacity: 0.1
-            }
+            },
+            IfcSlab: {
+                colorize: [0.337255, 0.303922, 0.870588], // Blue
+                opacity: 0.3
+            },
         }
     });
     const model = xktLoader.load({
@@ -26,7 +30,9 @@ export function display3d(viewer) {
         saoEnabled: true,
         metaModelSrc: "src/assets/final.json",
         excludeTypes: ["IfcSpace"],
-        objectDefaults: {},
+        objectDefaults: {IfcSlab: {
+            colorize: [0.337255, 0.303922, 0.870588], // Blue
+        }},
     });
     viewer.cameraControl.followPointer = true;
     viewer.scene.highlightMaterial.fill = false;
