@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import { Viewer, Skybox, Mesh,
-        ReadableGeometry,buildPlaneGeometry , PhongMaterial} from "@xeokit/xeokit-sdk/";
+import { Viewer, Skybox,PerformanceModel,
+         ImagePlane} from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextMenu3DModel";
@@ -29,6 +29,12 @@ export default {
       canvasId: "myCanvas",
       transparent: true,
       saoEnabled: true,
+    });
+
+     const performanceModel = new PerformanceModel(store.state.viewer.scene, {
+        id: "model",
+        isModel: true, // <--------------------- Represents a model, registers PerformanceModel by ID on viewer.scene.models
+         rotation: [0, 0, 0],
     });
 
     const cameraControl = store.state.viewer.cameraControl;
@@ -119,19 +125,19 @@ export default {
       src: "src/assets/cloudySkyBox.jpg",
       size: 1000,
     });
-   new Mesh(store.state.viewer.scene, {
-        geometry: new ReadableGeometry(store.state.viewer.scene, buildPlaneGeometry({
-            xSize: 19000000,
-            zSize: 35000000
-        })),
-        material: new PhongMaterial(store.state.viewer.scene, {
-            diffuse: [0.2, 0.7, 0.2],
-            backfaces: true
-        }),
-        position: [0, -60.25278768461993, -5156526.636644002],
-        pickable: false,
-        collidable: false
+  // 
+  
+  new ImagePlane(store.state.viewer.scene, {
+        src: "src/assets/1.jpg",
+        size: 3000,
+        position: [1838775.8837769788, -60.25278768461993, -5156526.636644002],
+        rotation: [0, 0, 0], // X, Y and Z
+        opacity: 1.0,
+        collidable: false,
+        gridVisible: false,
+        pickable: true
     });
+
     ContextMenuCanvas.contextMenu3dModel(store.state.viewer);
     // display 3d model
     store.state.model = display3d.display3d(store.state.viewer);
