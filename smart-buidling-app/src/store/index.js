@@ -25,7 +25,10 @@ const store = new Vuex.Store({
     tempdisplay : false,
 
     //luminance montioring 
-    luminancedisplay:false
+    luminancedisplay:false,
+
+    //humidity
+    humiditydisplay:false
   },
   actions: {
 

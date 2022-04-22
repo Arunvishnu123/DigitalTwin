@@ -5,6 +5,7 @@
         <Display3d />
         <TemperatureMonitoring />
         <LuminanceMonitoring />
+        <HumidityMonitoring />
       
     </w-app>
 </div>
@@ -15,13 +16,15 @@ import NavBar from "../components/Header.vue";
 import Display3d from "../components/View3DModel.vue";
 import TemperatureMonitoring from "../components/TemperatureMontioring.vue"
 import LuminanceMonitoring from "../components/LuminanceMonitoring.vue" 
+import HumidityMonitoring from "../components/HumidityMonitoring.vue"
 
 export default {
     components: {
         Display3d,
         NavBar,
         TemperatureMonitoring,
-        LuminanceMonitoring 
+        LuminanceMonitoring,
+        HumidityMonitoring
 
     },
     data: () => ({}),

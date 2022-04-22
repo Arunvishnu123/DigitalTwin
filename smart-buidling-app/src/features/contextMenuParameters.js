@@ -21,7 +21,8 @@ export function contextMenufirstFloor(viewer) {
                 },
                 {
                     title: "Humidity",                
-                    doAction: function (context) {                       
+                    doAction: function (context) {       
+                        store.state.humiditydisplay = true                
                     }
                 },
                 {
