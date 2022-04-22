@@ -7,7 +7,7 @@
             <w-tag xl height="2em" class="luminance" bg-color="primary">Luminance Monitoring</w-tag>
             <iframe src="http://193.49.165.77:8080/analyzer/?items=emse_fayol_4ET_408_mqtt_light&chartType=&coordSystem=" width="100%" height="100%">
             </iframe>
-            <w-tag xl height="2em" class="hide" color="white" bg-color="red">408 Humidity Monitoring</w-tag>
+            <w-tag xl height="2em" class="hide1" color="white" bg-color="red">408 Humidity Monitoring</w-tag>
         </w-flex>
     </w-drawer>
 </div>
@@ -36,7 +36,7 @@ export default {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.hide {
+.hide1 {
     z-index: 20000040;
     position: absolute;
     top: 35px;
