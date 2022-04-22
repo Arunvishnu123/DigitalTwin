@@ -202,4 +202,27 @@ export default {
   top: 645px;
   z-index: 200000;
 }
+
+@media only screen and  (min-width: 1100px) {
+#NavCubeCanvas {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 100px;
+  left: 1310px;
+  top: 445px;
+  z-index: 200000;
+}
+
+#AxisGizmoCanvas {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 100px;
+  left: 30px;
+  top: 445px;
+  z-index: 200000;
+}
+}
+
 </style>
