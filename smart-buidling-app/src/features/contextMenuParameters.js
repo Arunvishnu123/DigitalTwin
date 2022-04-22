@@ -20,13 +20,14 @@ export function contextMenufirstFloor(viewer) {
                     }
                 },
                 {
-                    title: "Humidity",
-                    getEnabled: function (context) {
-                        const scene = context.viewer.scene;
-                        return (scene.numVisibleObjects < scene.numObjects);
-                    },
-                    doAction: function (context) {
-                        
+                    title: "Humidity",                
+                    doAction: function (context) {                       
+                    }
+                },
+                {
+                    title: "Luminance",                   
+                    doAction: function (context) {   
+                        store.state.luminancedisplay  = true                    
                     }
                 }
             ],

@@ -4,6 +4,7 @@
         <nav-bar></nav-bar>
         <Display3d />
         <TemperatureMonitoring />
+        <LuminanceMonitoring />
       
     </w-app>
 </div>
@@ -13,12 +14,15 @@
 import NavBar from "../components/Header.vue";
 import Display3d from "../components/View3DModel.vue";
 import TemperatureMonitoring from "../components/TemperatureMontioring.vue"
+import LuminanceMonitoring from "../components/LuminanceMonitoring.vue" 
 
 export default {
     components: {
         Display3d,
         NavBar,
-        TemperatureMonitoring
+        TemperatureMonitoring,
+        LuminanceMonitoring 
+
     },
     data: () => ({}),
     computed: {},
