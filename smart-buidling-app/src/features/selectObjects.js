@@ -2,7 +2,7 @@ export function selectObects(viewer) {
     var lastEntity = null;
     var lastColorize = null;
 
-    viewer.cameraControl.on("hover", (pickResult) => {
+    viewer.cameraControl.on("picked", (pickResult) => {
 
         console.log(pickResult.entity.id);
 
@@ -15,11 +15,11 @@ export function selectObects(viewer) {
             lastEntity = pickResult.entity;
         
 
-            pickResult.entity.colorize = [0, 1.0, 1.0];
+            pickResult.entity.colorize = [0,0,0];
         }
     });
 
-    viewer.cameraControl.on("hoverOff", (e) => {
+    viewer.cameraControl.on("pickedNothing", (e) => {
 
         if (lastEntity) {
             lastEntity.colorize = lastColorize;

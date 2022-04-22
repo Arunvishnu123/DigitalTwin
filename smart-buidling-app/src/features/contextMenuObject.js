@@ -12,6 +12,10 @@ export function contextMenu3dModel(model, viewer) {
                 {
                     title: "Inspect Properties",
                     doAction: (context) => {
+                        viewer.cameraControl.navMode = "planView"
+                        IfcFlowTerminal:{
+                         visible:false   
+                        }
                         console.log("doactioncontext", context)
                         const objectId = context.entity.id;
                         console.log(objectId)

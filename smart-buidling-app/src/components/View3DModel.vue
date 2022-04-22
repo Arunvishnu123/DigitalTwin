@@ -7,12 +7,8 @@
 </template>
 
 <script>
-import {
-  Viewer,
-  Skybox,
-  DirLight,
-  AmbientLight,
-} from "@xeokit/xeokit-sdk/";
+import { Viewer, Skybox, Mesh,
+        ReadableGeometry,buildPlaneGeometry , PhongMaterial} from "@xeokit/xeokit-sdk/";
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextMenu3DModel";
@@ -85,9 +81,9 @@ export default {
     sao.scale = 10.0;
     sao.minResolution = 0.0;
     sao.numSamples = 10;
-    sao.kernelRadius =1000;
+    sao.kernelRadius = 1000;
     sao.blendCutoff = 1;
-    sao.blendFactor= 0.9;
+    sao.blendFactor = 0.9;
 
     cameraControl.followPointer = true;
     camera.perspective.near = 0.1;
@@ -119,9 +115,22 @@ export default {
     //     space: "world",
     // });
 
-    new Skybox(store.state.viewer.scene, {
+    const skybox = new Skybox(store.state.viewer.scene, {
       src: "src/assets/cloudySkyBox.jpg",
       size: 1000,
+    });
+   new Mesh(store.state.viewer.scene, {
+        geometry: new ReadableGeometry(store.state.viewer.scene, buildPlaneGeometry({
+            xSize: 19000000,
+            zSize: 35000000
+        })),
+        material: new PhongMaterial(store.state.viewer.scene, {
+            diffuse: [0.2, 0.7, 0.2],
+            backfaces: true
+        }),
+        position: [0, -60.25278768461993, -5156526.636644002],
+        pickable: false,
+        collidable: false
     });
     ContextMenuCanvas.contextMenu3dModel(store.state.viewer);
     // display 3d model

@@ -28,15 +28,18 @@ const store = new Vuex.Store({
 
     createFloorView() {
       console.log(this.state.selection)
-
+    
       if (this.state.selection == 1) {
         floorView.floorView("3_b98WEDT7feUaJ_WJe3S2", this.state.viewer, this.state.model);
+      
       }
       if (this.state.selection == 2) {
         floorView.floorView("3_b98WEDT7feUaJ_WJe2lo", this.state.viewer, this.state.model);
+       
       }
       if (this.state.selection == 3) {
         floorView.floorView("3_b98WEDT7feUaJ_WJe22_", this.state.viewer, this.state.model);
+   
       }
       if (this.state.selection == 4) {
         floorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.state.viewer, this.state.model);
