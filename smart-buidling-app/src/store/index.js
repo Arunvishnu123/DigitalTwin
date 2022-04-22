@@ -28,7 +28,10 @@ const store = new Vuex.Store({
     luminancedisplay:false,
 
     //humidity
-    humiditydisplay:false
+    humiditydisplay:false,
+    //room display
+    roomdisplay:false
+    
   },
   actions: {
 

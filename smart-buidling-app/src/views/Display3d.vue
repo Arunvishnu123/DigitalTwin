@@ -6,6 +6,7 @@
         <TemperatureMonitoring />
         <LuminanceMonitoring />
         <HumidityMonitoring />
+        <RoomMontoring />
       
     </w-app>
 </div>
@@ -17,6 +18,7 @@ import Display3d from "../components/View3DModel.vue";
 import TemperatureMonitoring from "../components/TemperatureMontioring.vue"
 import LuminanceMonitoring from "../components/LuminanceMonitoring.vue" 
 import HumidityMonitoring from "../components/HumidityMonitoring.vue"
+import RoomMontoring from "../components/RoomDetails.vue"
 
 export default {
     components: {
@@ -24,7 +26,8 @@ export default {
         NavBar,
         TemperatureMonitoring,
         LuminanceMonitoring,
-        HumidityMonitoring
+        HumidityMonitoring,
+        RoomMontoring
 
     },
     data: () => ({}),

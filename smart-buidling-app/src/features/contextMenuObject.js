@@ -13,14 +13,19 @@ export function contextMenu3dModel(model, viewer) {
                     title: "Inspect Properties",
                     doAction: (context) => {
                         viewer.cameraControl.navMode = "planView"
-                        IfcFlowTerminal:{
-                         visible:false   
-                        }
                         console.log("doactioncontext", context)
                         const objectId = context.entity.id;
                         console.log(objectId)
                         console.log(context.viewer.metaScene.metaObjects[objectId]);
                         console.log("test")
+                    }
+                }
+            ],
+            [
+                {
+                    title: "Plan View",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "planView"
                     }
                 }
             ],
@@ -33,7 +38,19 @@ export function contextMenu3dModel(model, viewer) {
                         });
                     }
                 }
-            ],
+            ],[{
+                title: "Fly to Object",
+                doAction: function (context) {
+                    const viewer = context.viewer;
+                    const entity = context.entity;
+                    viewer.cameraFlight.flyTo({
+                        aabb: entity.aabb,
+                        duration: 0.5
+                    }, () => {
+                    });
+                }
+            }],
+
             [
                 {
                     title: "Hide",
@@ -130,6 +147,7 @@ export function contextMenu3dModel(model, viewer) {
                 {
                     title: "Reset View",
                     doAction: function (context) {
+                        viewer.cameraControl.navMode = "orbit"
                         viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
                         viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
                         viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];

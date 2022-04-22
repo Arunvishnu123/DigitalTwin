@@ -30,6 +30,12 @@ export function contextMenufirstFloor(viewer) {
                     doAction: function (context) {   
                         store.state.luminancedisplay  = true                    
                     }
+                },
+                {
+                    title: "Room Details",                   
+                    doAction: function (context) {   
+                        store.state.roomdisplay  = true                    
+                    }
                 }
             ],
             [
