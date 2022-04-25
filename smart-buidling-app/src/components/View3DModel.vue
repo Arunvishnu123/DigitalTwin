@@ -154,17 +154,17 @@ export default {
             }
         });
   
-        store.state.viewer.cameraControl.on("hover", (pickResult) => {
-            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
-                this.t = true
-                console.log(this.t)
-                console.log("id clicked");
-            } else {
-                this.t = false
-                console.log(this.t)
-                console.log("notclcickedd")
-            }
-        })
+        // store.state.viewer.cameraControl.on("hover", (pickResult) => {
+        //     if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
+        //         this.t = true
+        //         console.log(this.t)
+        //         console.log("id clicked");
+        //     } else {
+        //         this.t = false
+        //         console.log(this.t)
+        //         console.log("notclcickedd")
+        //     }
+        // })
 
         //CreateAnnotation.createAnnotation()
 

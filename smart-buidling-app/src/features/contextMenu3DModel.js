@@ -4,6 +4,7 @@ import {
 import "../assets/xeokit-context-menu.css"
 import store from "../store/index"
 import * as ContextMenuParameters from "../features/contextMenuParameters";
+import * as cameraFlight from  "../features/cameraAnimation"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
@@ -47,6 +48,14 @@ export function contextMenu3dModel(viewer) {
                         // context.viewer.cameraFlight.flyTo({
                         //     aabb: context.viewer.scene.getAABB()
                         // });
+                    }
+                }
+            ],
+            [
+                {
+                    title: "Virtual Visit",
+                    doAction: function (context) {
+                        cameraFlight.cameraPathAnimation()
                     }
                 }
             ],
