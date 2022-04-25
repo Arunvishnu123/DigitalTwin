@@ -4,10 +4,10 @@
         <w-button @click="$store.state.luminancedisplay = false" sm outline round bg-color="white" absolute icon="wi-cross">
         </w-button>
         <w-flex column>
-            <w-tag xl height="2em" class="luminance" bg-color="primary">Luminance Monitoring</w-tag>
+            <w-tag xl height="2em" class="luminance" bg-color="primary">Room No - 408 Real Time Data</w-tag>
             <iframe src="http://193.49.165.77:8080/analyzer/?items=emse_fayol_4ET_408_mqtt_light&chartType=&coordSystem=" width="100%" height="100%">
             </iframe>
-            <w-tag xl height="2em" class="hide1" color="white" bg-color="red">408 Humidity Monitoring</w-tag>
+            <w-tag xl height="2.5em" class="hide2" color="white" bg-color="primary">Luminance Monitoring</w-tag>
         </w-flex>
     </w-drawer>
 </div>
@@ -36,8 +36,8 @@ export default {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.hide1 {
-    z-index: 20000040;
+.hide2 {
+    z-index: 20000050;
     position: absolute;
     top: 35px;
     width: 100%;

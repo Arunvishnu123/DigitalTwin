@@ -6,7 +6,7 @@
                 <w-tag xl height="2em" class="label1" bg-color="primary">Floor Selection</w-tag>
                 <w-button class="cross" @click="$store.state.openDrawer = false" bg-color="white" outline absolute round icon="wi-cross">
                 </w-button>
-                <w-radios class = "checkboxes" v-model="$store.state.selection" :items="radioItems">
+                <w-radios class="checkboxes" v-model="$store.state.selection" :items="radioItems">
                 </w-radios>
 
                 <w-button @click="floorView()" :loading="button2loading" class="updateButton">Update Model</w-button>

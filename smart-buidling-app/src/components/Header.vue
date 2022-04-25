@@ -55,7 +55,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-@media only screen and  (min-width: 1100px) {
+@media only screen and  (max-width: 1100px) {
   .bnavbar {
     left: -736px;
     top: -30px;
