@@ -41,6 +41,6 @@ export default {
 .close {
     position: relative;
     top: -390px;
-    left:470px
+    left: 470px
 }
 </style>

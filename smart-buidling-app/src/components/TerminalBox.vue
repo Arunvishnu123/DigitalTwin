@@ -31,26 +31,20 @@ export default {
                 },
             },
             commands: [{
-                    name: "info",
-                    get() {
-                        // this.test()
-
-                        const storeyViewsPlugin = new StoreyViewsPlugin(store.state.viewer);
-                        storeyViewsPlugin.showStoreyObjects("3_b98WEDT7feUaJ_WJe3S2", {
-                            hideOthers: true,
-                            useObjectStates: false,
-                        });
-                        console.log("test");
-                        return `<p>With ❤️ By Salah Bentayeb @halasproject.</p>`;
-                    },
+                name: "fourth",
+                get() {
+                    const storeyViewsPlugin = new StoreyViewsPlugin(store.state.viewer);
+                    storeyViewsPlugin.showStoreyObjects("3_b98WEDT7feUaJ_WJeW$i", {
+                        hideOthers: true,
+                        useObjectStates: false,
+                    });
+                    store.state.viewer.camera.eye = [1838782.7620401978, 49.39158880749794, -5156520.24746262];
+                    store.state.viewer.camera.look = [1838782.6567345671, 15.693182129143608, -5156520.397415988];
+                    store.state.viewer.camera.up = [-0.5746921936192545, 0.005437435123431921, -0.818351585134634];
+                    console.log("test");
+                    return `<p>Fourth Floor Successfully Separated</p>`;
                 },
-                {
-                    name: "uname",
-                    get() {
-                        return navigator.appVersion;
-                    },
-                },
-            ],
+            }, ],
         };
     },
     methods: {
@@ -72,13 +66,13 @@ export default {
     position: absolute;
     height: 1000px;
     width: 1000px;
-    left:0px;
-    top:50px;
-    margin-left:360px;
-    margin-right:30px
-
+    left: 0px;
+    top: 50px;
+    margin-left: 360px;
+    margin-right: 30px
 }
-.terminalBox{
+
+.terminalBox {
     overflow-x: scroll;
     overflow-y: scroll;
 }
