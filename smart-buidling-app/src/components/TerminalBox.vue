@@ -31,7 +31,7 @@ export default {
                 },
             },
             commands: [{
-                name: "fourth",
+                name: "et4",
                 get() {
                     const storeyViewsPlugin = new StoreyViewsPlugin(store.state.viewer);
                     storeyViewsPlugin.showStoreyObjects("3_b98WEDT7feUaJ_WJeW$i", {
