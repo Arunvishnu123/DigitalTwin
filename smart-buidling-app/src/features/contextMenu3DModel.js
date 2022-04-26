@@ -59,6 +59,14 @@ export function contextMenu3dModel(viewer) {
                     }
                 }
             ],
+            [
+                {
+                    title: "Open Terminal",
+                    doAction: function (context) {
+                        store.state.terminalDialog =true
+                    }
+                }
+            ],
             [ // Group
 
                 // Per-object emphasis effects

@@ -7,6 +7,7 @@
         <LuminanceMonitoring />
         <HumidityMonitoring />
         <RoomMontoring />
+        <TerminalDialog />
       
     </w-app>
 </div>
@@ -19,6 +20,7 @@ import TemperatureMonitoring from "../components/TemperatureMontioring.vue"
 import LuminanceMonitoring from "../components/LuminanceMonitoring.vue" 
 import HumidityMonitoring from "../components/HumidityMonitoring.vue"
 import RoomMontoring from "../components/RoomDetails.vue"
+import TerminalDialog from "../components/TerminalDialogBox.vue"
 
 export default {
     components: {
@@ -27,7 +29,8 @@ export default {
         TemperatureMonitoring,
         LuminanceMonitoring,
         HumidityMonitoring,
-        RoomMontoring
+        RoomMontoring,
+        TerminalDialog
 
     },
     data: () => ({}),

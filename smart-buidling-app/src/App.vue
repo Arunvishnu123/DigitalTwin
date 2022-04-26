@@ -7,10 +7,7 @@
 <script>
 export default {
   data: () => ({}),
-  mounted(){
-const input = prompt("which floor you need to go");
-console.log("test",input)
-  },
+  
   components: {},
 };
 </script>

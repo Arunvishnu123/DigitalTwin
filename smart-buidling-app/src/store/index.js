@@ -30,7 +30,10 @@ const store = new Vuex.Store({
     //humidity
     humiditydisplay: false,
     //room display
-    roomdisplay: false
+    roomdisplay: false,
+    //terminal dialog box open
+    terminalDialog:false,
+
 
   },
   actions: {
