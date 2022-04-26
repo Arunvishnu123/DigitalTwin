@@ -29,6 +29,7 @@ import * as NavCube from "../features/navCube";
 import * as AxisView from "../features/axisView";
 import * as ContextMenuParameters from "../features/contextMenuParameters";
 import * as CreateAnnotation from "../features/Annotation";
+import * as CreateKeyMap from "../features/keyMap"
 
 export default {
     data: () => ({
@@ -167,7 +168,7 @@ export default {
         // })
 
         //CreateAnnotation.createAnnotation()
-
+        CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
             size: 3000,
