@@ -105,7 +105,7 @@ export default {
         sao.kernelRadius = 1000;
         sao.blendCutoff = 1;
         sao.blendFactor = 0.9;
-
+         store.dispatch("readTemeprature421")
         cameraControl.followPointer = true;
         camera.perspective.near = 0.1;
         camera.perspective.far = 5000.0;

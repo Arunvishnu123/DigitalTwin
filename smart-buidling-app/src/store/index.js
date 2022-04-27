@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 import * as floorView from "../features/floorView"
+import * as ReadMqtt from "../features/mqtt"
 
 const store = new Vuex.Store({
   state: {
@@ -36,6 +37,8 @@ const store = new Vuex.Store({
 
    //temperature realtime montioring 
    temeperatureRealTime:false,
+
+   readTemperature:10
 
   },
   actions: {
@@ -80,7 +83,12 @@ const store = new Vuex.Store({
       }
 
 
-    }
+    },
+    readTemeprature421(){
+      this.state.readTemperature = ReadMqtt.readMQTT("emse/fayol/device/P8/temperature")
+      console.log(this.state.readTemperature)
+      //this.state.readTemperature =  temp
+  }
   }
 })
 export default store;
