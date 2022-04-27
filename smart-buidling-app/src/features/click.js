@@ -6,6 +6,7 @@ export function clickSensorData(id) {
         if (pickResult.entity.id == id) {
             console.log("id clicked");
             store.state.temeperatureRealTime = true
+            store.dispatch("readTemeprature421")
         }
     })
 }
