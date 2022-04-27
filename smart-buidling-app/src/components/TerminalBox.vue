@@ -31,33 +31,46 @@ export default {
                 },
             },
             commands: [{
-                name: "et4",
-                get() {
-                    const storeyViewsPlugin = new StoreyViewsPlugin(store.state.viewer);
-                    storeyViewsPlugin.showStoreyObjects("3_b98WEDT7feUaJ_WJeW$i", {
-                        hideOthers: true,
-                        useObjectStates: false,
-                    });
-                    store.state.viewer.camera.eye = [1838782.7620401978, 49.39158880749794, -5156520.24746262];
-                    store.state.viewer.camera.look = [1838782.6567345671, 15.693182129143608, -5156520.397415988];
-                    store.state.viewer.camera.up = [-0.5746921936192545, 0.005437435123431921, -0.818351585134634];
-                    console.log("test");
-                    return `<p>Fourth Floor Successfully Separated</p>`;
+                    name: "et4",
+                    get() {
+                        const storeyViewsPlugin = new StoreyViewsPlugin(store.state.viewer);
+                        storeyViewsPlugin.showStoreyObjects("3_b98WEDT7feUaJ_WJeW$i", {
+                            hideOthers: true,
+                            useObjectStates: false,
+                        });
+                        store.state.viewer.camera.eye = [
+                            1838782.7620401978, 49.39158880749794, -5156520.24746262,
+                        ];
+                        store.state.viewer.camera.look = [
+                            1838782.6567345671, 15.693182129143608, -5156520.397415988,
+                        ];
+                        store.state.viewer.camera.up = [
+                            -0.5746921936192545, 0.005437435123431921, -0.818351585134634,
+                        ];
+                        console.log("test");
+                        return `<p>Fourth Floor Successfully Separated</p>`;
+                    }
+                }, {
+                    name: "r421",
+                    get() {
+                        return `<p>Fourth Floor Successfully Separated</p>`;
+                    }
                 },
-            }, ],
-        };
+        
+        ],
+    };
+},
+methods: {
+    prompt(value) {
+        if (value == "node -v") {
+            this.send_to_terminal = process.versions.node;
+        }
     },
-    methods: {
-        prompt(value) {
-            if (value == "node -v") {
-                this.send_to_terminal = process.versions.node;
-            }
-        },
 
-        test() {
-            console.log("test");
-        },
+    test() {
+        console.log("test");
     },
+},
 };
 </script>
 
@@ -69,7 +82,7 @@ export default {
     left: 0px;
     top: 50px;
     margin-left: 360px;
-    margin-right: 30px
+    margin-right: 30px;
 }
 
 .terminalBox {
