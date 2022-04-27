@@ -34,6 +34,8 @@ const store = new Vuex.Store({
     //terminal dialog box open
     terminalDialog:false,
 
+   //temperature realtime montioring 
+   temeperatureRealTime:false,
 
   },
   actions: {

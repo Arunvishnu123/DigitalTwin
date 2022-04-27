@@ -30,6 +30,7 @@ import * as AxisView from "../features/axisView";
 import * as ContextMenuParameters from "../features/contextMenuParameters";
 import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
+import * as ClickSensor from "../features/click"
 
 export default {
     data: () => ({
@@ -43,6 +44,7 @@ export default {
             transparent: true,
             saoEnabled: true,
         });
+        console.log("test",store.state.viewer)
 
         const performanceModel = new PerformanceModel(store.state.viewer.scene, {
             id: "model",
@@ -138,22 +140,22 @@ export default {
             src: "src/assets/cloudySkyBox.jpg",
             size: 1000,
         });
-        // find the corodinates
-        store.state.viewer.scene.input.on("hover", (coords) => {
-            console.log("corodinates", coords);
-            const pickResult = store.state.viewer.scene.pick({
-                canvasPos: coords,
-                pickSurface: true, // <<------ This causes picking to find the intersection point on the entity
-            });
-            if (pickResult) {
-                console.log("pickresult", pickResult);
-                if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
-                    console.log("id clicked");
-                } else {
-                    console.log("notclcickedd")
-                }
-            }
-        });
+        // // find the corodinates
+        // store.state.viewer.scene.input.on("hover", (coords) => {
+        //     console.log("corodinates", coords);
+        //     const pickResult = store.state.viewer.scene.pick({
+        //         canvasPos: coords,
+        //         pickSurface: true, // <<------ This causes picking to find the intersection point on the entity
+        //     });
+        //     if (pickResult) {
+        //         console.log("pickresult", pickResult);
+        //         if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
+        //             console.log("id clicked");
+        //         } else {
+        //             console.log("notclcickedd")
+        //         }
+        //     }
+        // });
   
         // store.state.viewer.cameraControl.on("hover", (pickResult) => {
         //     if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
@@ -168,6 +170,7 @@ export default {
         // })
 
         //CreateAnnotation.createAnnotation()
+ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
         CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
