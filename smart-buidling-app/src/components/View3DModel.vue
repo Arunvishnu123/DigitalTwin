@@ -31,12 +31,13 @@ import * as ContextMenuParameters from "../features/contextMenuParameters";
 import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"
+import * as ObjectLoader from "../features/objectLoader"
 
 export default {
     data: () => ({
         viewer: null,
         model: null,
-        t:false
+        t: false
     }),
     mounted() {
         store.state.viewer = new Viewer({
@@ -44,7 +45,7 @@ export default {
             transparent: true,
             saoEnabled: true,
         });
-        console.log("test",store.state.viewer)
+        console.log("test", store.state.viewer)
 
         const performanceModel = new PerformanceModel(store.state.viewer.scene, {
             id: "model",
@@ -57,7 +58,7 @@ export default {
 
         const camera = scene.camera;
         store.state.viewer.scene.edgeMaterial.edges = false;
-
+        ObjectLoader.objectLoader()
         const cameraFlight = store.state.viewer.cameraFlight;
         const sao = scene.sao;
         const saoParams = new(function () {
@@ -105,7 +106,7 @@ export default {
         sao.kernelRadius = 1000;
         sao.blendCutoff = 1;
         sao.blendFactor = 0.9;
-         store.dispatch("readTemeprature421")
+        store.dispatch("readTemeprature421")
         cameraControl.followPointer = true;
         camera.perspective.near = 0.1;
         camera.perspective.far = 5000.0;
@@ -140,8 +141,8 @@ export default {
             src: "src/assets/cloudySkyBox.jpg",
             size: 1000,
         });
-        // // find the corodinates
-        // store.state.viewer.scene.input.on("hover", (coords) => {
+        // find the corodinates
+        // store.state.viewer.cameraControl("hover", (coords) => {
         //     console.log("corodinates", coords);
         //     const pickResult = store.state.viewer.scene.pick({
         //         canvasPos: coords,
@@ -156,7 +157,16 @@ export default {
         //         }
         //     }
         // });
-  
+
+        store.state.viewer.scene.input.on("picked", (e) => {
+            const entity = e.entity;
+            const canvasPos = e.canvasPos;
+            const worldPos = e.worldPos; // 3D World-space position
+            const viewPos = e.viewPos; // 3D View-space position
+            const worldNormal = e.worldNormal; // 3D World-space normal vector
+            console.log(e)
+        });
+
         // store.state.viewer.cameraControl.on("hover", (pickResult) => {
         //     if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
         //         this.t = true
@@ -170,7 +180,7 @@ export default {
         // })
 
         //CreateAnnotation.createAnnotation()
-ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
+        ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
         CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
@@ -249,17 +259,17 @@ ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
 }
 
 .transition-toggle {
-  margin: 12px 24px 12px 0;
-  width: 7.7em;
+    margin: 12px 24px 12px 0;
+    width: 7.7em;
 }
 
 .transition-box {
-  background-color: #eee;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 1em;
-  width: 14em;
-  text-align: center;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1em;
+    width: 14em;
+    text-align: center;
 }
 
 @media screen and (max-width: 800px) {
