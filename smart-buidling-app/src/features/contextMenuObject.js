@@ -28,6 +28,18 @@ export function contextMenu3dModel(model, viewer) {
                     doAction: (context) => {
                         viewer.cameraControl.navMode = "planView"
                     }
+                },
+                {
+                    title: "First Person View",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "firstPerson"
+                    }
+                },
+                {
+                    title: "Camera Orbit",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "orbit"
+                    }
                 }
             ],
             [
@@ -148,7 +160,7 @@ export function contextMenu3dModel(model, viewer) {
                 {
                     title: "Reset View",
                     doAction: function (context) {
-                        viewer.cameraControl.navMode = "orbit"
+                        
                         viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];
                         viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
                         viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];

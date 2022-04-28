@@ -5,7 +5,9 @@ export function keyMap(){
     store.state.viewer.cameraControl.navMode = "firstPerson";
     const scene = store.state.viewer.scene;
     const keyMap = {};
+    //camerControl.constrainVertical = true;
     camerControl.followPointer = true;
+    camerControl.panToPointer = true
     console.log("testcameracontrol",camerControl)
     const input = scene.input;
     keyMap[camerControl.DOLLY_FORWARDS] = [input.KEY_UP_ARROW];

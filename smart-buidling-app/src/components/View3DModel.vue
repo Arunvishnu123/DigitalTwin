@@ -183,7 +183,7 @@ export default {
         //CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
 
-       DisplayPersonData.clickPersonData("1Qfe3f5n95yfrQ8nllTWu9")
+       DisplayPersonData.clickPersonData()
         CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",

@@ -42,7 +42,20 @@ const store = new Vuex.Store({
 
    ///table person toggle
 
-   tablepersonDialog:false
+   tablepersonDialog:false,
+
+   //window open close dialog
+
+   windowOpenDialog:false,
+
+   //person details
+   person :{
+        name: null,
+        postion:null,
+        emailID:null,
+        imageLink:null
+
+   }
 
   },
   actions: {

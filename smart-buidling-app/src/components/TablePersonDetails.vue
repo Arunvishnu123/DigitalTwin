@@ -7,9 +7,9 @@
 
     <w-button @click="$store.state.tablepersonDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
     </w-button>
-    <w-image class="image mr5" src="src/assets/67491341.jfif" :width="150" :height="150">
+    <w-image class="image mr5" :src="$store.state.person.imageLink" :width="150" :height="150">
     </w-image>
-    <w-tag xl class="personName mr4" bg-color="primary">Name - Arun R S <br /> Position - Research Intern <br /> Email-ID - arunvishnu40@gmail.com</w-tag>
+    <w-tag xl class="personName mr4" bg-color="primary">Name -  {{$store.state.person.name}}<br /> Position - {{$store.state.person.postion}} <br /> Email-ID - {{$store.state.person.emailID}}</w-tag>
 
 </w-dialog>
 </template>
