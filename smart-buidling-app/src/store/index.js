@@ -58,7 +58,9 @@ const store = new Vuex.Store({
    },
 
    ///window1 status room 421
-   windowOpen421FD: false
+   windowOpen421FD: false,
+   windowImage:"src/assets/windowClosed.PNG"
+
 
   },
   actions: {

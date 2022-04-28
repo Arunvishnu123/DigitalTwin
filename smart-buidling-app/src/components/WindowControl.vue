@@ -8,7 +8,7 @@
         <div class="mainWindow">
             <w-button @click="$store.state.windowOpenDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
             </w-button>
-            <w-image class="image1 mr5" src="src/assets/windowOpen.PNG" width="90%" :ratio="1" height="90%">
+            <w-image class="image1 mr5" :src="$store.state.windowImage" width="90%" :ratio="1" height="90%">
             </w-image>
             <w-tag xl class="window mr4" v-if="$store.state.windowOpen421FD" color="white" bg-color="green">Window in Open Position</w-tag>
             <w-tag xl class="window1 mr4" v-if="$store.state.windowOpen421FD == false" color="white" bg-color="red">Window in closed position</w-tag>
@@ -16,7 +16,7 @@
                 <w-switch class="mr6" v-model="value"></w-switch>
                 <span class="title3 mb0">
                     Window Open:
-                    <code class="ml2">{{ value }}</code>
+                    <code class="ml2">{{ $store.state.windowOpen421FD }}</code>
                 </span>
             </w-flex>
         </div>
@@ -55,6 +55,9 @@ export default {
 /* Adapt text color according to the background color. */
 .w-switch__track {
     color: #666;
+}
+.image2{
+    top:-20px;
 }
 
 .w-switch--on .w-switch__track {
