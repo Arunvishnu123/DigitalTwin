@@ -1,7 +1,6 @@
 <template>
 <div class="test5">
     <w-dialog v-model="$store.state.windowOpenDialog" overlay-color="rgba(85, 121, 129, 0.5)" :width="500" persistent title-class="primary-light1--bg white">
-
         <template #title>
             <w-icon class="mr2">mdi mdi-tune</w-icon>
             Window Control and Status
@@ -11,15 +10,14 @@
             </w-button>
             <w-image class="image1 mr5" src="src/assets/windowOpen.PNG" width="90%" :ratio="1" height="90%">
             </w-image>
-            <w-tag xl class="window mr4" color="white" bg-color="green">Window in Open Position</w-tag>
-            <w-tag xl class="window1 mr4" color="white" bg-color="red">Window in closed position</w-tag>
+            <w-tag xl class="window mr4" v-if="$store.state.windowOpen421FD" color="white" bg-color="green">Window in Open Position</w-tag>
+            <w-tag xl class="window1 mr4" v-if="$store.state.windowOpen421FD == false" color="white" bg-color="red">Window in closed position</w-tag>
             <w-flex justify-center>
-                <w-switch  class="mr6" v-model="value"></w-switch>
+                <w-switch class="mr6" v-model="value"></w-switch>
                 <span class="title3 mb0">
                     Window Open:
-                    <code class="ml2">{{value}}</code>
+                    <code class="ml2">{{ value }}</code>
                 </span>
-
             </w-flex>
         </div>
     </w-dialog>
@@ -30,11 +28,9 @@
 export default {
     data: () => ({
         value: false,
-        test:"close"
+        test: "close",
     }),
-    methods:{
-       
-    }
+    methods: {},
 };
 </script>
 

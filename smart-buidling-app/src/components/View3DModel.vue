@@ -34,6 +34,7 @@ import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"
 import * as ObjectLoader from "../features/objectLoader"
 import * as windowClickEvent from "../features/windowOpenCloseDialog"
+import * as ReadMqtt from "../features/mqtt"
 
 export default {
     data: () => ({
@@ -108,7 +109,7 @@ export default {
         sao.kernelRadius = 1000;
         sao.blendCutoff = 1;
         sao.blendFactor = 0.9;
-        store.dispatch("readTemeprature421")
+
         cameraControl.followPointer = true;
         camera.perspective.near = 0.1;
         camera.perspective.far = 5000.0;
@@ -138,7 +139,7 @@ export default {
         //     intensity: 0.2,
         //     space: "world",
         // });
-
+        ReadMqtt.readMQTT()
         const skybox = new Skybox(store.state.viewer.scene, {
             src: "src/assets/cloudySkyBox.jpg",
             size: 1000,
@@ -185,7 +186,7 @@ export default {
         ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
         windowClickEvent.clickPersonData()
 
-       DisplayPersonData.clickPersonData()
+        DisplayPersonData.clickPersonData()
         CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
