@@ -38,7 +38,11 @@ const store = new Vuex.Store({
    //temperature realtime montioring 
    temeperatureRealTime:false,
 
-   readTemperature:10
+   readTemperature:0,
+
+   ///table person toggle
+
+   tablepersonDialog:false
 
   },
   actions: {

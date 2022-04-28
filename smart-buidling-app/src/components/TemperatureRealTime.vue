@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-dialog v-model="$store.state.temeperatureRealTime" overlay-color="rgba(35, 91, 129, 0.4)" :width="460" persistent title-class="primary-light1--bg white">
+    <w-dialog v-model="$store.state.temeperatureRealTime" overlay-color="rgba(85, 121, 129, 0.5)" :width="460" persistent title-class="primary-light1--bg white">
         <template #title>
             <w-icon class="mr2">mdi mdi-tune</w-icon>
             Real-Time Temperature Data

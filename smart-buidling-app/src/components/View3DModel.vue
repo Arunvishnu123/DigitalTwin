@@ -19,6 +19,7 @@ import {
     PerformanceModel,
     ImagePlane,
 } from "@xeokit/xeokit-sdk/";
+import * as DisplayPersonData from "../features/clickPerosonDetails"
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextMenu3DModel";
@@ -181,6 +182,8 @@ export default {
 
         //CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
+
+       DisplayPersonData.clickPersonData("1Qfe3f5n95yfrQ8nllTWu9")
         CreateKeyMap.keyMap()
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
