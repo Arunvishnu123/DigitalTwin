@@ -33,6 +33,7 @@ import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"
 import * as ObjectLoader from "../features/objectLoader"
+import * as windowClickEvent from "../features/windowOpenCloseDialog"
 
 export default {
     data: () => ({
@@ -182,6 +183,7 @@ export default {
 
         //CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
+        windowClickEvent.clickPersonData()
 
        DisplayPersonData.clickPersonData()
         CreateKeyMap.keyMap()

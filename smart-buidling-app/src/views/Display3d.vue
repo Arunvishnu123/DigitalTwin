@@ -10,6 +10,7 @@
         <TerminalDialog />   
         <RealTimeTemperature />  
         <DisplayPersonData />
+        <DisplayWindowStatus />
     </w-app>
 </div>
 </template>
@@ -24,6 +25,7 @@ import RoomMontoring from "../components/RoomDetails.vue"
 import TerminalDialog from "../components/TerminalDialogBox.vue"
 import RealTimeTemperature from "../components/TemperatureRealTime.vue"
 import DisplayPersonData from "../components/TablePersonDetails.vue"
+import DisplayWindowStatus from "../components/WindowControl.vue"
 
 export default {
     components: {
@@ -35,7 +37,8 @@ export default {
         RoomMontoring,
         TerminalDialog,
         RealTimeTemperature,
-        DisplayPersonData
+        DisplayPersonData,
+        DisplayWindowStatus
 
     },
     data: () => ({}),
