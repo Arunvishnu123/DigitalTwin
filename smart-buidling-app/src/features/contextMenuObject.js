@@ -18,7 +18,7 @@ export function contextMenu3dModel(model, viewer) {
                         console.log(objectId)
                         console.log(context.viewer.metaScene.metaObjects[objectId]);
                         console.log("test")
-                        console.log(store.state.model)
+                        console.log("storrrrrr",store.state.model)
                     }
                 }
             ],

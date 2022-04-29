@@ -40,6 +40,26 @@ export function contextMenu3dModel(viewer) {
             ],
             [
                 {
+                    title: "Plan View",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "planView"
+                    }
+                },
+                {
+                    title: "First Person View",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "firstPerson"
+                    }
+                },
+                {
+                    title: "Camera Orbit",
+                    doAction: (context) => {
+                        viewer.cameraControl.navMode = "orbit"
+                    }
+                }
+            ],
+            [
+                {
                     title: "Intial View",
                     doAction: function (context) {
                         context.viewer.camera.eye = [1838806.1036860247, 9.44347287346586, -5156481.191867573];

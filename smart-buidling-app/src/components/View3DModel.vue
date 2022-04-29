@@ -118,6 +118,7 @@ export default {
         camera.ortho.far = 1000.0;
 
         camera.projection = "perspective";
+       
 
         scene.highlightMaterial.fill = true;
         scene.highlightMaterial.fillAlpha = 0.3;
@@ -219,6 +220,8 @@ export default {
         AxisView.viewAxis("AxisGizmoCanvas", store.state.viewer);
         //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.model);
         window.viewer = store.state.viewer;
+
+         console.log("model",store.state.model)
     },
 
     methods: {

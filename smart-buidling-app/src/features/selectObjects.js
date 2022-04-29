@@ -1,32 +1,29 @@
 export function selectObects(viewer) {
     var lastEntity = null;
-    var lastColorize = null;
 
-    viewer.cameraControl.on("picked", (pickResult) => {
+    viewer.scene.input.on("picked", function (coords) {
 
-        console.log(pickResult.entity.id);
+        var hit = viewer.scene.pick({
+            canvasPos: coords
+        });
 
-        if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
+        if (hit) {
+
+            if (!lastEntity || hit.entity.id !== lastEntity.id) {
+
+                if (lastEntity) {
+                    lastEntity.selected = false;
+                }
+
+                lastEntity = hit.entity;
+                hit.entity.selected = true;
+            }
+        } else {
 
             if (lastEntity) {
-                lastEntity.colorize = lastColorize;
+                lastEntity.selected = false;
+                lastEntity = null;
             }
-
-            lastEntity = pickResult.entity;
-        
-
-            pickResult.entity.colorize = [0,0,0];
         }
     });
-
-    viewer.cameraControl.on("pickedNothing", (e) => {
-
-        if (lastEntity) {
-            lastEntity.colorize = lastColorize;
-        }
-
-        lastEntity = null;
-        lastColorize = null;
-    });
-
 }
