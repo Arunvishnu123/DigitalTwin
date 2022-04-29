@@ -2,9 +2,10 @@ import store from "../store/index"
 import {
     AnnotationsPlugin
 } from "@xeokit/xeokit-sdk/";
+import "../assets/annotation.css"
 
 export function createAnnotation() {
-    const annotations = new AnnotationsPlugin(store.state.viewer,{
+    const annotations = new AnnotationsPlugin(store.state.viewer, {
 
         markerHTML: "<div class='annotation-marker' style='background-color: {{markerBGColor}};'>{{glyph}}</div>",
         labelHTML: "<div class='annotation-label' style='background-color: {{labelBGColor}};'>\
@@ -24,19 +25,34 @@ export function createAnnotation() {
         annotation.setLabelShown(!annotation.getLabelShown());
     });
 
-    store.state.model.on("loaded", () => {
-        annotations.createAnnotation({
-            id: "Annotation1",
-            worldPos:[1838784.159,16,-5156527.90],
-            occludable: true,
-            markerShown: true,
-            labelShown: true,
-            values: {
-                glyph: "A2",
-                title: "Kitchen bench",
-                description: "This annotation becomes visible<br>whenever you can see its marker<br>through the window",
-                markerBGColor: "blue"
-            }
+    var i = 1;
+
+    store.state.viewer.scene.input.on("mouseclicked", (coords) => {
+
+        const pickResult = store.state.viewer.scene.pick({
+            canvasPos: coords,
+            pickSurface: true  // <<------ This causes picking to find the intersection point on the entity
         });
-    })
+
+        if (pickResult) {
+            console.log(pickResult)
+            const annotation = annotations.createAnnotation({
+                id: "myAnnotation" + i,
+                pickResult: pickResult, // <<------- initializes worldPos and entity from PickResult
+                
+                occludable: true,       // Optional, default is true
+                markerShown: true,      // Optional, default is true
+                labelShown: true,       // Optional, default is true
+                values: {               // HTML template values
+                    glyph: "A" + i,
+                    title: "My annotation " + i,
+                    description: "My description " + i
+                },
+            });
+
+            i++;
+        }
+    });
+
+
 }

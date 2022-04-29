@@ -7,8 +7,8 @@
         <LuminanceMonitoring />
         <HumidityMonitoring />
         <RoomMontoring />
-        <TerminalDialog />   
-        <RealTimeTemperature />  
+        <TerminalDialog />
+        <RealTimeTemperature />
         <DisplayPersonData />
         <DisplayWindowStatus />
     </w-app>
@@ -18,14 +18,14 @@
 <script>
 import NavBar from "../components/Header.vue";
 import Display3d from "../components/View3DModel.vue";
-import TemperatureMonitoring from "../components/TemperatureMontioring.vue"
-import LuminanceMonitoring from "../components/LuminanceMonitoring.vue" 
-import HumidityMonitoring from "../components/HumidityMonitoring.vue"
-import RoomMontoring from "../components/RoomDetails.vue"
-import TerminalDialog from "../components/TerminalDialogBox.vue"
-import RealTimeTemperature from "../components/TemperatureRealTime.vue"
-import DisplayPersonData from "../components/TablePersonDetails.vue"
-import DisplayWindowStatus from "../components/WindowControl.vue"
+import TemperatureMonitoring from "../components/TemperatureMontioring.vue";
+import LuminanceMonitoring from "../components/LuminanceMonitoring.vue";
+import HumidityMonitoring from "../components/HumidityMonitoring.vue";
+import RoomMontoring from "../components/RoomDetails.vue";
+import TerminalDialog from "../components/TerminalDialogBox.vue";
+import RealTimeTemperature from "../components/TemperatureRealTime.vue";
+import DisplayPersonData from "../components/TablePersonDetails.vue";
+import DisplayWindowStatus from "../components/WindowControl.vue";
 
 export default {
     components: {
@@ -38,8 +38,7 @@ export default {
         TerminalDialog,
         RealTimeTemperature,
         DisplayPersonData,
-        DisplayWindowStatus
-
+        DisplayWindowStatus,
     },
     data: () => ({}),
     computed: {},
@@ -48,8 +47,9 @@ export default {
 </script>
 
 <style scoped>
-.mainBody{
-       height: 100%;
-    overflow: hidden;
+.mainBody {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 </style>

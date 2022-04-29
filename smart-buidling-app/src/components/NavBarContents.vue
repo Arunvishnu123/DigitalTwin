@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-app>
+    
         <w-drawer class="dialogbox" v-model="$store.state.openDrawer" :[position]="true">
             <w-flex column>
                 <w-tag xl height="2em" class="label1" bg-color="primary">Floor Selection</w-tag>
@@ -12,7 +12,6 @@
                 <w-button @click="floorView()" :loading="button2loading" class="updateButton">Update Model</w-button>
             </w-flex>
         </w-drawer>
-    </w-app>
 </div>
 </template>
 

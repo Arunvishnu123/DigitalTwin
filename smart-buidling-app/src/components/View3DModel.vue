@@ -61,7 +61,7 @@ export default {
 
         const camera = scene.camera;
         store.state.viewer.scene.edgeMaterial.edges = false;
-        ObjectLoader.objectLoader()
+       // ObjectLoader.objectLoader()
         const cameraFlight = store.state.viewer.cameraFlight;
         const sao = scene.sao;
         const saoParams = new(function () {
@@ -183,7 +183,7 @@ export default {
         //     }
         // })
 
-        //CreateAnnotation.createAnnotation()
+      ///  CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
         windowClickEvent.clickPersonData()
 
@@ -221,7 +221,7 @@ export default {
         //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.model);
         window.viewer = store.state.viewer;
 
-         console.log("model",store.state.model)
+         console.log("model",store.state.model.scene.objects)
     },
 
     methods: {

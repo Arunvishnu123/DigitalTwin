@@ -5,13 +5,13 @@
             <w-icon class="mr2">mdi mdi-tune</w-icon>
             Window Control and Status
         </template>
-        <div>
+        
             <w-button @click="$store.state.windowOpenDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
             </w-button>
             <img class="image1" :src="$store.state.windowImage" />
             
             <w-tag xl class="status" color="white" :bg-color="$store.state.windowStatus  ? 'green' : 'red'">{{ $store.state.windowOpen421FD }}</w-tag>
-        </div>
+    
     </w-dialog>
 </div>
 </template>
