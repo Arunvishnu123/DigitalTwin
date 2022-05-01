@@ -13,7 +13,7 @@
           animateValue: true,
           animationDuration: '1000',
           animationFunction: 'linear',
-        }" :min="0" :max="100" :stroke-width="8" v-model="tes"></knob-control>
+        }" :min="0" :max="40" :stroke-width="8" v-model="$store.state.readTemperature"></knob-control>
 
         <w-tag xl class="realTemp mr4" bg-color="primary">Temperature in degree Celsius - {{ $store.state.readTemperature }}
         </w-tag>

@@ -23,7 +23,7 @@ const store = new Vuex.Store({
     objectContextMenu: null,
 
     //temperature montioring open drawer
-    tempdisplay: false,
+    tempdisplay:false,
 
     //luminance montioring 
     luminancedisplay: false,
