@@ -1,11 +1,11 @@
 <template>
-<w-dialog v-model="$store.state.tablepersonDialog" overlay-color="rgba(85, 121, 129, 0.5)" :width="460" title-class="primary-light1--bg white">
+<w-dialog class="dialog" v-model="$store.state.tablepersonDialog" overlay-color="rgba(135, 121, 199, 0.5)" :width="460" title-class="primary-light1--bg white">
     <template  #title>
-        <w-icon class="mr2">mdi mdi-tune</w-icon>
-        Person Details
+        <font-awesome-icon class="userIcon" :icon="['fa', 'user']"></font-awesome-icon>
+           Employee Details
     </template>
 
-    <w-button @click="$store.state.tablepersonDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
+    <w-button class="closePerson"  @click="$store.state.tablepersonDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
     </w-button>
     <w-image class="image mr5" :src="$store.state.person.imageLink" :width="150" :height="150">
     </w-image>
@@ -23,11 +23,23 @@ export default {
 <style scoped>
 .personName {
     top: 10px;
-    width: 95%;
+    width:99%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 10px;
 }
 
 .image {
     left: 130px
+}
+.dialog{
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 10px;
+    border-color: red;
+}
+.userIcon{
+    padding-right: 10px;
+}
+.closePerson{
+    top:10px
 }
 </style>

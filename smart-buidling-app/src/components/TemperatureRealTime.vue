@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-dialog v-model="$store.state.temeperatureRealTime" overlay-color="rgba(85, 121, 129, 0.5)" :width="460" persistent title-class="primary-light1--bg white">
+    <w-dialog class="tempTitle" v-model="$store.state.temeperatureRealTime" overlay-color="rgba(85, 121, 129, 0.5)" :width="460" persistent title-class="primary-light1--bg white">
         <template #title>
             <w-icon class="mr2">mdi mdi-tune</w-icon>
             Real-Time Temperature Data
@@ -22,7 +22,10 @@ export default {
 
 <style scoped>
 .realTemp {
-    width: 95%;
+    width: 99%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.tempTitle{
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; 
 }
 </style>
