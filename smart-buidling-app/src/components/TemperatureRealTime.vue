@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-dialog class="tempTitle" v-model="$store.state.temeperatureRealTime" overlay-color="rgba(85, 121, 129, 0.5)" :width="460" persistent title-class="primary-light1--bg white">
+    <w-dialog class="tempTitle" v-model="$store.state.temeperatureRealTime" overlay-color="rgba(85, 121, 129, 0)" :width="460"  title-class="primary-light1--bg white">
         <template #title>
             <font-awesome-icon class="tempIcon" :icon="['fa', 'thermometer']"></font-awesome-icon>
             Real-Time Temperature Data

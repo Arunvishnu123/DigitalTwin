@@ -25,16 +25,16 @@ import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextMenu3DModel";
 import * as ContextMenu3DModel from "../features/contextMenuObject";
 import store from "../store/index";
-import * as FloorView from "../features/floorView";
 import * as NavCube from "../features/navCube";
 import * as AxisView from "../features/axisView";
 import * as ContextMenuParameters from "../features/contextMenuParameters";
-import * as CreateAnnotation from "../features/Annotation";
+//import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"
 import * as ObjectLoader from "../features/objectLoader"
 import * as windowClickEvent from "../features/windowOpenCloseDialog"
 import * as ReadMqtt from "../features/mqtt"
+import * as HoverOver from "../features/Hover"
 
 export default {
     data: () => ({
@@ -52,7 +52,7 @@ export default {
 
         const performanceModel = new PerformanceModel(store.state.viewer.scene, {
             id: "model",
-            isModel: true, // <--------------------- Represents a model, registers PerformanceModel by ID on viewer.scene.models
+            isModel: true,
             rotation: [0, 0, 0],
         });
 
@@ -144,22 +144,7 @@ export default {
             src: "src/assets/cloudySkyBox.jpg",
             size: 1000,
         });
-        //find the corodinates
-        // store.state.viewer.cameraControl("hover", (coords) => {
-        //     console.log("corodinates", coords);
-        //     const pickResult = store.state.viewer.scene.pick({
-        //         canvasPos: coords,
-        //         pickSurface: true, // <<------ This causes picking to find the intersection point on the entity
-        //     });
-        //     if (pickResult) {
-        //         console.log("pickresult", pickResult);
-        //         if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
-        //             console.log("id clicked");
-        //         } else {
-        //             console.log("notclcickedd")
-        //         }
-        //     }
-        // });
+        
 
         store.state.viewer.scene.input.on("picked", (e) => {
             const entity = e.entity;
@@ -183,11 +168,13 @@ export default {
         // })
 
         ///  CreateAnnotation.createAnnotation()
-        ClickSensor.clickSensorData("1bDMdL0k55X8oOMH5VK_cb")
+        ClickSensor.clickSensorData()
+        HoverOver.hoverOver()
         windowClickEvent.clickPersonData()
         ObjectLoader.objectLoader()
         DisplayPersonData.clickPersonData()
         CreateKeyMap.keyMap()
+        
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",
             size: 3000,
@@ -237,6 +224,7 @@ export default {
 </script>
 
 <style scoped>
+
 #myCanvas {
     top: 0px;
     width: 100%;
@@ -280,7 +268,7 @@ export default {
     text-align: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
     #NavCubeCanvas {
         position: absolute;
         width: 250px;

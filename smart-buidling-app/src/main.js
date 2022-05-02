@@ -16,9 +16,11 @@ const waveui = new WaveUI({
   // Some Wave UI options.
 })
 
-new Vue({
+let vm = new Vue({
   router,
   store,
   waveui,
   render: (h) => h(App),
 }).$mount("#app");
+
+global.vm = vm;

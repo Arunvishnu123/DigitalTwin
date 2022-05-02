@@ -11,6 +11,7 @@
         <RealTimeTemperature />
         <DisplayPersonData />
         <DisplayWindowStatus />
+        <Tooltip />    
     </w-app>
 </div>
 </template>
@@ -26,6 +27,7 @@ import TerminalDialog from "../components/TerminalDialogBox.vue";
 import RealTimeTemperature from "../components/TemperatureRealTime.vue";
 import DisplayPersonData from "../components/TablePersonDetails.vue";
 import DisplayWindowStatus from "../components/WindowControl.vue";
+import Tooltip from "../components/Tooltip.vue"
 
 export default {
     components: {
@@ -39,10 +41,17 @@ export default {
         RealTimeTemperature,
         DisplayPersonData,
         DisplayWindowStatus,
+        Tooltip
     },
-    data: () => ({}),
+    data: () => ({
+
+    }),
     computed: {},
-    methods: {},
+    methods: {
+        test(){
+            console.log("test")
+        }
+    },
 };
 </script>
 
@@ -52,4 +61,9 @@ export default {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+.toolTip{
+    height:100%;
+    width: 100%;
+}
+
 </style>
