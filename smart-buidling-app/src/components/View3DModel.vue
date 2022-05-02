@@ -28,13 +28,14 @@ import store from "../store/index";
 import * as NavCube from "../features/navCube";
 import * as AxisView from "../features/axisView";
 import * as ContextMenuParameters from "../features/contextMenuParameters";
-//import * as CreateAnnotation from "../features/Annotation";
+import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"
 import * as ObjectLoader from "../features/objectLoader"
 import * as windowClickEvent from "../features/windowOpenCloseDialog"
 import * as ReadMqtt from "../features/mqtt"
 import * as HoverOver from "../features/Hover"
+import * as ClickRoomData from "../features/clickRoomData"
 
 export default {
     data: () => ({
@@ -167,13 +168,14 @@ export default {
         //     }
         // })
 
-        ///  CreateAnnotation.createAnnotation()
+        ///CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData()
         HoverOver.hoverOver()
         windowClickEvent.clickPersonData()
         ObjectLoader.objectLoader()
         DisplayPersonData.clickPersonData()
         CreateKeyMap.keyMap()
+        ClickRoomData.clickSensorData()
         
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/1.jpg",

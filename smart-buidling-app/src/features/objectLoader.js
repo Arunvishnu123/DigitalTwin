@@ -8,8 +8,8 @@ export function objectLoader(){
         id: "objectModel",
         src: "src/assets/test.obj",
         edges: true,
-      //  position: [-5, -1, 0],
-        scale: [0.2, 0.2, 0.2],
+        position:[1838784.159,16,-5156527.90],
+        scale: [0.05, 0.05, 0.05],
     });
 
 }

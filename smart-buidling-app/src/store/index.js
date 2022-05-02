@@ -60,7 +60,16 @@ const store = new Vuex.Store({
    ///window1 status room 421
    windowOpen421FD: "Window Closed",
    windowImage:"src/assets/windowClosed.PNG",
-   windowStatus:false
+   windowStatus:false,
+
+   // room details 
+
+    roomCapacity:null,
+
+    //roomDialog
+
+    roomDialog:false
+
 
 
   },

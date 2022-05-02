@@ -18,6 +18,8 @@ export function keyMap(){
     keyMap[camerControl.PAN_DOWN] = [input.KEY_D];
     keyMap[camerControl.ROTATE_Y_POS] = [input.KEY_LEFT_ARROW];
     keyMap[camerControl.ROTATE_Y_NEG] = [input.KEY_RIGHT_ARROW];
+    keyMap[camerControl.ROTATE_X_POS] = [input.KEY_P];
+    keyMap[camerControl.ROTATE_X_NEG] = [input.KEY_O];
     keyMap[camerControl.AXIS_VIEW_RIGHT] = [input.KEY_NUM_1];
     keyMap[camerControl.AXIS_VIEW_BACK] = [input.KEY_NUM_2];
     keyMap[camerControl.AXIS_VIEW_LEFT] = [input.KEY_NUM_3];

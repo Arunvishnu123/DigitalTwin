@@ -25,6 +25,15 @@ export function createAnnotation() {
         annotation.setLabelShown(!annotation.getLabelShown());
     });
 
+    var prevAnnotationClicked = null;
+    annotations.on("markerClicked", (annotation) => {
+        if (prevAnnotationClicked) {
+            prevAnnotationClicked.setLabelShown(false);
+        }
+        annotation.setLabelShown(true);
+        viewer.cameraFlight.flyTo(annotation);
+        prevAnnotationClicked = annotation;
+    });
     var i = 1;
 
     store.state.viewer.scene.input.on("mouseclicked", (coords) => {
@@ -39,8 +48,7 @@ export function createAnnotation() {
             const annotation = annotations.createAnnotation({
                 id: "myAnnotation" + i,
                 pickResult: pickResult, // <<------- initializes worldPos and entity from PickResult
-                
-                occludable: true,       // Optional, default is true
+                ///occludable: true,       // Optional, default is true
                 markerShown: true,      // Optional, default is true
                 labelShown: true,       // Optional, default is true
                 values: {               // HTML template values
