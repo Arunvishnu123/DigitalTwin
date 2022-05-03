@@ -11,12 +11,14 @@
         <RealTimeTemperature />
         <DisplayPersonData />
         <DisplayWindowStatus />
-        <Tooltip />    
+        <Tooltip />   
+        <TreeView /> 
     </w-app>
 </div>
 </template>
 
 <script>
+import TreeView from "../components/TreeViewDrawer.vue"
 import NavBar from "../components/Header.vue";
 import Display3d from "../components/View3DModel.vue";
 import TemperatureMonitoring from "../components/TemperatureMontioring.vue";
@@ -41,7 +43,8 @@ export default {
         RealTimeTemperature,
         DisplayPersonData,
         DisplayWindowStatus,
-        Tooltip
+        Tooltip,
+        TreeView
     },
     data: () => ({
 
