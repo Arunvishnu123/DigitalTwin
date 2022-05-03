@@ -7,7 +7,6 @@ export function keyMap(){
     const keyMap = {};
     camerControl.constrainVertical = true;
     camerControl.followPointer = true;
-    camerControl.panToPointer = true
     console.log("testcameracontrol",camerControl)
     const input = scene.input;
     keyMap[camerControl.PAN_FORWARDS] = [input.KEY_UP_ARROW];

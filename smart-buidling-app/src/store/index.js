@@ -72,7 +72,7 @@ const store = new Vuex.Store({
 
     // tree view 
 
-    openTreeView:null
+    openTreeView:false
 
 
 

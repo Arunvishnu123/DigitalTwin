@@ -3,11 +3,7 @@
     <canvas id="myCanvas"></canvas>
     <canvas id="NavCubeCanvas"></canvas>
     <canvas id="AxisGizmoCanvas"></canvas>
-    <w-app>
-        <w-transition-scale>
-            <div class="transition-box" v-if="t">Scaling transition</div>
-        </w-transition-scale>
-    </w-app>
+   <TreeView />
 
 </div>
 </template>
@@ -36,6 +32,7 @@ import * as windowClickEvent from "../features/windowOpenCloseDialog"
 import * as ReadMqtt from "../features/mqtt"
 import * as HoverOver from "../features/Hover"
 import * as ClickRoomData from "../features/clickRoomData"
+import TreeView from "../components/TreeViewDrawer.vue"
 
 export default {
     data: () => ({
@@ -43,6 +40,9 @@ export default {
         model: null,
         t: false
     }),
+    components:{
+TreeView
+    },
     mounted() {
         store.state.viewer = new Viewer({
             canvasId: "myCanvas",
