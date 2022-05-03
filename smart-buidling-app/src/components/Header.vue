@@ -7,6 +7,10 @@
       <w-button @click="$store.state.openDrawer = 'left'" class="bnavbar">
         <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>
       </w-button>
+
+       <w-button @click="$store.state.openTreeView = 'left'" class="treeBar">
+       <font-awesome-icon icon="fa-solid fa-network-wired" />
+      </w-button>
       <nav-bar-contents> </nav-bar-contents>
     </w-app>
   </div>
@@ -36,10 +40,9 @@ export default {
 }
 
 .bnavbar {
-  left: -816px;
-  top: -30px;
-  size: 30px;
-  z-index: 200001;
+ position: absolute;
+  z-index: 200081;
+  margin-left: 0px;
 }
 
 .dialogbox {
@@ -54,6 +57,10 @@ export default {
 .main {
   height: 100%;
   overflow: hidden;
+}
+.treeBar{
+  position: absolute;
+  z-index: 200080;
 }
 @media only screen and  (max-width: 1100px) {
   .bnavbar {

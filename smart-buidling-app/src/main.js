@@ -4,11 +4,9 @@ import router from "./router/index";
 import store from './store/index';
 import WaveUI from 'wave-ui';
 import 'wave-ui/dist/wave-ui.css';
-import KnobControl from 'vue-knob-control'
 import "./fa.config"
 import shell from 'vue-shell'
 Vue.use(shell);
-Vue.use(KnobControl)
 
 Vue.use(WaveUI)
 

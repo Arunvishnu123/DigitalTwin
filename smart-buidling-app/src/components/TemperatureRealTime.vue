@@ -18,14 +18,12 @@
 
 <script>
 import TempDial from "../components/TempDial.vue"
-import KnobControl from "vue-knob-control";
 export default {
     data: () => ({
         tes: 56,
         color: "red"
     }),
     components: {
-        KnobControl,
         TempDial
     },
 };

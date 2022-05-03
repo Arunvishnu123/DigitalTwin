@@ -68,7 +68,13 @@ const store = new Vuex.Store({
 
     //roomDialog
 
-    roomDialog:false
+    roomDialog:false,
+
+    // tree view 
+
+    openTreeView:false
+
+
 
 
 

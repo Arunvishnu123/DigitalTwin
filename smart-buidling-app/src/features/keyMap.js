@@ -5,13 +5,13 @@ export function keyMap(){
     store.state.viewer.cameraControl.navMode = "firstPerson";
     const scene = store.state.viewer.scene;
     const keyMap = {};
-    //camerControl.constrainVertical = true;
+    camerControl.constrainVertical = true;
     camerControl.followPointer = true;
     camerControl.panToPointer = true
     console.log("testcameracontrol",camerControl)
     const input = scene.input;
-    keyMap[camerControl.DOLLY_FORWARDS] = [input.KEY_UP_ARROW];
-    keyMap[camerControl.DOLLY_BACKWARDS] = [input.KEY_DOWN_ARROW];
+    keyMap[camerControl.PAN_FORWARDS] = [input.KEY_UP_ARROW];
+    keyMap[camerControl.PAN_BACKWARDS] = [input.KEY_DOWN_ARROW];
     keyMap[camerControl.PAN_LEFT] = [input.KEY_L ];
     keyMap[camerControl.PAN_RIGHT] = [input.KEY_R];
     keyMap[camerControl.PAN_UP] = [input.KEY_U];
