@@ -4,8 +4,7 @@
         <template #title>
            <font-awesome-icon class="windowClass" icon="fa-solid fa-window-maximize" />
             Window Control and Status
-        </template>
-        
+        </template>      
             <w-button @click="$store.state.windowOpenDialog = false" sm outline round bg-color="white" absolute icon="wi-cross">
             </w-button>
             <img class="image1" :src="$store.state.windowImage" />            

@@ -5,6 +5,7 @@ import "../assets/xeokit-context-menu.css"
 import store from "../store/index"
 import * as ContextMenuParameters from "../features/contextMenuParameters";
 import * as cameraFlight from  "../features/cameraAnimation"
+import * as floorView from "../features/floorView"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
@@ -115,6 +116,7 @@ export function contextMenu3dModel(viewer) {
                                 doAction: function (context) {
                                     store.state.objectContextMenu.enabled = false
                                     ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
+                                    floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
                                     viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
                                     viewer.camera.look = [1838784.212, 17.40368311, -5156525.627];
                                     viewer.camera.up = [-0.040127462, 0.990154669, -0.134102643];

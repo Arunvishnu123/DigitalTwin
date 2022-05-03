@@ -2,7 +2,7 @@
   <div>
     <w-app class="main">
       <w-tag xl height="2em" class="label mr4" bg-color="primary"
-        >Ecole Des Mines in Saint-Etienne</w-tag
+        >Mines Saint-Etienne Espace Fauriel Building</w-tag
       >
       <w-button @click="$store.state.openDrawer = 'left'" class="bnavbar">
         <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>

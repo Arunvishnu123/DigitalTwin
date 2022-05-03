@@ -15,8 +15,8 @@ export function readMQTT(){
     client.subscribe("emse/fayol/device/P8/temperature", function() {
         client.on('message', function(topic, message, packet) {
           console.log("recrveed",message.toString())
-          value = message.toString()
-          store.state.readTemperature = message.toString()
+          value = parseFloat(message.toString())
+          store.state.readTemperature = value.toFixed(2)
         });
     });
 
