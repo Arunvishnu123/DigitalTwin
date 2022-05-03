@@ -85,7 +85,7 @@ export default {
 }
 
 .dialogbox {
-    z-index: 200002;
+    z-index: 200082;
 }
 
 .cross {

@@ -42,7 +42,8 @@ export default {
 .bnavbar {
  position: absolute;
   z-index: 200081;
-  margin-left: 0px;
+  left:5px;
+  top:2px
 }
 
 .dialogbox {
@@ -61,6 +62,8 @@ export default {
 .treeBar{
   position: absolute;
   z-index: 200080;
+   left:35px;
+   top:2px;
 }
 @media only screen and  (max-width: 1100px) {
   .bnavbar {
