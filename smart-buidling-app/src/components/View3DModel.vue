@@ -15,7 +15,7 @@ import {
     PerformanceModel,
     ImagePlane,
 } from "@xeokit/xeokit-sdk/";
-import * as DisplayPersonData from "../features/clickPerosonDetails"
+import * as DisplayPersonData from "../features/clickevent/clickPerosonDetails"
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
 import * as ContextMenuCanvas from "../features/contextmenu/contextMenu3DModel";
@@ -26,12 +26,12 @@ import * as AxisView from "../features/axisView";
 import * as ContextMenuParameters from "../features/contextmenu/contextMenuParameters";
 import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
-import * as ClickSensor from "../features/click"
+import * as ClickSensor from "../features/clickevent/sensorClick"
 import * as ObjectLoader from "../features/objectLoader"
-import * as windowClickEvent from "../features/windowOpenCloseDialog"
-import * as ReadMqtt from "../features/mqtt"
-import * as HoverOver from "../features/Hover"
-import * as ClickRoomData from "../features/clickRoomData"
+import * as windowClickEvent from "../features/clickevent/windowOpenCloseDialog"
+import * as ReadMqtt from "../features/mqttdatasubscribe/mqtt"
+import * as HoverOver from "../features/hoverevent/Hover"
+import * as ClickRoomData from "../features/clickevent/clickRoomData"
 import TreeView from "../components/TreeViewDrawer.vue"
 
 export default {

@@ -1,5 +1,5 @@
 import mqtt from "mqtt"
-import store from "../store/index"
+import store from "../../store/index"
 
 export function readMQTT(){
     console.log("test")
