@@ -18,12 +18,12 @@ import {
 import * as DisplayPersonData from "../features/clickPerosonDetails"
 import * as display3d from "../features/view3D";
 import * as selectObjects from "../features/selectObjects";
-import * as ContextMenuCanvas from "../features/contextMenu3DModel";
-import * as ContextMenu3DModel from "../features/contextMenuObject";
+import * as ContextMenuCanvas from "../features/contextmenu/contextMenu3DModel";
+import * as ContextMenu3DModel from "../features/contextmenu/contextMenuObject";
 import store from "../store/index";
 import * as NavCube from "../features/navCube";
 import * as AxisView from "../features/axisView";
-import * as ContextMenuParameters from "../features/contextMenuParameters";
+import * as ContextMenuParameters from "../features/contextmenu/contextMenuParameters";
 import * as CreateAnnotation from "../features/Annotation";
 import * as CreateKeyMap from "../features/keyMap"
 import * as ClickSensor from "../features/click"

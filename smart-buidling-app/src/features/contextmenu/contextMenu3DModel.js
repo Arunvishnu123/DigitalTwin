@@ -1,11 +1,11 @@
 import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
-import "../assets/xeokit-context-menu.css"
-import store from "../store/index"
-import * as ContextMenuParameters from "../features/contextMenuParameters";
-import * as cameraFlight from  "../features/cameraAnimation"
-import * as floorView from "../features/floorView"
+import "../../assets/xeokit-context-menu.css"
+import store from "../../store/index"
+import * as ContextMenuParameters from "./contextMenuParameters";
+import * as cameraFlight from  "../cameraAnimation"
+import * as floorView from "../floorView"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
