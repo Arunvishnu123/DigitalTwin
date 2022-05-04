@@ -1,5 +1,5 @@
 
-import store from "../store/index"
+import store from "../../store/index"
 
 export function treeView(){
     const treeView = new TreeViewPlugin(viewer, {

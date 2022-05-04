@@ -1,5 +1,5 @@
 import {OBJLoaderPlugin} from "@xeokit/xeokit-sdk"
-import store from "../store/index"
+import store from "../../store/index"
 
 export function objectLoader(){
     const objLoader = new OBJLoaderPlugin(store.state.viewer);

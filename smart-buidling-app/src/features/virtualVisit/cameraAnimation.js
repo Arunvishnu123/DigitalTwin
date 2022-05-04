@@ -1,5 +1,5 @@
 import { CameraPath, CameraPathAnimation } from "@xeokit/xeokit-sdk";
-import store from "../store/index"
+import store from "../../store/index"
 
 export function cameraPathAnimation() {
 

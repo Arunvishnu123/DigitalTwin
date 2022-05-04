@@ -1,4 +1,4 @@
-import store from "../store/index"
+import store from "../../store/index"
 
 export function keyMap(){
     const camerControl =  store.state.viewer.cameraControl;

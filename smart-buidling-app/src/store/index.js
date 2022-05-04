@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
-import * as floorView from "../features/floorView"
+import * as floorView from "../features/floorView/floorView"
 
 
 const store = new Vuex.Store({

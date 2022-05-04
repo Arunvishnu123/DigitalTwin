@@ -4,7 +4,7 @@ import {
 import "../../assets/xeokit-context-menu.css"
 import store from "../../store/index"
 import * as ContextMenuParameters from "./contextMenuParameters";
-import * as floorView from "../floorView"
+import * as floorView from "../floorView/floorView"
 
 export function contextMenu3dModel(model, viewer) {
     store.state.objectContextMenu = new ContextMenu({
