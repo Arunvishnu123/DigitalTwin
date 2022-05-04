@@ -17,17 +17,17 @@
 </template>
 
 <script>
-import NavBar from "../components/Header.vue";
-import Display3d from "../components/View3DModel.vue";
-import TemperatureMonitoring from "../components/TemperatureMontioring.vue";
-import LuminanceMonitoring from "../components/LuminanceMonitoring.vue";
-import HumidityMonitoring from "../components/HumidityMonitoring.vue";
-import RoomMontoring from "../components/RoomDetails.vue";
-import TerminalDialog from "../components/TerminalDialogBox.vue";
-import RealTimeTemperature from "../components/TemperatureRealTime.vue";
-import DisplayPersonData from "../components/TablePersonDetails.vue";
-import DisplayWindowStatus from "../components/WindowControl.vue";
-import Tooltip from "../components/Tooltip.vue"
+import NavBar from "../components/header/Header.vue";
+import Display3d from "../components/bimModel/View3DModel.vue";
+import TemperatureMonitoring from "../components/historicalMonitoring/TemperatureMontioring.vue";
+import LuminanceMonitoring from "../components/historicalMonitoring/LuminanceMonitoring.vue";
+import HumidityMonitoring from "../components/historicalMonitoring/HumidityMonitoring.vue";
+import RoomMontoring from "../components/roomMonitoring/RoomDetails.vue";
+import TerminalDialog from "../components/terminalBox/TerminalDialogBox.vue";
+import RealTimeTemperature from "../components/realTimeMonitoring/TemperatureRealTime.vue";
+import DisplayPersonData from "../components/roomMonitoring/TablePersonDetails.vue";
+import DisplayWindowStatus from "../components/realTimeMonitoring/WindowControl.vue";
+import Tooltip from "../components/bimModel/Tooltip.vue"
 
 export default {
     components: {

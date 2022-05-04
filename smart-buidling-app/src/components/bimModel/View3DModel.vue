@@ -15,24 +15,24 @@ import {
     PerformanceModel,
     ImagePlane,
 } from "@xeokit/xeokit-sdk/";
-import * as DisplayPersonData from "../features/clickevent/clickPerosonDetails"
-import * as display3d from "../features/bimModel/view3D";
-import * as selectObjects from "../features/additional/selectObjects";
-import * as ContextMenuCanvas from "../features/contextmenu/contextMenu3DModel";
-import * as ContextMenu3DModel from "../features/contextmenu/contextMenuObject";
-import store from "../store/index";
-import * as NavCube from "../features/bimModel/navCube";
-import * as AxisView from "../features/bimModel/axisView";
-import * as ContextMenuParameters from "../features/contextmenu/contextMenuParameters";
-import * as CreateAnnotation from "../features/annotation/annotation";
-import * as CreateKeyMap from "../features/firstPersonView/keyMap"
-import * as ClickSensor from "../features/clickevent/sensorClick"
-import * as ObjectLoader from "../features/objectLoader/objectLoader"
-import * as windowClickEvent from "../features/clickevent/windowOpenCloseDialog"
-import * as ReadMqtt from "../data/mqtt/subscribe/fourthFloor/r421"
-import * as HoverOver from "../features/hoverevent/Hover"
-import * as ClickRoomData from "../features/clickevent/clickRoomData"
-import TreeView from "../components/TreeViewDrawer.vue"
+import * as DisplayPersonData from "../../features/clickevent/clickPerosonDetails"
+import * as display3d from "../../features/bimModel/view3D";
+import * as selectObjects from "../../features/additional/selectObjects";
+import * as ContextMenuCanvas from "../../features/contextmenu/contextMenu3DModel";
+import * as ContextMenu3DModel from "../../features/contextmenu/contextMenuObject";
+import store from "../../store/index";
+import * as NavCube from "../../features/bimModel/navCube";
+import * as AxisView from "../../features/bimModel/axisView";
+import * as ContextMenuParameters from "../../features/contextmenu/contextMenuParameters";
+import * as CreateAnnotation from "../../features/annotation/annotation";
+import * as CreateKeyMap from "../../features/firstPersonView/keyMap"
+import * as ClickSensor from "../../features/clickevent/sensorClick"
+import * as ObjectLoader from "../../features/objectLoader/objectLoader"
+import * as windowClickEvent from "../../features/clickevent/windowOpenCloseDialog"
+import * as ReadMqtt from "../../data/mqtt/subscribe/fourthFloor/r421"
+import * as HoverOver from "../../features/hoverevent/Hover"
+import * as ClickRoomData from "../../features/clickevent/clickRoomData"
+import TreeView from "../header/TreeViewDrawer.vue"
 
 export default {
     data: () => ({
@@ -178,7 +178,7 @@ TreeView
         ClickRoomData.clickSensorData()
         
         new ImagePlane(store.state.viewer.scene, {
-            src: "src/assets/1.jpg",
+            src: "src/assets/images/1.jpg",
             size: 3000,
             position: [1838775.8837769788, -60.25278768461993, -5156526.636644002],
             rotation: [0, 0, 0], // X, Y and Z

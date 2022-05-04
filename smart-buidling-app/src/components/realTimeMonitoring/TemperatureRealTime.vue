@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import TempDial from "../components/TempDial.vue"
+import TempDial from "../../widgets/TempDial.vue"
 export default {
     data: () => ({
         tes: 56,

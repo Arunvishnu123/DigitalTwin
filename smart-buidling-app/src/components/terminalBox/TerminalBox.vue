@@ -8,7 +8,7 @@
 import {
     StoreyViewsPlugin
 } from "@xeokit/xeokit-sdk/";
-import store from "../store/index";
+import store from "../../store/index";
 export default {
     data() {
         return {
@@ -25,7 +25,7 @@ export default {
                 sign: "SmartBuilding $",
                 img: {
                     align: "left",
-                    link: "src/assets/test.png",
+                    link: "src/assets/images/test.png",
                     width: 150,
                     height: 150,
                 },

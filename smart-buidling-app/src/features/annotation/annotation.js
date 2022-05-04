@@ -2,7 +2,7 @@ import store from "../../store/index"
 import {
     AnnotationsPlugin
 } from "@xeokit/xeokit-sdk/";
-import "../../assets/annotation.css"
+import "../../assets/styles/annotation.css"
 
 export function createAnnotation() {
     const annotations = new AnnotationsPlugin(store.state.viewer, {

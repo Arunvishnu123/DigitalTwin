@@ -1,7 +1,7 @@
 import {
     ContextMenu
 } from "@xeokit/xeokit-sdk/";
-import "../../assets/xeokit-context-menu.css"
+import "../../assets/styles/xeokit-context-menu.css"
 import store from "../../store/index"
 
 export function contextMenufirstFloor(viewer) {

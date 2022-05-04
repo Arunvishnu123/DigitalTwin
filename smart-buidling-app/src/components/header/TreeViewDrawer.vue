@@ -17,7 +17,7 @@
 import {
     TreeViewPlugin
 } from "@xeokit/xeokit-sdk/";
-import store from "../store/index"
+import store from "../../store/index"
 export default {
     computed: {
         position() {

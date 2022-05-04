@@ -6,7 +6,7 @@
 
 <script>
 import store from "./store/index"
-import * as floorView from "./features/floorView/floorView"
+import * as floorView from "./features/floorViews/floorView"
 export default {
     data: () => ({}),
 

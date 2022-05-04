@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import store from "../store/index";
+import store from "../../store/index";
 import TerminalBox from "./TerminalBox.vue";
 export default {
     data: () => ({}),
