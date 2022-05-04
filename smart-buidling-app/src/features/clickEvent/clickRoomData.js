@@ -6,7 +6,7 @@ export function clickSensorData() {
         if (pickResult.entity.id == "26RvPR7OX7XPFMpPoB2VUB") {
             console.log("id clicked");
             store.state.roomDialog = true
-           
+
         }
     })
 }

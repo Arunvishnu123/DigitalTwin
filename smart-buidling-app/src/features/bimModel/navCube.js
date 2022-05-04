@@ -2,8 +2,8 @@ import {
     NavCubePlugin
 } from "@xeokit/xeokit-sdk/";
 
-export function navCubeView(canvasID,viewer){
-    
+export function navCubeView(canvasID, viewer) {
+
     new NavCubePlugin(viewer, {
         canvasId: canvasID,
         //color: "lightblue",

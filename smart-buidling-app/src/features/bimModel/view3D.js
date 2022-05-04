@@ -7,13 +7,10 @@ export function display3d(viewer) {
     viewer.camera.look = [1838784.2194265071, 11.599380180651577, -5156512.788618103];
     viewer.camera.up = [0.03188734217413631, 0.9984305577024861, 0.04603931857632314];
     const xktLoader = new XKTLoaderPlugin(viewer, {
-
         objectDefaults: { // <<----- Only override color of IfcSpace elements, keep other original IFC colors
-
             IfcSpace: {
 
             },
-
             IfcWindow: {
                 pickable: false,
                 opacity: 0.1
@@ -35,13 +32,12 @@ export function display3d(viewer) {
                 colorize: [150, 146, 146], // Blue
                 pickable: false,
             },
-    
         },
     });
-viewer.cameraControl.followPointer = true;
-viewer.scene.highlightMaterial.fill = false;
-viewer.scene.highlightMaterial.fillAlpha = 0.3;
-viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
+    viewer.cameraControl.followPointer = true;
+    viewer.scene.highlightMaterial.fill = false;
+    viewer.scene.highlightMaterial.fillAlpha = 0.3;
+    viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
 
-return model 
+    return model
 }
