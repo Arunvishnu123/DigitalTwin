@@ -1,17 +1,17 @@
 import store from "../../store/index"
 
-export function keyMap(){
-    const camerControl =  store.state.viewer.cameraControl;
+export function keyMap() {
+    const camerControl = store.state.viewer.cameraControl;
     store.state.viewer.cameraControl.navMode = "firstPerson";
     const scene = store.state.viewer.scene;
     const keyMap = {};
     camerControl.constrainVertical = true;
-    camerControl.followPointer = true;
-    console.log("testcameracontrol",camerControl)
+    camerControl.followPointer = false;
+    console.log("testcameracontrol", camerControl)
     const input = scene.input;
     keyMap[camerControl.PAN_FORWARDS] = [input.KEY_UP_ARROW];
     keyMap[camerControl.PAN_BACKWARDS] = [input.KEY_DOWN_ARROW];
-    keyMap[camerControl.PAN_LEFT] = [input.KEY_L ];
+    keyMap[camerControl.PAN_LEFT] = [input.KEY_L];
     keyMap[camerControl.PAN_RIGHT] = [input.KEY_R];
     keyMap[camerControl.PAN_UP] = [input.KEY_U];
     keyMap[camerControl.PAN_DOWN] = [input.KEY_D];

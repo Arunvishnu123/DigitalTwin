@@ -1,7 +1,6 @@
 <template>
 <div>
-    <div @click="m()" class="annotation-marker" id="myAnnotation5Marker" style="background-color: red">
-        S-421
+    <div @click="m()" id="myAnnotation5Marker">
     </div>
     <div class="annotation-label" id="myAnnotation5Label" style="background-color: white">
         <div class="annotation-title">
@@ -43,40 +42,44 @@ export default {
         store.state.viewer.scene.ticksPerOcclusionTest = 1
         const annotations = new AnnotationsPlugin(store.state.viewer, {});
 
-        var prevAnnotationClicked = null;
+        // var prevAnnotationClicked = null;
 
-        annotations.on("markerClicked", (annotation) => {
-            if (prevAnnotationClicked) {
-                prevAnnotationClicked.setLabelShown(false);
-            }
-            annotation.setLabelShown(true);
-            viewer.cameraFlight.flyTo(annotation);
-            prevAnnotationClicked = annotation;
-        });
-        annotations.on("markerMouseEnter", (annotation) => {
-            annotation.setLabelShown(true);
-        });
+        // annotations.on("markerClicked", (annotation) => {
+        //     if (prevAnnotationClicked) {
+        //         prevAnnotationClicked.setLabelShown(false);
+        //     }
+        //     annotation.setLabelShown(true);
+        //     viewer.cameraFlight.flyTo(annotation);
+        //     prevAnnotationClicked = annotation;
+        // });
+        // annotations.on("markerMouseEnter", (annotation) => {
+        //     annotation.setLabelShown(true);
+        // });
 
         annotations.on("markerMouseLeave", (annotation) => {
             annotation.setLabelShown(false);
         });
         store.state.viewer.cameraControl.on("hover", (pickResult) => {
-            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
-            annotations.createAnnotation({
+            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {   
+                console.log("sdhkfjdfhsdhf  ",t)
+               const t =  annotations.createAnnotation({
                     id: "myAnnotation5",
-                    entity: viewer.scene.objects["1bDMdL0k55X8oOMH5VK_cb"],
+                    //entity: viewer.scene.objects["1bDMdL0k55X8oOMH5VK_cb"],
                     worldPos: this.position,
                     //occludable: true,
                     markerShown: true,
                     eye: [1838784.226, 17.41054783, -5156525.58],
                     look: [1838784.212, 17.40368311, -5156525.627],
                     up: [-0.040127462, 0.990154669, -0.134102643],
-                    labelShown:true,
+                    labelShown: true,
                     markerElementId: "myAnnotation5Marker",
                     labelElementId: "myAnnotation5Label",
                 });
-            }  if (pickResult.entity.id != "1bDMdL0k55X8oOMH5VK_cb") {
-                 annotations.destroy()
+            }
+           else {
+                annotations.destroy()
+                console.log(annotations.destroy())
+                console.log("jkdfhsdhfjsdfh")
             }
         })
 
@@ -91,7 +94,7 @@ export default {
     text-align: center;
     font-family: "Arial";
     position: absolute;
-    width: 60px;
+    width: 25px;
     height: 25px;
     border-radius: 15px;
     border: 2px solid #ffffff;
@@ -108,7 +111,7 @@ export default {
     max-width: 250px;
     min-height: 50px;
     padding: 8px;
-    padding-left: 12px;
+    padding-left: 30px;
     padding-right: 12px;
     background: #ffffff;
     color: #000000;
@@ -132,7 +135,7 @@ export default {
     width: 0;
     z-index: 1;
     margin-top: -11px;
-    left: -12px;
+    left: -1px;
     top: 20px;
 }
 

@@ -156,17 +156,18 @@ export default {
             console.log(e)
         });
 
-        // store.state.viewer.cameraControl.on("hover", (pickResult) => {
-        //     if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
-        //         this.t = true
-        //         console.log(this.t)
-        //         console.log("id clicked");
-        //     } else {
-        //         this.t = false
-        //         console.log(this.t)
-        //         console.log("notclcickedd")
-        //     }
-        // })
+        store.state.viewer.scene.input.on("mouseclicked", (coords) => {
+
+        const pickResult = store.state.viewer.scene.pick({
+            canvasPos: coords,
+            pickSurface: true  // <<------ This causes picking to find the intersection point on the entity
+        });
+
+        if (pickResult) {
+            console.log("pickresult",pickResult)
+                        
+        }
+    });
 
         //CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData()
