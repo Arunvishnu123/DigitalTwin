@@ -20,7 +20,7 @@ module.exports = {
     devServer: {
         // open: true, // open browser after serve.
         hot: true,
-        host:"10.103.1.236",
+        host:"localhost",
         port:8080
     },
     plugins: [

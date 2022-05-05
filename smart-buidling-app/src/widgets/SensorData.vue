@@ -1,30 +1,58 @@
 <template>
 <div>
-
-    <div class='annotation-marker' id="myAnnotation5Marker" style='background-color: red;'>S-421</div>
-    <div class='annotation-label' id="myAnnotation5Label" style='background-color: white;'>
-        <div class='annotation-title'>Temperature - {{$store.state.readTemperature}} °C</div>
-         <div class='annotation-title'>Luminance - {{$store.state.readTemperature}}</div>
-          <div class='annotation-title'>Relative Humidity - {{$store.state.readTemperature}}</div>
-    <div class="annotation-desc">click on the sensor box for more information</div>
+    <div @click="m()" class="annotation-marker" id="myAnnotation5Marker" style="background-color: red">
+        S-421
+    </div>
+    <div class="annotation-label" id="myAnnotation5Label" style="background-color: white">
+        <div class="annotation-title">
+            Temperature - {{ $store.state.readTemperature }} °C
+        </div>
+        <div class="annotation-title">
+            Luminance - {{ $store.state.readTemperature }}
+        </div>
+        <div class="annotation-title">
+            Relative Humidity - {{ $store.state.readTemperature }}
+        </div>
+        <div class="annotation-desc">
+            click on the sensor box for more information
+        </div>
     </div>
 </div>
 </template>
 
 <script>
-import store from "../store/index"
+import store from "../store/index";
+import * as floorView from "../features/floorViews/floorView"
 import {
     AnnotationsPlugin
 } from "@xeokit/xeokit-sdk/";
-import Temp from "./TempDial.vue"
+import Temp from "./TempDial.vue";
 export default {
-    props: ['position'],
+    props: ["position"],
     components: {
-        Temp
+        Temp,
     },
+    methods: {
+        m() {
+            console.log("work")
+            floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
 
+        }
+    },
     mounted() {
+        store.state.viewer.scene.ticksPerOcclusionTest = 1
         const annotations = new AnnotationsPlugin(store.state.viewer, {});
+
+        var prevAnnotationClicked = null;
+
+        annotations.on("markerClicked", (annotation) => {
+            if (prevAnnotationClicked) {
+                prevAnnotationClicked.setLabelShown(false);
+            }
+            annotation.setLabelShown(true);
+            viewer.cameraFlight.flyTo(annotation);
+            prevAnnotationClicked = annotation;
+        });
         annotations.on("markerMouseEnter", (annotation) => {
             annotation.setLabelShown(true);
         });
@@ -32,31 +60,39 @@ export default {
         annotations.on("markerMouseLeave", (annotation) => {
             annotation.setLabelShown(false);
         });
+        store.state.viewer.cameraControl.on("hover", (pickResult) => {
+            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
+            annotations.createAnnotation({
+                    id: "myAnnotation5",
+                    entity: viewer.scene.objects["1bDMdL0k55X8oOMH5VK_cb"],
+                    worldPos: this.position,
+                    //occludable: true,
+                    markerShown: true,
+                    eye: [1838784.226, 17.41054783, -5156525.58],
+                    look: [1838784.212, 17.40368311, -5156525.627],
+                    up: [-0.040127462, 0.990154669, -0.134102643],
+                    labelShown:true,
+                    markerElementId: "myAnnotation5Marker",
+                    labelElementId: "myAnnotation5Label",
+                });
+            }  if (pickResult.entity.id != "1bDMdL0k55X8oOMH5VK_cb") {
+                 annotations.destroy()
+            }
+        })
 
-        annotations.createAnnotation({
-            id: "myAnnotation5",
-            worldPos: this.position,
-            //occludable: true,
-            markerShown: true,
-            labelShown: false,
-
-            markerElementId: "myAnnotation5Marker",
-            labelElementId: "myAnnotation5Label"
-        });
-
-    }
-}
+    },
+};
 </script>
 
 <style scoped>
 .annotation-marker {
     color: white;
-    line-height: 1.8;
+    line-height: 1;
     text-align: center;
     font-family: "Arial";
     position: absolute;
-    width: 80px;
-    height: 30px;
+    width: 60px;
+    height: 25px;
     border-radius: 15px;
     border: 2px solid #ffffff;
     background-color: black;
@@ -64,7 +100,7 @@ export default {
     /* Set markers and labels initially hidden */
     box-shadow: 5px 5px 15px 1px #000000;
     z-index: 0;
-    text-align: center;
+    align-items: center;
 }
 
 .annotation-label {
@@ -87,7 +123,7 @@ export default {
 }
 
 .annotation-label:after {
-    content: '';
+    content: "";
     position: absolute;
     border-style: solid;
     border-width: 8px 12px 8px 0;
@@ -101,7 +137,7 @@ export default {
 }
 
 .annotation-label:before {
-    content: '';
+    content: "";
     position: absolute;
     border-style: solid;
     border-width: 9px 13px 9px 0;
