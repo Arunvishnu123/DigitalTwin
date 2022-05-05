@@ -2,12 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 import * as floorView from "../features/floorViews/floorView"
+import display from './componentModule/display';
 
 
 const store = new Vuex.Store({
   state: {
     // navbar drawer - dialog box control
-    openDrawer: false,
+   // openDrawer: false,
 
     // 3d model viewer 
     viewer: null,
@@ -125,6 +126,11 @@ const store = new Vuex.Store({
     readTemeprature421(){
       
   }
+  },
+  modules:{
+            display
   }
 })
+
+store.state.a
 export default store;

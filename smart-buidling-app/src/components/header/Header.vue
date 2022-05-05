@@ -4,7 +4,7 @@
       <w-tag xl height="2em" class="label mr4" bg-color="primary"
         >Mines Saint-Etienne Espace Fauriel Building</w-tag
       >
-      <w-button @click="$store.state.openDrawer = 'left'" class="bnavbar">
+      <w-button @click="$store.state.display.openDrawer = 'left'" class="bnavbar">
         <font-awesome-icon :icon="['fa', 'bars']"></font-awesome-icon>
       </w-button>
 

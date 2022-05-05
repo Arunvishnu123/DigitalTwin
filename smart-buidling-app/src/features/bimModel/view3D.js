@@ -1,5 +1,5 @@
 import {
-    XKTLoaderPlugin
+    XKTLoaderPlugin,math
 } from "@xeokit/xeokit-sdk/";
 
 export function display3d(viewer) {
@@ -26,6 +26,7 @@ export function display3d(viewer) {
         src: 'src/assets/MINES.xkt',
         saoEnabled: true,
         metaModelSrc: "src/assets/final.json",
+        orgin:[0,0,0],
         excludeTypes: ["IfcSpace"],
         objectDefaults: {
             IfcSlab: {
@@ -38,6 +39,53 @@ export function display3d(viewer) {
     viewer.scene.highlightMaterial.fill = false;
     viewer.scene.highlightMaterial.fillAlpha = 0.3;
     viewer.scene.highlightMaterial.edgeColor = [1, 1, 1];
+    function projectLongLatToMercator(longitude, latitude, altitude = 0) {
 
+        const EARTH_RADIUS = 6371008.8; // Meters
+        const EARTH_CIRCUMFERENCE = 2 * Math.PI * EARTH_RADIUS; // Meters
+
+        function mercatorXfromLng(longitude) {
+            return (180 + longitude) / 360;
+        }
+
+        function mercatorYfromLat(latitude) {
+            return (180 - (180 / Math.PI * Math.log(Math.tan(Math.PI / 4
+                + latitude * Math.PI / 360)))) / 360;
+        }
+
+        function mercatorZfromAltitude(altitude, latitude) {
+            return altitude / circumferenceAtLatitude(latitude);
+        }
+
+        function circumferenceAtLatitude(latitude) {
+            return EARTH_CIRCUMFERENCE * Math.cos(latitude * Math.PI / 180);
+        }
+
+        function mercatorScaleAtLatitude(latitude) {
+            return 1 / Math.cos(latitude * Math.PI / 180);
+        }
+
+        function latFromMercatorY(y) {
+            const y2 = 180 - y * 360;
+            return 360 / Math.PI * Math.atan(Math.exp(y2 * Math.PI / 180)) - 90;
+        }
+
+        // Returns the distance of 1 meter in Mercator coordinate units at the given latitude.
+        function meterInMercatorCoordinateUnits(y) {
+            return 1 / EARTH_CIRCUMFERENCE * mercatorScaleAtLatitude(latFromMercatorY(y));
+        }
+
+        const mercator = math.vec3([
+            mercatorXfromLng(longitude),
+            mercatorYfromLat(latitude),
+            mercatorZfromAltitude(altitude, latitude)
+        ]);
+
+        const modelMercatorScale = meterInMercatorCoordinateUnits(mercator[1]);
+
+        math.mulVec3Scalar(mercator, 1 / modelMercatorScale);
+console.log("testmercator",mercator)
+        return mercator;
+    }
     return model
 }

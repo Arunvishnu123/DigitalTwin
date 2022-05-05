@@ -203,6 +203,7 @@ export function contextMenu3dModel(model, viewer) {
                                     viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
                                     viewer.camera.look = [1838784.212, 17.40368311, -5156525.627];
                                     viewer.camera.up = [-0.040127462, 0.990154669, -0.134102643];
+                                    store.state.model.scene.objects["295MeKx7H5KOdAaP3Utyr_"].colorize = [174, 174, 174 ]
                                 }
                             },
 

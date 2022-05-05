@@ -3,7 +3,7 @@
     <canvas id="myCanvas"></canvas>
     <canvas id="NavCubeCanvas"></canvas>
     <canvas id="AxisGizmoCanvas"></canvas>
-   <TreeView />
+
 
 </div>
 </template>
@@ -41,7 +41,7 @@ export default {
         t: false
     }),
     components:{
-TreeView
+
     },
     mounted() {
         store.state.viewer = new Viewer({
@@ -168,7 +168,7 @@ TreeView
         //     }
         // })
 
-        ///CreateAnnotation.createAnnotation()
+        //CreateAnnotation.createAnnotation()
         ClickSensor.clickSensorData()
         HoverOver.hoverOver()
         windowClickEvent.clickPersonData()

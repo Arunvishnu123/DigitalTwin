@@ -1,0 +1,126 @@
+<template>
+<div>
+
+    <div class='annotation-marker' id="myAnnotation5Marker" style='background-color: red;'>S-421</div>
+    <div class='annotation-label' id="myAnnotation5Label" style='background-color: white;'>
+        <div class='annotation-title'>Temperature - {{$store.state.readTemperature}} °C</div>
+         <div class='annotation-title'>Luminance - {{$store.state.readTemperature}}</div>
+          <div class='annotation-title'>Relative Humidity - {{$store.state.readTemperature}}</div>
+    <div class="annotation-desc">click on the sensor box for more information</div>
+    </div>
+</div>
+</template>
+
+<script>
+import store from "../store/index"
+import {
+    AnnotationsPlugin
+} from "@xeokit/xeokit-sdk/";
+import Temp from "./TempDial.vue"
+export default {
+    props: ['position'],
+    components: {
+        Temp
+    },
+
+    mounted() {
+        const annotations = new AnnotationsPlugin(store.state.viewer, {});
+        annotations.on("markerMouseEnter", (annotation) => {
+            annotation.setLabelShown(true);
+        });
+
+        annotations.on("markerMouseLeave", (annotation) => {
+            annotation.setLabelShown(false);
+        });
+
+        annotations.createAnnotation({
+            id: "myAnnotation5",
+            worldPos: this.position,
+            //occludable: true,
+            markerShown: true,
+            labelShown: false,
+
+            markerElementId: "myAnnotation5Marker",
+            labelElementId: "myAnnotation5Label"
+        });
+
+    }
+}
+</script>
+
+<style scoped>
+.annotation-marker {
+    color: white;
+    line-height: 1.8;
+    text-align: center;
+    font-family: "Arial";
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    background-color: black;
+    visibility: hidden;
+    /* Set markers and labels initially hidden */
+    box-shadow: 5px 5px 15px 1px #000000;
+    z-index: 0;
+    text-align: center;
+}
+
+.annotation-label {
+    position: absolute;
+    max-width: 250px;
+    min-height: 50px;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background: #ffffff;
+    color: #000000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 8px;
+    border: #ffffff solid 2px;
+    box-shadow: 5px 5px 15px 1px #000000;
+    z-index: 90000;
+    visibility: hidden;
+    /* Set markers and labels initially hidden */
+}
+
+.annotation-label:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 8px 12px 8px 0;
+    border-color: transparent white;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -11px;
+    left: -12px;
+    top: 20px;
+}
+
+.annotation-label:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 9px 13px 9px 0;
+    border-color: transparent #ffffff;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-top: -12px;
+    left: -15px;
+    top: 20px;
+}
+
+.annotation-title {
+    font: normal 18px arial, serif;
+    margin-bottom: 8px;
+}
+
+.annotation-desc {
+    font: normal 10px arial, serif;
+    text-align: center;
+}
+</style>

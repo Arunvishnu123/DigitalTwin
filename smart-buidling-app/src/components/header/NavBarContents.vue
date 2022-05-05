@@ -1,9 +1,9 @@
 <template>
 <div>   
-        <w-drawer class="dialogbox" v-model="$store.state.openDrawer" :[position]="true">
+        <w-drawer class="dialogbox" v-model="$store.state.display.openDrawer" :[position]="true">
             <w-flex column>
                 <w-tag xl height="2em" class="label1" bg-color="primary">Floor Selection</w-tag>
-                <w-button class="cross" @click="$store.state.openDrawer = false" bg-color="white" outline absolute round icon="wi-cross">
+                <w-button class="cross" @click="$store.state.display.openDrawer = false" bg-color="white" outline absolute round icon="wi-cross">
                 </w-button>
                 <w-radios class="checkboxes" v-model="$store.state.selection" :items="radioItems">
                 </w-radios>
@@ -60,7 +60,7 @@ export default {
     }),
     computed: {
         position() {
-            return store.state.openDrawer || "right";
+            return store.state.display.openDrawer || "right";
         },
     },
     methods: {
@@ -73,7 +73,7 @@ export default {
             this[`button${id}loading`] = true
             setTimeout(() => (this[`button${id}loading`] = false), 3000)
         }
-    }
+    },
 };
 </script>
 
