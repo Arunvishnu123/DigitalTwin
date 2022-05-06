@@ -13,6 +13,9 @@
         <DisplayWindowStatus />
         <Tooltip />   
         <Test1 :position="h"/>
+        <EmployeeData />
+        <Windowtest />
+        <RoomData />
     </w-app>
 </div>
 </template>
@@ -29,7 +32,10 @@ import RealTimeTemperature from "../components/realTimeMonitoring/TemperatureRea
 import DisplayPersonData from "../components/roomMonitoring/TablePersonDetails.vue";
 import DisplayWindowStatus from "../components/realTimeMonitoring/WindowControl.vue";
 import Tooltip from "../components/bimModel/Tooltip.vue"
-import Test1 from "../widgets/SensorData.vue"
+import Test1 from "../widgets/createLabel/SensorData.vue"
+import EmployeeData from "../widgets/createLabel/EmployeeInformation.vue"
+import Windowtest from "../widgets/createLabel/WindowInformation.vue"
+import RoomData from "../widgets/createLabel/RoomData.vue"
 
 export default {
     components: {
@@ -44,7 +50,10 @@ export default {
         DisplayPersonData,
         DisplayWindowStatus,
         Tooltip,
-        Test1
+        Test1,
+        EmployeeData,
+        Windowtest,
+        RoomData
     },
     data: () => ({
            h:[1838785.4837244658,17.222810247329033,-5156526.853220375]

@@ -35,6 +35,7 @@ export default {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     padding: 10px;
     border-color: red;
+    z-index: 900013;
 }
 .userIcon{
     padding-right: 10px;
