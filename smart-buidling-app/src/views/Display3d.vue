@@ -8,7 +8,7 @@
         <HumidityMonitoring />
         <RoomMontoring />
         <TerminalDialog />
-        <RealTimeTemperature />
+       
         <DisplayPersonData />
         <DisplayWindowStatus />
         <Tooltip />   
@@ -16,6 +16,7 @@
         <EmployeeData />
         <Windowtest />
         <RoomData />
+        <RealTimeMonitoring />
     </w-app>
 </div>
 </template>
@@ -28,7 +29,7 @@ import LuminanceMonitoring from "../components/historicalMonitoring/LuminanceMon
 import HumidityMonitoring from "../components/historicalMonitoring/HumidityMonitoring.vue";
 import RoomMontoring from "../components/roomMonitoring/RoomDetails.vue";
 import TerminalDialog from "../components/terminalBox/TerminalDialogBox.vue";
-import RealTimeTemperature from "../components/realTimeMonitoring/TemperatureRealTime.vue";
+// import RealTimeTemperature from "../components/realTimeMonitoring/TemperatureRealTime.vue";
 import DisplayPersonData from "../components/roomMonitoring/TablePersonDetails.vue";
 import DisplayWindowStatus from "../components/realTimeMonitoring/WindowControl.vue";
 import Tooltip from "../components/bimModel/Tooltip.vue"
@@ -36,6 +37,7 @@ import Test1 from "../widgets/createLabel/SensorData.vue"
 import EmployeeData from "../widgets/createLabel/EmployeeInformation.vue"
 import Windowtest from "../widgets/createLabel/WindowInformation.vue"
 import RoomData from "../widgets/createLabel/RoomData.vue"
+import RealTimeMonitoring from "../components/realTimeMonitoring/RealTimeMonitoring.vue"
 
 export default {
     components: {
@@ -46,14 +48,15 @@ export default {
         HumidityMonitoring,
         RoomMontoring,
         TerminalDialog,
-        RealTimeTemperature,
+        // RealTimeTemperature,
         DisplayPersonData,
         DisplayWindowStatus,
         Tooltip,
         Test1,
         EmployeeData,
         Windowtest,
-        RoomData
+        RoomData,
+        RealTimeMonitoring
     },
     data: () => ({
            h:[1838785.4837244658,17.222810247329033,-5156526.853220375]

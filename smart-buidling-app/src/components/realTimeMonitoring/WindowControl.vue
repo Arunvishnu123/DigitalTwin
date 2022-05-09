@@ -41,6 +41,7 @@ export default {
 
 .windowTitle{
  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ z-index: 900010;
 
 }
 

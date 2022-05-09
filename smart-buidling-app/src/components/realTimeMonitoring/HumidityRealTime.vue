@@ -1,24 +1,24 @@
 <template>
 <div>
-    <TempDial />
-    <w-button xl class="realTemp mr4" @click="$store.state.tempdisplay = true" bg-color="primary">Click to View Historical Temperature
+    <Humidity/>
+    <w-button xl class="realHum mr4" @click="$store.state.humiditydisplay = true" bg-color="primary">Click to View Historical Humidity
     </w-button>
 </div>
 </template>
 
 <script>
-import TempDial from "../../widgets/TempDial.vue";
+import Humidity from "../../widgets/Humidity.vue"
 export default {
     data: () => ({
     }),
     components: {
-        TempDial,
+        Humidity,
     },
 };
 </script>
 
 <style scoped>
-.realTemp {
+.realHum {
     width: 99%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     overflow-x: hidden;

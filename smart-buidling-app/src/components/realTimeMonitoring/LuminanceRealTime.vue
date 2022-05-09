@@ -1,24 +1,24 @@
 <template>
 <div>
-    <TempDial />
-    <w-button xl class="realTemp mr4" @click="$store.state.tempdisplay = true" bg-color="primary">Click to View Historical Temperature
+    <Luminance />
+    <w-button xl class="realLum mr4" @click="$store.state.luminancedisplay = true" bg-color="primary">Click to View Historical Luminanace
     </w-button>
 </div>
 </template>
 
 <script>
-import TempDial from "../../widgets/TempDial.vue";
+import Luminance from "../../widgets/Luminance.vue"
 export default {
     data: () => ({
     }),
     components: {
-        TempDial,
+        Luminance,
     },
 };
 </script>
 
 <style scoped>
-.realTemp {
+.realLum {
     width: 99%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     overflow-x: hidden;
