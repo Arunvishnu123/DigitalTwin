@@ -9,6 +9,7 @@ import {
     StoreyViewsPlugin
 } from "@xeokit/xeokit-sdk/";
 import store from "../../store/index";
+import  * as  floorView from "../../features/floorViews/floorView"
 export default {
     data() {
         return {
@@ -53,24 +54,30 @@ export default {
                 }, {
                     name: "r421",
                     get() {
-                        return `<p>Fourth Floor Successfully Separated</p>`;
+                        floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
+                        //  store.state.objectContextMenu.enabled = false
+                        //ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
+                        store.state.viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
+                        store.state.viewer.camera.look = [1838784.212, 17.40368311, -5156525.627];
+                        store.state.viewer.camera.up = [-0.040127462, 0.990154669, -0.134102643];
+                        return `<p>Room No 421 is reached</p>`;
                     }
                 },
-        
-        ],
-    };
-},
-methods: {
-    prompt(value) {
-        if (value == "node -v") {
-            this.send_to_terminal = process.versions.node;
-        }
-    },
 
-    test() {
-        console.log("test");
+            ],
+        };
     },
-},
+    methods: {
+        prompt(value) {
+            if (value == "node -v") {
+                this.send_to_terminal = process.versions.node;
+            }
+        },
+
+        test() {
+            console.log("test");
+        },
+    },
 };
 </script>
 

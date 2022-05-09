@@ -89,7 +89,7 @@ export default {
                         offsetCenter: [0, '-15%'],
                         fontSize: 60,
                         fontWeight: 'bolder',
-                        formatter: '{value} Cand',
+                        formatter: '{value} C',
                         color: 'auto'
                     },
                     data: [{

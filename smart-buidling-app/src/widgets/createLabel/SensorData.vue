@@ -7,10 +7,10 @@
             Temperature - {{ $store.state.readTemperature }} °C
         </div>
         <div class="annotation-title">
-            Luminance - {{ $store.state.readTemperature }}
+            Luminance - {{ $store.state.readTemperature }} C
         </div>
         <div class="annotation-title">
-            Relative Humidity - {{ $store.state.readTemperature }}
+            Relative Humidity - {{ $store.state.readTemperature }} %
         </div>
         <div class="annotation-desc">
             click on the sensor box for more information
