@@ -112,7 +112,7 @@ const store = new Vuex.Store({
         this.state.viewer.camera.eye = [1838782.7620401978,  49.39158880749794,-5156520.24746262];
         this.state.viewer.camera.look = [1838782.6567345671, 15.693182129143608, -5156520.397415988];
         this.state.viewer.camera.up = [-0.5746921936192545, 0.005437435123431921, -0.818351585134634];
-        this.state.openDrawer = false
+        this.state.display.openDrawer = false
       }
       if (this.state.selection == 8) {
         floorView.floorView("3_b98WEDT7feUaJ_WJeW_M", this.state.viewer, this.state.model);

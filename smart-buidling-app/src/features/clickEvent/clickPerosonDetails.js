@@ -27,9 +27,9 @@ export function clickPersonData() {
         }
         if (pickResult.entity.id == "1Qfe3f5n95yfrQ8nllTWx6") {
             store.state.person.name = "	HOUNAS Zehor Thilleli"
-            store.state.person.postion = "Doctorant"
-            store.state.person.emailID = "zehor-thilleli.hounas@edf.fr"
-            store.state.person.imageLink = "src/assets/images/plain.jpg"
+            store.state.person.postion = "Doctorante"
+            store.state.person.emailID = "zehor.hounas@emse.fr"
+            store.state.person.imageLink = "src/assets/images/photo-identité.jpg"
             store.state.tablepersonDialog = true
         }
     })
