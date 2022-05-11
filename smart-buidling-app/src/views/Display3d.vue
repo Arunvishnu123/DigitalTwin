@@ -8,11 +8,10 @@
         <HumidityMonitoring />
         <RoomMontoring />
         <TerminalDialog />
-       
         <DisplayPersonData />
         <DisplayWindowStatus />
-        <Tooltip />   
-        <Test1 :position="h"/>
+        <Tooltip />
+        <Test1 :position="h" />
         <EmployeeData />
         <Windowtest />
         <RoomData />
@@ -38,7 +37,11 @@ import EmployeeData from "../widgets/createLabel/EmployeeInformation.vue"
 import Windowtest from "../widgets/createLabel/WindowInformation.vue"
 import RoomData from "../widgets/createLabel/RoomData.vue"
 import RealTimeMonitoring from "../components/realTimeMonitoring/RealTimeMonitoring.vue"
-
+import TreeView from "../components/header/TreeViewDrawer.vue"
+import {
+    TreeViewPlugin
+} from "@xeokit/xeokit-sdk/";
+import store from "../store/index"
 export default {
     components: {
         Display3d,
@@ -56,17 +59,22 @@ export default {
         EmployeeData,
         Windowtest,
         RoomData,
-        RealTimeMonitoring
+        RealTimeMonitoring,
+        TreeView
     },
     data: () => ({
-           h:[1838785.4837244658,17.222810247329033,-5156526.853220375]
+        h: [1838785.4837244658, 17.222810247329033, -5156526.853220375]
     }),
     computed: {},
     methods: {
-        test(){
+        test() {
             console.log("test")
         }
     },
+    mounted() {
+  
+
+    }
 };
 </script>
 
@@ -76,8 +84,9 @@ export default {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-.toolTip{
-    height:100%;
+
+.toolTip {
+    height: 100%;
     width: 100%;
 }
 

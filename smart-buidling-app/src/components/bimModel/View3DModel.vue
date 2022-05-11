@@ -271,7 +271,7 @@ export default {
     text-align: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
     #NavCubeCanvas {
         position: absolute;
         width: 250px;

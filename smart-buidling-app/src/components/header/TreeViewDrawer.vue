@@ -1,6 +1,6 @@
 <template>
 <div>
-    <w-drawer class="treeView" v-model="$store.state.openTreeView" :[position]="right">
+    <w-drawer class="treeView" v-model="$store.state.openTreeView" :[position]="true">
         <w-flex column>
             <w-tag xl height="2em" class="label1" bg-color="primary">Tree View</w-tag>
             <w-button class="cross" @click="$store.state.openTreeView = false" bg-color="white" outline absolute round icon="wi-cross">
@@ -25,10 +25,10 @@ export default {
         }
     },
     mounted() {
-        const test = document.getElementById("treeViewContainer");
-        console.log("sdsahdsgadgsad", test)
+        const test = this.$refs;
+        console.log("sdsahdsgadgsad", this.$el.querySelector("#treeViewContainer"))
         const treeView = new TreeViewPlugin(store.state.viewer, {
-            containerElement: "treeViewContainer",
+            containerElement: this.$el.querySelector("#treeViewContainer"),
             autoExpandDepth: 1,
             hierarchy: "storeys",
             sortNodes: true,

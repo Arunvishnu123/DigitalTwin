@@ -1,17 +1,12 @@
 <template>
 <div>
-    <div @click="m()" id="myAnnotation5Marker">
-    </div>
+    <div @click="m()" id="myAnnotation5Marker"></div>
     <div class="annotation-label" id="myAnnotation5Label" style="background-color: white">
         <div class="annotation-title">
             Temperature - {{ $store.state.readTemperature }} °C
         </div>
-        <div class="annotation-title">
-            Luminance - 20 C
-        </div>
-        <div class="annotation-title">
-            Relative Humidity - 20 %
-        </div>
+        <div class="annotation-title">Luminance - 20 C</div>
+        <div class="annotation-title">Relative Humidity - 20 %</div>
         <div class="annotation-desc">
             click on the sensor box for more information
         </div>
@@ -21,49 +16,50 @@
 
 <script>
 import store from "../../store/index";
-import * as floorView from "../../features/floorViews/floorView"
+import * as floorView from "../../features/floorViews/floorView";
 import {
     AnnotationsPlugin
 } from "@xeokit/xeokit-sdk/";
 
 export default {
     props: ["position"],
-    components: {
-
-    },
+    components: {},
     methods: {
         m() {
-            console.log("work")
-            floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
-
-        }
+            console.log("work");
+            floorView.floorView(
+                "3_b98WEDT7feUaJ_WJeW$i",
+                store.state.viewer,
+                store.state.model
+            );
+        },
     },
     mounted() {
-        store.state.viewer.scene.ticksPerOcclusionTest = 1
+        store.state.viewer.scene.ticksPerOcclusionTest = 1;
         const annotations = new AnnotationsPlugin(store.state.viewer, {});
 
-        // var prevAnnotationClicked = null;
+        var prevAnnotationClicked = null;
 
-        // annotations.on("markerClicked", (annotation) => {
-        //     if (prevAnnotationClicked) {
-        //         prevAnnotationClicked.setLabelShown(false);
-        //     }
-        //     annotation.setLabelShown(true);
-        //     viewer.cameraFlight.flyTo(annotation);
-        //     prevAnnotationClicked = annotation;
-        // });
-        // annotations.on("markerMouseEnter", (annotation) => {
-        //     annotation.setLabelShown(true);
-        // });
+        annotations.on("markerClicked", (annotation) => {
+            if (prevAnnotationClicked) {
+                prevAnnotationClicked.setLabelShown(false);
+            }
+            annotation.setLabelShown(true);
+            viewer.cameraFlight.flyTo(annotation);
+            prevAnnotationClicked = annotation;
+        });
+        annotations.on("markerMouseEnter", (annotation) => {
+            annotation.setLabelShown(true);
+        });
 
         annotations.on("markerMouseLeave", (annotation) => {
             annotation.setLabelShown(false);
-            console.log("djfhdfhsdfgghsdgfsdh",annotation)
+            console.log("djfhdfhsdfgghsdgfsdh", annotation);
         });
         store.state.viewer.cameraControl.on("hover", (pickResult) => {
-            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {   
-                console.log("sdhkfjdfhsdhf  ",t)
-               const t =  annotations.createAnnotation({
+            if (pickResult.entity.id == "1bDMdL0k55X8oOMH5VK_cb") {
+                console.log("sdhkfjdfhsdhf  ", t);
+                const t = annotations.createAnnotation({
                     id: "myAnnotation5",
                     //entity: viewer.scene.objects["1bDMdL0k55X8oOMH5VK_cb"],
                     worldPos: this.position,
@@ -76,14 +72,12 @@ export default {
                     markerElementId: "myAnnotation5Marker",
                     labelElementId: "myAnnotation5Label",
                 });
+            } else {
+                annotations.destroy();
+                console.log("annotations      ", annotations);
+                console.log("jkdfhsdhfjsdfh");
             }
-           else {
-                annotations.destroy()
-                console.log(annotations.destroy())
-                console.log("jkdfhsdhfjsdfh")
-            }
-        })
-
+        });
     },
 };
 </script>
@@ -99,7 +93,7 @@ export default {
     height: 25px;
     border-radius: 15px;
     border: 2px solid #ffffff;
-    background-color: black;
+    background-color: rgb(228, 228, 228);
     visibility: hidden;
     /* Set markers and labels initially hidden */
     box-shadow: 5px 5px 15px 1px #000000;

@@ -40,21 +40,21 @@ export default {
             },
         ],
         selection: 1,
-        labelRealTime:null
+        labelRealTime: null
     }),
 
-    mounted(){
-       if(this.selection == 1 ){
-           this.labelRealTime = "Temperature"
-       }
+    mounted() {
+        if (this.selection == 1) {
+            this.labelRealTime = "Temperature"
+        }
 
-        if(this.selection == 2 ){
-           this.labelRealTime = "Relative Humidity"
-       }
+        if (this.selection == 2) {
+            this.labelRealTime = "Relative Humidity"
+        }
 
-        if(this.selection == 3 ){
-           this.labelRealTime = "Luminance"
-       }
+        if (this.selection == 3) {
+            this.labelRealTime = "Luminance"
+        }
     }
 };
 </script>
@@ -76,7 +76,7 @@ export default {
     top: 10px;
     margin-bottom: 10px;
     margin-left: 50px;
-       overflow-x: hidden;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 </style>
