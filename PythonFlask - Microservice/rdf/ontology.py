@@ -101,6 +101,4 @@ class Ontology:
         onto.add((myOnto.hasHeadHeight, RDFS.range, XSD.float))
         onto.add((myOnto.hasHeadHeight, RDFS.subPropertyOf, bot.Element))
 
-
-
         return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\New folder (21)\tet.ttl" , format='ttl')

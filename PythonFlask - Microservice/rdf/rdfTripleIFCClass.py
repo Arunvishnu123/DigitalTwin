@@ -1,7 +1,6 @@
 from rdflib import Graph, URIRef, Literal, BNode, Namespace
 from rdflib.namespace import RDF, XSD, OWL, RDFS, BRICK
 
-
 class IFCClassTriple:
     def __init__(self ,ifcClass):
         self.ifcClassG = Graph()

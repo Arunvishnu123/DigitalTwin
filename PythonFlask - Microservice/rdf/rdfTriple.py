@@ -1,7 +1,6 @@
 from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,SKOS
 
-
 class RDFGraph:
     def __init__(self):
         pass
@@ -109,10 +108,48 @@ class RDFGraph:
                 rdfG.add((type, props.storeyName, Literal(test["Name"], datatype=XSD["string"])))
             if (i == "Elevation"):
                 rdfG.add((type, props.hasElevation, Literal(test["Elevation"], datatype=XSD["string"])))
-
-
-
-
+            if (i == "Base Level"):
+                rdfG.add((type, props.BaseLevel, Literal(test["Base Level"], datatype=XSD["string"])))
+            if (i == "Top Level"):
+                rdfG.add((type, props.TopLevel, Literal(test["Top Level"], datatype=XSD["string"])))
+            if (i == "TotalThickness"):
+                rdfG.add((type, props.hasTotalThickness, Literal(test["TotalThickness"], datatype=XSD["float"])))
+            if (i == "TotalThickness"):
+                rdfG.add((type, props.hasTotalThickness, Literal(test["TotalThickness"], datatype=XSD["float"])))
+            if (i == "TotalThickness"):
+                rdfG.add((type, props.hasTotalThickness, Literal(test["TotalThickness"], datatype=XSD["float"])))
+            if (i == "Finish"):
+                rdfG.add((type, props.Finish, Literal(test["Finish"], datatype=XSD["string"])))
+            if (i == "GrossCeilingArea"):
+                rdfG.add((type, props.hasGrossCeilingArea, Literal(test["GrossCeilingArea"], datatype=XSD["float"])))
+            if (i == "Height Offset From Level"):
+                rdfG.add((type, props.hasHeightOffsetFromLevel, Literal(test["Height Offset From Level"], datatype=XSD["float"])))
+            if (i == "Perimeter"):
+                rdfG.add((type, props.hasPerimeter, Literal(test["Perimeter"], datatype=XSD["float"])))
+            if (i == "Perimeter"):
+                rdfG.add((type, props.hasPerimeter, Literal(test["Perimeter"], datatype=XSD["float"])))
+            if (i == "Base Offset"):
+                rdfG.add((type, props.hasBaseOffset, Literal(test["Base Offset"], datatype=XSD["float"])))
+            if (i == "Elevation from Level"):
+                rdfG.add((type, props.hasBaseOffset, Literal(test["Elevation from Level"], datatype=XSD["float"])))
+            if (i == "Angle"):
+                rdfG.add((type, props.hasBaseOffset, Literal(test["Angle"], datatype=XSD["float"])))
+            if (i == "Bend Radius"):
+                rdfG.add((type, props.hasBaseOffset, Literal(test["Bend Radius"], datatype=XSD["float"])))
+            if (i == "Hauteur de chemin"):
+                rdfG.add((type, props.hasPathHeight, Literal(test["Hauteur de chemin"], datatype=XSD["float"])))
+            if (i == "Largeur de chemin"):
+                rdfG.add((type, props.hasPathWidth, Literal(test["Largeur de chemin"], datatype=XSD["float"])))
+            if (i == "Longueur de chemin"):
+                rdfG.add((type, props.hasPathLength, Literal(test["Longueur de chemin"], datatype=XSD["float"])))
+            if (i == "Size"):
+                rdfG.add((type, props.hasSize, Literal(test["Size"], datatype=XSD["string"])))
+            if (i == "Thickness"):
+                rdfG.add((type, props.hasThickness, Literal(test["Thickness"], datatype=XSD["float"])))
+            if (i == "Centre à extrémité"):
+                rdfG.add((type, props.hasCentreToEndRatio, Literal(test["Centre à extrémité"], datatype=XSD["float"])))
+            if (i == "Centre à extrémité"):
+                rdfG.add((type, props.hasCentreToEndRatio, Literal(test["Centre à extrémité"], datatype=XSD["float"])))
             if ifcClass == "IfcSpace":
                 for k in relatedElementList:
                     containsElementLink = "http://127.0.0.1:3000/" + k[0] + "/" + k[1]
