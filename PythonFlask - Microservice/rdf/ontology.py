@@ -46,8 +46,7 @@ class Ontology:
 
         # ifc element thermal tranmittance
         onto.add((myOnto.hasThermalTransmittance, RDF.type, RDF.Property))
-        onto.add(
-            (myOnto.hasThermalTransmittance, RDFS.comment, Literal("the value of thermal transmittance", lang="en")))
+        onto.add((myOnto.hasThermalTransmittance, RDFS.comment, Literal("the value of thermal transmittance", lang="en")))
         onto.add((myOnto.hasThermalTransmittance, RDFS.label, Literal("elementThermalTransmittance", lang="en")))
         onto.add((myOnto.hasThermalTransmittance, RDFS.range, XSD.float))
         onto.add((myOnto.hasThermalTransmittance, RDFS.subPropertyOf, bot.Element))

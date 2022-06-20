@@ -1,16 +1,11 @@
 import ifcopenshell.util
 import ifcopenshell.util.element
 import os
+import ifcopenshell.geom
 from ifcopenshell.util.selector import Selector
 
 from rdf.rdfTriple import RDFGraph
 from rdf.rdfTripleIFCClass import IFCClassTriple
-
-mainArray = {}
-j = {}
-propArray = []
-z = {}
-
 
 class IFCInformationExtratcion:
 
@@ -47,8 +42,16 @@ class IFCInformationExtratcion:
             os.mkdir(path)
             products = ifc_file.by_type(i)
             ifcClassTriple.addIFCClassNumber(len(products))
-
             for product in products:
+                settings = ifcopenshell.geom.settings()
+                try:
+                 shape = ifcopenshell.geom.create_shape(settings,product)
+                 faces = shape.geometry.faces
+                 verts = shape.geometry.verts
+                 grouped_verts = [[verts[i], verts[i + 1], verts[i + 2]] for i in range(0, len(verts), 3)]
+                 grouped_faces = [[faces[i], faces[i + 1], faces[i + 2]] for i in range(0, len(faces), 3)]
+                except:
+                    continue
                 propJson = {"IFCguid": product.GlobalId}
                 line1 = ifcopenshell.util.element.get_psets(product)
                 ifcClassTriple.addIFCElementLink(product.GlobalId)
@@ -71,5 +74,5 @@ class IFCInformationExtratcion:
                         relatedStoreyElement = (storeyElement.is_a() , storeyElement.GlobalId)
                         self.relatedElementList.append(relatedStoreyElement)
 
-                self.test.createRDFGraph(i, product.GlobalId, propJson, path, self.relatedElementList)
+                self.test.createRDFGraph(i, product.GlobalId, propJson, path, self.relatedElementList , grouped_verts ,  grouped_faces  )
             ifcClassTriple.createFile(self.tripleStoreDirectory)

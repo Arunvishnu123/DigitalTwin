@@ -5,7 +5,7 @@ class RDFGraph:
     def __init__(self):
         pass
 
-    def createRDFGraph(self, ifcClass, ifcGuid ,test , path , relatedElementList):
+    def createRDFGraph(self, ifcClass, ifcGuid ,test , path , relatedElementList  , vertices , faces):
         rdfG = Graph()
         # rdfG.parse("https://w3id.org/bot#")
         # props namespace
@@ -14,6 +14,9 @@ class RDFGraph:
         # bot namespace
         bot = Namespace("https://w3id.org/bot#")
         rdfG.bind('bot', bot)
+        # seas namespace
+        seas = Namespace("https://w3id.org/seas/")
+        rdfG.bind("seas" , seas)
 
         type = URIRef("http://127.0.0.1:3000/" + ifcClass + "/" + ifcGuid)
         rdfG.add((type, RDF.type, bot.Element))
@@ -27,6 +30,10 @@ class RDFGraph:
             rdfG.add((type, RDF.type, props.IfcBeam))
         if(ifcClass == "IfcBuilding"):
             rdfG.add((type,RDF.type , props.IfcBuilding))
+        rdfG.add((type,props.hasGeometryType , props.Vertex))
+        rdfG.add((type, props.hasGeometryType, props.Face))
+        rdfG.add((props.Vertex , seas.value, Literal(vertices)))
+        rdfG.add((props.Face , seas.value, Literal(faces)))
         for i in test:
             if(i == "Level"):
                 rdfG.add((type, props.belongToLevel, Literal(test["Level"], datatype=XSD["string"])))
