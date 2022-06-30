@@ -19,6 +19,12 @@ export default {
                     icon: 'pi pi-fw pi-arrows-h',
                     to: '/addKnowledge'
                 },
+
+                 {
+                    label: 'Update Knowledge',
+                    icon: 'pi pi-fw pi-arrows-h',
+                    to: '/updateknowledge'
+                },
             ]);
 
             return { items }

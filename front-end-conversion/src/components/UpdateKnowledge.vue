@@ -12,7 +12,7 @@
                     <Editor v-model="value" editorStyle="height: 320px">
                         <template #toolbar>
                             <span class="ql-formats">
-                               <label> Enter the Sparql Query to add new Knowledge</label>
+                               <label> Enter the Sparql Query to Update the Knowledge Graph</label>
                             </span>
                         </template>
                     </Editor>
