@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,FOAF
 from ifc.readIFC import  IFCInformationExtratcion
 
-t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (31)")
+t = IFCInformationExtratcion(r"C:\Users\ARUN\Downloads\SmallOffice_d_IFC2x3.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (32)")
 g = t.propSetExtraction()
 app = Flask(__name__)
 
