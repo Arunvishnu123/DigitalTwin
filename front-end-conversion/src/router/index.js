@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from "../views/Home.vue"
 import UploadFile from"../components/UploadIFCComponent.vue"
+import AddKnowledge  from"../components/AddSparqlComponent.vue"
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/uploadfile',
     name: 'uploadFile',
     component: UploadFile
+  },
+  {
+    path: '/addKnowledge',
+    name: 'addknowledge',
+    component: AddKnowledge
   },
 
 ]

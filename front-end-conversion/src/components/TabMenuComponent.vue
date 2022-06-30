@@ -17,7 +17,7 @@ export default {
                 {
                     label: 'ADD Knowledge',
                     icon: 'pi pi-fw pi-arrows-h',
-                    to: '/t'
+                    to: '/addKnowledge'
                 },
             ]);
 
