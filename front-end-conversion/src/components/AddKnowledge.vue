@@ -5,7 +5,7 @@
             <form @submit.prevent="test" class="p-fluid form ">
                 <div class="field">
                     <div >
-                        <InputText id="name" />
+                        <InputText id="name" placeholder="Enter the IFC element Link" />
                     </div>
                 </div>
                 <div class="field">
