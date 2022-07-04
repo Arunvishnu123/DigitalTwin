@@ -2,9 +2,7 @@
 <div>
     <Header />
     <TabMenu />
-    <span class="p-input-icon-left test">
-        <InputText type="text" class="link" v-model="value3" placeholder="Enter the Link to Visualise the Knowledge Graphs" />
-    </span>
+    <InputText type="text" class="link" v-model="value3" placeholder="Enter the Link to Visualise the Knowledge Graphs" />
 </div>
 </template>
 
@@ -20,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.link{
-    width:100%
+.link {
+    width: 100%
 }
 </style>

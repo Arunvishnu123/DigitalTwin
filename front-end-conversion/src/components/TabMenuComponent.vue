@@ -33,7 +33,7 @@ export default {
             },
 
               {
-                label: 'Visualise Knowlede Graphs',
+                label: 'Visualise Knowledge Graphs',
                 icon: 'pi pi-fw pi-sliders-v',
                 to: '/visualizeGraph'
             },

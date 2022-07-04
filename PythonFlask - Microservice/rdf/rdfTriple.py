@@ -17,7 +17,7 @@ class RDFGraph:
         # seas namespace
         seas = Namespace("https://w3id.org/seas/")
         rdfG.bind("seas" , seas)
-
+        geometry = BNode()
         type = URIRef("http://127.0.0.1:3000/" + ifcClass + "/" + ifcGuid)
         rdfG.add((type, RDF.type, bot.Element))
         if (ifcClass == "ifcWindow" or ifcClass == "IFCWindow" or ifcClass == "ifcwindow"):
@@ -30,10 +30,10 @@ class RDFGraph:
             rdfG.add((type, RDF.type, props.IfcBeam))
         if(ifcClass == "IfcBuilding"):
             rdfG.add((type,RDF.type , props.IfcBuilding))
-        rdfG.add((type,props.hasGeometryType , props.Vertex))
-        rdfG.add((type, props.hasGeometryType, props.Face))
-        rdfG.add((props.Vertex , seas.value, Literal(vertices)))
-        rdfG.add((props.Face , seas.value, Literal(faces)))
+        rdfG.add((type,props.hasGeometryType ,  geometry))
+        rdfG.add((type, props.hasGeometryType,  geometry))
+        rdfG.add(( geometry , props.hasVertices, Literal(vertices)))
+        rdfG.add(( geometry  ,props.hasFaces, Literal(faces)))
         for i in test:
             if(i == "Level"):
                 rdfG.add((type, props.belongToLevel, Literal(test["Level"], datatype=XSD["string"])))
@@ -131,8 +131,6 @@ class RDFGraph:
                 rdfG.add((type, props.hasGrossCeilingArea, Literal(test["GrossCeilingArea"], datatype=XSD["float"])))
             if (i == "Height Offset From Level"):
                 rdfG.add((type, props.hasHeightOffsetFromLevel, Literal(test["Height Offset From Level"], datatype=XSD["float"])))
-            if (i == "Perimeter"):
-                rdfG.add((type, props.hasPerimeter, Literal(test["Perimeter"], datatype=XSD["float"])))
             if (i == "Perimeter"):
                 rdfG.add((type, props.hasPerimeter, Literal(test["Perimeter"], datatype=XSD["float"])))
             if (i == "Base Offset"):
