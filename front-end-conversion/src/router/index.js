@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from "../views/Home.vue"
-import UploadFile from"../components/UploadIFCComponent.vue"
-import AddKnowledge  from"../components/AddSparqlComponent.vue"
-import UpdateKnowledge  from"../components/UpdateKnowldegeComponent.vue"
+import UploadFile from "../components/UploadIFCComponent.vue"
+import AddKnowledge  from "../components/AddSparqlComponent.vue"
+import UpdateKnowledge  from "../components/UpdateKnowldegeComponent.vue"
+import Visualize from "../components/VisualizeComponent.vue"
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/updateknowledge',
     name: 'UpdateKnowledge ',
     component: UpdateKnowledge 
+  },
+  {
+    path: '/visualizeGraph',
+    name: 'visualizeGraph',
+    component: Visualize 
   },
 
 ]

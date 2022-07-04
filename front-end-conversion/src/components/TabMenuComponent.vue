@@ -6,30 +6,44 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import {
+    ref
+} from 'vue';
 export default {
     setup() {
-           const items = ref([{
-                    label: 'IFC to RDF Conversion',
-                    icon: 'pi pi-fw pi-copy',
-                    to: '/uploadfile'
-                },
-                {
-                    label: 'ADD Knowledge',
-                    icon: 'pi pi-fw pi-arrows-h',
-                    to: '/addKnowledge'
-                },
+        const items = ref([{
+                label: 'Home',
+                icon: 'pi pi-fw pi-home',
+                to: '/'
+            }, {
+                label: 'IFC to RDF Conversion',
+                icon: 'pi pi-fw pi-copy',
+                to: '/uploadfile'
+            },
+            {
+                label: 'ADD Knowledge',
+                icon: 'pi pi-fw pi-arrows-h',
+                to: '/addKnowledge'
+            },
 
-                 {
-                    label: 'Update Knowledge',
-                    icon: 'pi pi-fw pi-arrows-h',
-                    to: '/updateknowledge'
-                },
-            ]);
+            {
+                label: 'Update Knowledge',
+                icon: 'pi pi-fw pi-sort-amount-up-alt',
+                to: '/updateknowledge'
+            },
 
-            return { items }
+              {
+                label: 'Visualise Knowlede Graphs',
+                icon: 'pi pi-fw pi-sliders-v',
+                to: '/visualizeGraph'
+            },
+        ]);
+
+        return {
+            items
         }
-    
+    }
+
 }
 </script>
 

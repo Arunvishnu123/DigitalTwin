@@ -9,6 +9,7 @@ import FileUpload from 'primevue/fileupload';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import Editor from 'primevue/editor';
+import Image from 'primevue/image';
 const app = createApp(App);
 
 import "primevue/resources/themes/saga-blue/theme.css"       //theme
@@ -24,3 +25,4 @@ app.component("FileUpload" , FileUpload)
 app.component("InputText" , InputText)
 app.component("Button" , Button)
 app.component("Editor" , Editor )
+app.component("Image" , Image )
