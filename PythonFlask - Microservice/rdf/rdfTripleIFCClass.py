@@ -24,5 +24,5 @@ class IFCClassTriple:
         self.ifcClassG.add((self.urlRef ,self.bot.containsElements ,  type ))
 
     def createFile(self , location ):
-        self.ifcClassG.serialize(location + "/"+ self.ifcClass + ".ttl" , format="ttl" )
+        self.ifcClassG.serialize(location + "/" + self.ifcClass + ".ttl" , format="ttl" )
 
