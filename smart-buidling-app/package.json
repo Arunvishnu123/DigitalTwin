@@ -19,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.6",
     "@xeokit/xeokit-sdk": "^2.2.5-beta-3",
     "asciify-image": "^0.1.8",
+    "axios": "^0.27.2",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "echarts": "^5.3.2",

@@ -5,11 +5,11 @@
             <form @submit.prevent="test" class="p-fluid form">
                 <div class="field">
                     <div>
-                        <InputText id="name" placeholder="Enter the IFC element Link" />
+                        <InputText id="name" v-model="restApiLink" placeholder="Enter the IFC element Link" />
                     </div>
                 </div>
                 <div class="field">
-                    <Editor v-model="value" editorStyle="height: 320px">
+                    <Editor v-model="elementSparqlUpdate" editorStyle="height: 320px">
                         <template #toolbar>
                             <span class="ql-formats">
                                 <label>
@@ -26,13 +26,22 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     data() {
         return {
-            name: "",
-            email: "",
+            restApiLink: null,
+            elementSparqlUpdate: null
         };
     },
+
+    methods: {
+        async updateRestAPI() {
+            await axios.get(" / ").then((response) => {
+                console.log(response)
+            })
+        }
+    }
 };
 </script>
 

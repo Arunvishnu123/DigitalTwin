@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,FOAF
 from ifc.readIFC import  IFCInformationExtratcion
 
-t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (37)")
+t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (42)")
 g = t.propSetExtraction()
 app = Flask(__name__)
 
@@ -17,5 +17,3 @@ def createdOntology():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
-
-

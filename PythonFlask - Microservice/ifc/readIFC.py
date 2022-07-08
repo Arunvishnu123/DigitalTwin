@@ -6,6 +6,7 @@ from ifcopenshell.util.selector import Selector
 
 from rdf.rdfTriple import RDFGraph
 from rdf.rdfTripleIFCClass import IFCClassTriple
+from rdf.rdfIfcClass import IFCClass
 
 class IFCInformationExtratcion:
 
@@ -17,6 +18,7 @@ class IFCInformationExtratcion:
         self.tripleStoreDirectory = tripleStoreDirectory
         self.relatedElementList = []
         self.selector  =  Selector()
+
 
 
     def getUniqueItems(self, iterable):
@@ -34,32 +36,35 @@ class IFCInformationExtratcion:
         for product in products:
             self.ifcClasses.append(product.is_a())
         self.finalIFCClass = self.getUniqueItems(self.ifcClasses)
+        t = []
         for i in self.finalIFCClass:
+            ifcClassNumber = {}
             print(i)
+            ifcClassNumber["ifcClassName"] = i
             ifcClassTriple = IFCClassTriple(i)
             ifcClassTriple.createIFCClassTriple()
             path = os.path.join(self.tripleStoreDirectory, i)
             os.mkdir(path)
             products = ifc_file.by_type(i)
             ifcClassTriple.addIFCClassNumber(len(products))
+            ifcClassNumber["elementsCount"] = len(products)
+            t.append(ifcClassNumber)
             for product in products:
-                settings = ifcopenshell.geom.settings()
-                try:
-                 shape = ifcopenshell.geom.create_shape(settings,product)
-                 faces = shape.geometry.faces
-                 verts = shape.geometry.verts
-                 grouped_verts = [[verts[i], verts[i + 1], verts[i + 2]] for i in range(0, len(verts), 3)]
-                 grouped_faces = [[faces[i], faces[i + 1], faces[i + 2]] for i in range(0, len(faces), 3)]
-                except:
-                    continue
+                #settings = ifcopenshell.geom.settings()
+                #try:
+                 #shape = ifcopenshell.geom.create_shape(settings,product)
+                 #faces = shape.geometry.faces
+                 #verts = shape.geometry.verts
+                 #grouped_verts = [[verts[i], verts[i + 1], verts[i + 2]] for i in range(0, len(verts), 3)]
+                 #grouped_faces = [[faces[i], faces[i + 1], faces[i + 2]] for i in range(0, len(faces), 3)]
+                #except:
+                    #continue
                 propJson = {"IFCguid": product.GlobalId}
                 line1 = ifcopenshell.util.element.get_psets(product)
                 ifcClassTriple.addIFCElementLink(product.GlobalId)
-
                 for main in line1:
                     for properties in line1[main]:
                         propJson[properties] = line1[main][properties]
-
                 if i == "IfcSpace":
                     self.relatedElementList = []
                     self.selector = Selector()
@@ -73,6 +78,11 @@ class IFCInformationExtratcion:
                     for storeyElement in storeyElements:
                         relatedStoreyElement = (storeyElement.is_a() , storeyElement.GlobalId)
                         self.relatedElementList.append(relatedStoreyElement)
-
+                grouped_verts = []
+                grouped_faces = []
                 self.test.createRDFGraph(i, product.GlobalId, propJson, path, self.relatedElementList , grouped_verts ,  grouped_faces  )
             ifcClassTriple.createFile(self.tripleStoreDirectory)
+            print(ifcClassNumber)
+            ifcClass = IFCClass(self.tripleStoreDirectory)
+            print(t)
+            ifcClass.ifcClassGeneration(t)
