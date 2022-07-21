@@ -1,0 +1,48 @@
+{
+    "Pset_DistributionFlowElementCommon": {
+        "Reference": "GOU CFA"
+    },
+    "Pset_ManufacturerTypeInformation": {
+        "Manufacturer": "Test"
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Cable Tray Fittings"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "GOU CFA"
+    },
+    "Constraints": {
+        "Level": "Level: R+2",
+        "Elevation from Level": 2.89
+    },
+    "Dimensions": {
+        "Angle": 90.0,
+        "Bend Radius": 0.05,
+        "Hauteur de chemin": 0.05,
+        "Largeur de chemin": 0.2,
+        "Longueur de chemin": 0.075,
+        "Size": "200 mmx50 mm\u00f8-200 mmx50 mm\u00f8",
+        "Thickness": 0.00253999998984,
+        "Volume": 0.00385611518312387
+    },
+    "Graphics": {
+        "Use Annotation Scale": false
+    },
+    "Identity Data": {
+        "Workset": "ELECTRICITE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Bend or Fitting": "Fitting",
+        "Category": "Cable Tray Fittings",
+        "Centre \u00e0 extr\u00e9mit\u00e9": 0.225,
+        "Family": "Courbure horizontale de goulotte: GOU CFA",
+        "Family and Type": "Courbure horizontale de goulotte: GOU CFA",
+        "Libell\u00e9 sur le rayon de courbure": 0.15,
+        "Type": "Courbure horizontale de goulotte: GOU CFA",
+        "Type Id": "Courbure horizontale de goulotte: GOU CFA"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "Pset_ProductRequirements": {
+        "Category": "Stairs"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Escalier central"
+    },
+    "Pset_StairCommon": {
+        "IsExternal": false,
+        "Reference": "Escalier central",
+        "NumberOfRiser": 15.0,
+        "NumberOfTreads": 14.0,
+        "RiserHeight": 0.163333333333333,
+        "TreadLength": 0.25
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Top Offset": 0.0,
+        "Base Level": "Level: RDC",
+        "Desired Stair Height": 2.45,
+        "Top Level": "Level: ENTRESOL"
+    },
+    "Dimensions": {
+        "Actual Number of Risers": 15,
+        "Actual Riser Height": 0.163333333333333,
+        "Actual Tread Depth": 0.25,
+        "Desired Number of Risers": 15,
+        "Tread/Riser Start Number": 1
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Stairs",
+        "Family": "Assembled Stair: Escalier central",
+        "Family and Type": "Assembled Stair: Escalier central",
+        "Type": "Assembled Stair: Escalier central",
+        "Type Id": "Assembled Stair: Escalier central"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Calculation Rules(Type)": {
+        "Maximum Riser Height": 0.19,
+        "Minimum Run Width": 1.0,
+        "Minimum Tread Depth": 0.25
+    },
+    "Construction(Type)": {
+        "Function": "Interior",
+        "Landing Type": "Non-Monolithic Landing: Palier non-monobloc",
+        "Run Type": "Non-Monolithic Run: Marche 50 mm Contremarche 13 mm"
+    },
+    "Graphics(Type)": {
+        "Cut Mark Type": "Stair Cut Mark: Zigzag simple"
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "C2010",
+        "Assembly Description": "Stair Construction",
+        "Type Name": "Escalier central",
+        "Workset": "Types d'escaliers"
+    },
+    "Other(Type)": {
+        "Category": "Stairs",
+        "Family Name": "Assembled Stair"
+    },
+    "Supports(Type)": {
+        "Left Lateral Offset": 0.0,
+        "Left Support": "Stringer (Closed)",
+        "Left Support Type": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm",
+        "Middle Support": false,
+        "Middle Support Number": 0,
+        "Right Lateral Offset": 0.0,
+        "Right Support": "Stringer (Closed)",
+        "Right Support Type": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm"
+    }
+}

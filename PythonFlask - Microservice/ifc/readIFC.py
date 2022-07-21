@@ -30,6 +30,8 @@ class IFCInformationExtratcion:
                 result.append(item)
         return result
 
+
+
     def propSetExtraction(self):
         ifc_file = ifcopenshell.open(self.location)
         products = ifc_file.by_type('IfcProduct')

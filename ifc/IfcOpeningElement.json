@@ -1,0 +1,65 @@
+{
+    "BaseQuantities": {
+        "Depth": 1.2048,
+        "Height": 1.64,
+        "Width": 4.36560240841219
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Base is Attached": false,
+        "Related to Mass": false,
+        "Room Bounding": true,
+        "Top is Attached": false,
+        "Base Constraint": "Level: RDC",
+        "Top Constraint": "Level: R+2",
+        "Top Offset": -4.4143975915878,
+        "Unconnected Height": 4.36560240841219
+    },
+    "Dimensions": {
+        "Area": 7.159587949796,
+        "Length": 1.64
+    },
+    "Horizontal Grid": {
+        "Angle": 0.0,
+        "Justification": "Beginning",
+        "Number": 4,
+        "Offset": 0.0
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Walls",
+        "Family": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple",
+        "Family and Type": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple",
+        "Type": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple",
+        "Type Id": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Structural": {
+        "Enable Analytical Model": false,
+        "Structural": false,
+        "Structural Usage": "Non-bearing"
+    },
+    "Vertical Grid": {
+        "Angle": 0.0,
+        "Justification": "Beginning",
+        "Number": 4,
+        "Offset": 0.0
+    },
+    "Pset_ElementShading": {
+        "Roughness": 0.9144
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Walls"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 90 cm"
+    },
+    "Pset_OpeningElementCommon": {
+        "Reference": "G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 90 cm"
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "Pset_MemberCommon": {
+        "Slope": 0.0,
+        "IsExternal": false,
+        "Reference": "Escalier central",
+        "Span": 0.05
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Stairs"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Escalier central"
+    },
+    "BaseQuantities": {
+        "Length": 0.05,
+        "CrossSectionArea": 2.0897667473443,
+        "OuterSurfaceArea": 0.568012929947887,
+        "GrossSurfaceArea": 4.74754642463648,
+        "NetSurfaceArea": 38.6479065632765,
+        "GrossVolume": 0.104488337367215,
+        "NetVolume": 0.67044997255521
+    },
+    "Constraints": {
+        "Lower End Cut": "Vertical Cut",
+        "Trim Support at Upper": "Do not trim",
+        "Upper End Cut": "Vertical Cut"
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Supports",
+        "Family": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm",
+        "Family and Type": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm",
+        "Type": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm",
+        "Type Id": "Stringer: Limon \u00e0 la fran\u00e7aise - 50 mm"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Dimensions(Type)": {
+        "Flip Section Profile": false,
+        "Structural Depth On Landing": 0.3,
+        "Structural Depth On Run": 0.15,
+        "Total Depth": 0.4,
+        "Width": 0.05
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "",
+        "Assembly Description": "",
+        "Workset": "Types d'escaliers",
+        "Type Name": "Limon \u00e0 la fran\u00e7aise - 50 mm"
+    },
+    "Other(Type)": {
+        "Category": "Supports",
+        "Family Name": "Stringer"
+    }
+}

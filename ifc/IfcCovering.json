@@ -1,0 +1,43 @@
+{
+    "Pset_CoveringCommon": {
+        "Reference": "Quadrillage 600 x 600 mm",
+        "TotalThickness": 0.052,
+        "Finish": "Panneau de plafond 600 x 600;"
+    },
+    "Pset_ElementShading": {
+        "Roughness": 0.9144
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Ceilings"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Quadrillage 600 x 600 mm"
+    },
+    "BaseQuantities": {
+        "GrossCeilingArea": 655.625206832487
+    },
+    "Constraints": {
+        "Room Bounding": true,
+        "Level": "Level: R+1",
+        "Height Offset From Level": 2.5
+    },
+    "Dimensions": {
+        "Area": 655.625206832487,
+        "Perimeter": 197.33338386505,
+        "Volume": 34.092483058581
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Ceilings",
+        "Family": "Compound Ceiling: Quadrillage 600 x 600 mm",
+        "Family and Type": "Compound Ceiling: Quadrillage 600 x 600 mm",
+        "Type": "Compound Ceiling: Quadrillage 600 x 600 mm",
+        "Type Id": "Compound Ceiling: Quadrillage 600 x 600 mm"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    }
+}

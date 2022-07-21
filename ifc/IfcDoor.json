@@ -1,0 +1,41 @@
+{
+    "Constraints": {
+        "Level": "Level: RDC"
+    },
+    "Dimensions": {
+        "Area": 4.41,
+        "Height": 2.45,
+        "Volume": 0.092132,
+        "Width": 1.8
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D",
+        "Statut ouverture": "Ferm\u00e9"
+    },
+    "Other": {
+        "Category": "Doors",
+        "Host Id": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple",
+        "Family": "Double vitr\u00e9e: Double vitr\u00e9e",
+        "Family and Type": "Double vitr\u00e9e: Double vitr\u00e9e",
+        "Type": "Double vitr\u00e9e: Double vitr\u00e9e",
+        "Type Id": "Double vitr\u00e9e: Double vitr\u00e9e"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Pset_DoorCommon": {
+        "IsExternal": true,
+        "Reference": "Double vitr\u00e9e",
+        "ThermalTransmittance": 3.6886
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Doors"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Double vitr\u00e9e"
+    },
+    "BaseQuantities": {
+        "Area": 46.180605
+    }
+}

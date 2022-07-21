@@ -1,0 +1,69 @@
+{
+    "Pset_AirSideSystemInformation": {
+        "Name": "Bureau"
+    },
+    "Pset_ProductRequirements": {
+        "Name": "Bureau",
+        "Category": "Rooms"
+    },
+    "Pset_SpaceCommon": {
+        "Reference": "Bureau 020",
+        "Category": "Rooms"
+    },
+    "BaseQuantities": {
+        "NetFloorArea": 22.5351703018037,
+        "Height": 2.45,
+        "GrossPerimeter": 62.4580610236216,
+        "GrossFloorArea": 22.5351703018037,
+        "GrossVolume": 55.2111672394191
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Level": "RDC",
+        "Limit Offset": 0.0,
+        "Upper Limit": "Level: ENTRESOL"
+    },
+    "Dimensions": {
+        "Area": 22.5351703018037,
+        "Computation Height": 0.0,
+        "Perimeter": 19.0372169999999,
+        "Unbounded Height": 2.45,
+        "Volume": 46.8030735787568
+    },
+    "Energy Analysis": {
+        "Actual Lighting Load": 0.0,
+        "Actual Lighting Load per area": 0.0,
+        "Actual Power Load": 0.0,
+        "Actual Power Load per area": 0.0,
+        "Area per Person": 28.5714285714286,
+        "Base Lighting Load on": "By Space Type",
+        "Base Power Load on": "By Space Type",
+        "Heat Load Values": "By Space Type",
+        "Latent Heat Gain per person": 630.91814901261,
+        "Lighting Load Units": "Power Density",
+        "Number of People": 0.0,
+        "Plenum Lighting Contribution": 0.2,
+        "Power Load Units": "Power Density",
+        "Sensible Heat Gain per person": 788.647686265762,
+        "Specified Lighting Load": 0.0,
+        "Specified Lighting Load per area": 10.7639104167097,
+        "Specified Power Load": 0.0,
+        "Specified Power Load per area": 13.9930835417226,
+        "Total Heat Gain per person": 1419.56583527837
+    },
+    "Identity Data": {
+        "Department": "Personnel",
+        "Edited by": "Aurelia.D",
+        "Name": "Bureau",
+        "Number": "020",
+        "Occupancy": "Occup\u00e9",
+        "Workset": "SECOND OEUVRE"
+    },
+    "Other": {
+        "Category": "Rooms",
+        "Phase Id": "Phase 1"
+    },
+    "Phasing": {
+        "Phase": "Phase 1"
+    }
+}

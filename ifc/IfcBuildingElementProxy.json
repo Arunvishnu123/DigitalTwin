@@ -1,0 +1,53 @@
+{
+    "Pset_BuildingElementProxyCommon": {
+        "Reference": "600mm Arial"
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Generic Models"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "600mm Arial"
+    },
+    "Constraints": {
+        "Work Plane": "<not associated>"
+    },
+    "Dimensions": {
+        "Depth": 0.05
+    },
+    "Graphics": {
+        "Horizontal Align": "Left",
+        "Text": "DES"
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D",
+        "Subcategory": "Generic Models"
+    },
+    "Other": {
+        "Category": "Generic Models",
+        "Family": "Model Text: 600mm Arial",
+        "Family and Type": "Model Text: 600mm Arial",
+        "Type": "Model Text: 600mm Arial",
+        "Type Id": "Model Text: 600mm Arial"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "",
+        "Assembly Description": "",
+        "Type Name": "600mm Arial",
+        "Workset": "Types de textes 3D"
+    },
+    "Other(Type)": {
+        "Category": "Generic Models",
+        "Family Name": "Model Text"
+    },
+    "Text(Type)": {
+        "Bold": false,
+        "Italic": false,
+        "Text Font": "Arial",
+        "Text Size": 0.35
+    }
+}

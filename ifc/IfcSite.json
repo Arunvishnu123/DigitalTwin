@@ -1,0 +1,28 @@
+{
+    "Identity Data": {
+        "Edited by": "",
+        "Author": "",
+        "Building Name": "Espace Fauriel",
+        "DEF_Adresse": "30 rue Saint Simon, 69009 Lyon",
+        "DEF_Mail": "contact@defibim.com",
+        "DEF_Site Internet": "www.defibim.com",
+        "DEF_Tel": "06 61 18 54 97",
+        "DEF_TITRE": "ECOLE DES MINES",
+        "DEF_TYPE MAQUETTE": "Locale",
+        "Organization Description": "Bureau d'Etudes BIM",
+        "Organization Name": "DEFIBIM",
+        "Workset": "Infos sur le projet"
+    },
+    "Other": {
+        "Category": "Project Information",
+        "Client Name": "M. LEFRANCOIS",
+        "Project Address": "29 Rue Pierre et Dominique Ponchardier\r\n42100 Saint-\u00c9tienne",
+        "Project Issue Date": "21/04/21",
+        "Project Name": "Espace Fauriel - Ecole Sup\u00e9rieure des Mines",
+        "Project Number": "220211",
+        "Project Status": "DOE"
+    },
+    "Text": {
+        "SiteName": "Ecole des Mines - Saint Etienne"
+    }
+}

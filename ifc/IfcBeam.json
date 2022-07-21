@@ -1,0 +1,76 @@
+{
+    "Pset_BeamCommon": {
+        "Slope": 0.0,
+        "IsExternal": false,
+        "Reference": "30 x 45ht",
+        "Span": 22.26
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Structural Framing"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "30 x 45ht"
+    },
+    "Pset_ReinforcementBarPitchOfBeam": {
+        "Reference": "30 x 45ht"
+    },
+    "BaseQuantities": {
+        "Length": 22.26,
+        "CrossSectionArea": 15.6732751875,
+        "OuterSurfaceArea": 7.3949985,
+        "GrossSurfaceArea": 7.66499850000001,
+        "NetSurfaceArea": 31.346550375,
+        "GrossVolume": 0.665549865000035,
+        "NetVolume": 2.69968953375
+    },
+    "Constraints": {
+        "Cross-Section Rotation": 0.0,
+        "End Level Offset": 0.840000000000002,
+        "Orientation": "Normal",
+        "Reference Level": "Level: R+3",
+        "Reference Level Elevation": 12.42,
+        "Start Level Offset": 0.840000000000002,
+        "Work Plane": "<not associated>"
+    },
+    "Dimensions": {
+        "Elevation at Bottom": 15.47,
+        "Elevation at Top": 15.92,
+        "Length": 22.26,
+        "Volume": 2.69968953375
+    },
+    "Geometric Position": {
+        "Join Status": "Both joins enabled",
+        "y Justification": "Origin",
+        "y Offset Value": 0.0,
+        "yz Justification": "Uniform",
+        "z Justification": "Top",
+        "z Offset Value": 2.66
+    },
+    "Identity Data": {
+        "Workset": "STRUCTURE",
+        "Comments": "",
+        "Edited by": "Aurelia.D"
+    },
+    "Materials and Finishes": {
+        "Structural Material": "B\u00e9ton - B\u00e9ton coul\u00e9 sur place"
+    },
+    "Other": {
+        "Category": "Structural Framing",
+        "Family": "Poutre rectangulaire - B\u00e9ton: 30 x 45ht",
+        "Family and Type": "Poutre rectangulaire - B\u00e9ton: 30 x 45ht",
+        "Type": "Poutre rectangulaire - B\u00e9ton: 30 x 45ht",
+        "Type Id": "Poutre rectangulaire - B\u00e9ton: 30 x 45ht"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Structural": {
+        "Enable Analytical Model": true,
+        "Rebar Cover - Bottom Face": "Rebar Cover Settings: Enrobage d'armature\u00a01",
+        "Rebar Cover - Other Faces": "Rebar Cover Settings: Enrobage d'armature\u00a01",
+        "Rebar Cover - Top Face": "Rebar Cover Settings: Enrobage d'armature\u00a01",
+        "Cut Length": 21.99770025,
+        "Start Attachment Type": "End Elevation",
+        "Structural Usage": "Other"
+    }
+}

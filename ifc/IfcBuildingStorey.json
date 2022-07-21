@@ -1,0 +1,55 @@
+{
+    "Pset_AirSideSystemInformation": {
+        "Name": "SSOL"
+    },
+    "Pset_BuildingStoreyCommon": {
+        "AboveGround": false
+    },
+    "Pset_ProductRequirements": {
+        "Name": "SSOL",
+        "Category": "Levels"
+    },
+    "Constraints": {
+        "Elevation": -3.0
+    },
+    "Dimensions": {
+        "Computation Height": 0.0
+    },
+    "Identity Data": {
+        "Structural": false,
+        "Building Story": true,
+        "Edited by": "Aurelia.D",
+        "Name": "SSOL",
+        "Workset": "Quadrillages et niveaux partag\u00e9s"
+    },
+    "Other": {
+        "Category": "Levels",
+        "Family": "Level: DEF_Ligne de Niveau",
+        "Family and Type": "Level: DEF_Ligne de Niveau",
+        "Type": "Level: DEF_Ligne de Niveau",
+        "Type Id": "Level: DEF_Ligne de Niveau"
+    },
+    "Constraints(Type)": {
+        "Elevation Base": "Project Base Point"
+    },
+    "Construction(Type)": {
+        "DEF_Niveau NGF": 158.9
+    },
+    "Graphics(Type)": {
+        "Color": 12632256,
+        "Line Pattern": "Tiret point",
+        "Line Weight": "1",
+        "Symbol": "DEF_Marqueur de niveau - Point triangulaire: DEF_Marqueur de niveau - Point triangulaire",
+        "Symbol at End 1 Default": true,
+        "Symbol at End 2 Default": false
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Type Name": "DEF_Ligne de Niveau",
+        "Workset": "Types de niveaux"
+    },
+    "Other(Type)": {
+        "Category": "Levels",
+        "Family Name": "Level"
+    }
+}

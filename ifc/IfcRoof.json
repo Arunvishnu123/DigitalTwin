@@ -1,0 +1,69 @@
+{
+    "Pset_ElementShading": {
+        "Roughness": 0.9144
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Roofs"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Toiture - B\u00e9ton 20 cm"
+    },
+    "Pset_RoofCommon": {
+        "IsExternal": true,
+        "Reference": "Toiture - B\u00e9ton 20 cm",
+        "ProjectedArea": 711.481628016621,
+        "TotalArea": 710.400028016621
+    },
+    "Constraints": {
+        "Related to Mass": false,
+        "Room Bounding": true,
+        "Base Level": "Level: R+6",
+        "Base Offset From Level": 3.3,
+        "Cutoff Offset": 0.0
+    },
+    "Construction": {
+        "Fascia Depth": 0.0,
+        "Maximum Ridge Height": 27.28,
+        "Rafter Cut": "Plumb Cut"
+    },
+    "Dimensions": {
+        "Area": 710.400028016621,
+        "Thickness": 0.2,
+        "Volume": 142.080005603323
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Roofs",
+        "Family": "Basic Roof: Toiture - B\u00e9ton 20 cm",
+        "Family and Type": "Basic Roof: Toiture - B\u00e9ton 20 cm",
+        "Type": "Basic Roof: Toiture - B\u00e9ton 20 cm",
+        "Type Id": "Basic Roof: Toiture - B\u00e9ton 20 cm"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Analytical Properties(Type)": {
+        "Roughness": 3,
+        "Absorptance": 0.7
+    },
+    "Construction(Type)": {
+        "Default Thickness": 0.2
+    },
+    "Graphics(Type)": {
+        "Coarse Scale Fill Color": 0
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "",
+        "Assembly Description": "",
+        "Type Name": "Toiture - B\u00e9ton 20 cm",
+        "Workset": "Types de toits"
+    },
+    "Other(Type)": {
+        "Category": "Roofs",
+        "Family Name": "Basic Roof"
+    }
+}

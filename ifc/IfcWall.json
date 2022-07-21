@@ -1,0 +1,67 @@
+{
+    "BaseQuantities": {
+        "Height": 3.0,
+        "Length": 27.983537,
+        "Width": 0.8,
+        "GrossFootprintArea": 22.3868296,
+        "NetVolume": 67.1604888,
+        "NetSideArea": 217.4748812
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Top Offset": 0.0,
+        "Base Constraint": "Level: SSOL",
+        "Base Extension Distance": 0.0,
+        "Base is Attached": false,
+        "Location Line": "Wall Centerline",
+        "Related to Mass": false,
+        "Room Bounding": true,
+        "Top Constraint": "Level: RDC",
+        "Top Extension Distance": 0.0,
+        "Top is Attached": false,
+        "Unconnected Height": 3.0
+    },
+    "Dimensions": {
+        "Area": 83.950611,
+        "Length": 27.983537,
+        "Volume": 67.1604888
+    },
+    "Identity Data": {
+        "Workset": "STRUCTURE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Walls",
+        "Family": "Basic Wall: G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm",
+        "Family and Type": "Basic Wall: G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm",
+        "Type": "Basic Wall: G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm",
+        "Type Id": "Basic Wall: G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Structural": {
+        "Enable Analytical Model": false,
+        "Structural": false,
+        "Structural Usage": "Non-bearing"
+    },
+    "Pset_ElementShading": {
+        "Roughness": 0.9144
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Walls"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm"
+    },
+    "Pset_ReinforcementBarPitchOfWall": {
+        "Reference": "G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm"
+    },
+    "Pset_WallCommon": {
+        "Reference": "G\u00e9n\u00e9rique - Fa\u00e7ade - B\u00e9ton 80 cm",
+        "ThermalTransmittance": 0.3125,
+        "IsExternal": true,
+        "ExtendToStructure": false,
+        "LoadBearing": false
+    }
+}

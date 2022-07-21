@@ -1,0 +1,66 @@
+{
+    "Pset_DistributionFlowElementCommon": {
+        "Reference": "Standard"
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Plumbing Fixtures"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Standard"
+    },
+    "Constraints": {
+        "Level": "Level: RDC",
+        "Elevation from Level": 0.0,
+        "D\u00e9bit_EFS": 0.0176573333607443,
+        "D\u00e9bit_Sanitaire": 0.0176573333607443,
+        "Diam\u00e8tre_EF": 0.01,
+        "Diam\u00e8tre_EV": 0.033,
+        "Host": "Level : RDC",
+        "Offset from Host": 0.0
+    },
+    "Dimensions": {
+        "Area": 0.311750178229688,
+        "Volume": 0.0111932216924784
+    },
+    "Identity Data": {
+        "Workset": "CVC",
+        "Edited by": "Aurelia.D",
+        "Mark": "1"
+    },
+    "Mechanical": {
+        "System Abbreviation": "",
+        "System Classification": "Domestic Cold Water,Sanitary",
+        "System Name": ""
+    },
+    "Other": {
+        "Category": "Plumbing Fixtures",
+        "Family": "Urinoir: Standard",
+        "Family and Type": "Urinoir: Standard",
+        "Type": "Urinoir: Standard",
+        "Type Id": "Urinoir: Standard"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Constraints(Type)": {
+        "Default Elevation": 0.0
+    },
+    "Identity Data(Type)": {
+        "Code Name": "",
+        "Edited by": "",
+        "OmniClass Number": "",
+        "OmniClass Title": "",
+        "Assembly Code": "D2010200",
+        "Assembly Description": "Urinals",
+        "Type Name": "Standard",
+        "Workset": "Famille  : Appareils sanitaires : Urinoir"
+    },
+    "Materials and Finishes(Type)": {
+        "Mat\u00e9riau - Cuvette": "Porcelaine - Blanche",
+        "Mat\u00e9riau - Raccords": "M\u00e9tal - Chrome poli"
+    },
+    "Other(Type)": {
+        "Category": "Plumbing Fixtures",
+        "Family Name": "Urinoir"
+    }
+}

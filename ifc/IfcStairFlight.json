@@ -1,0 +1,69 @@
+{
+    "Pset_ProductRequirements": {
+        "Category": "Runs"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Marche 50 mm Contremarche 13 mm"
+    },
+    "Pset_StairFlightCommon": {
+        "Reference": "Marche 50 mm Contremarche 13 mm",
+        "NumberOfRiser": 15.0,
+        "NumberOfTreads": 14.0,
+        "RiserHeight": 0.163333333333333,
+        "TreadLength": 0.25,
+        "NosingLength": 0.0,
+        "TreadLengthAtOffset": 0.25
+    },
+    "Constraints": {
+        "Relative Base Height": 0.0,
+        "Relative Top Height": 2.45,
+        "Run Height": 2.45
+    },
+    "Construction": {
+        "Begin with Riser": true,
+        "End with Riser": true,
+        "Extend Below Riser Base": 0.0
+    },
+    "Dimensions": {
+        "Actual Number of Risers": 15,
+        "Actual Number of Treads": 14,
+        "Actual Riser Height": 0.163333333333333
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Runs",
+        "Family": "Non-Monolithic Run: Marche 50 mm Contremarche 13 mm",
+        "Family and Type": "Non-Monolithic Run: Marche 50 mm Contremarche 13 mm",
+        "Type": "Non-Monolithic Run: Marche 50 mm Contremarche 13 mm",
+        "Type Id": "Non-Monolithic Run: Marche 50 mm Contremarche 13 mm"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "",
+        "Assembly Description": "",
+        "Workset": "Types d'escaliers",
+        "Type Name": "Marche 50 mm Contremarche 13 mm"
+    },
+    "Other(Type)": {
+        "Category": "Runs",
+        "Family Name": "Non-Monolithic Run"
+    },
+    "Risers(Type)": {
+        "Riser": true,
+        "Riser Thickness": 0.0125,
+        "Riser To Tread Connection": "Extend Riser Behind Tread",
+        "Slanted": false
+    },
+    "Treads(Type)": {
+        "Apply Nosing Profile": "Front Only",
+        "Nosing Length": 0.0,
+        "Tread": true,
+        "Tread Thickness": 0.05
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "Pset_ProductRequirements": {
+        "Category": "Windows"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "1.65m x 1.8 m"
+    },
+    "Pset_WindowCommon": {
+        "IsExternal": true,
+        "Reference": "1.65m x 1.8 m",
+        "ThermalTransmittance": 2.88
+    },
+    "BaseQuantities": {
+        "Height": 1.8,
+        "Width": 0.55,
+        "Area": 6.22047346591311
+    },
+    "Constraints": {
+        "Level": "Level: R+1",
+        "Sill Height": 0.85
+    },
+    "Dimensions": {
+        "Area": 6.22047346591311,
+        "Volume": 0.108576429004616
+    },
+    "Graphics": {
+        "Encadrement int\u00e9rieur": false
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D",
+        "Mark": "3",
+        "Statut ouverture": "Ferm\u00e9"
+    },
+    "Other": {
+        "Category": "Windows",
+        "Family": "3 vantaux - 3 imposte: 1.65m x 1.8 m",
+        "Family and Type": "3 vantaux - 3 imposte: 1.65m x 1.8 m",
+        "Host Id": "Basic Wall: G\u00e9n\u00e9rique - fa\u00e7ade - B\u00e9ton 40 cm",
+        "Type": "3 vantaux - 3 imposte: 1.65m x 1.8 m",
+        "Type Id": "3 vantaux - 3 imposte: 1.65m x 1.8 m",
+        "Head Height": 2.65
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    }
+}

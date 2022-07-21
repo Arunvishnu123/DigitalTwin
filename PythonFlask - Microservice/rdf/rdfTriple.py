@@ -35,7 +35,7 @@ class RDFGraph:
         rdfG.add(( geometry , props.hasVertices, Literal(vertices)))
         rdfG.add(( geometry  ,props.hasFaces, Literal(faces)))
         for i in test:
-            if(i == "Level"):
+            if(i == "Level"):            
                 rdfG.add((type, props.belongToLevel, Literal(test["Level"], datatype=XSD["string"])))
             if(i == "Area"):
                 rdfG.add((type, props.hasArea, Literal(test["Area"], datatype=XSD['float'])))

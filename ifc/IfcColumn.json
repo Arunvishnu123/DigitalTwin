@@ -1,0 +1,54 @@
+{
+    "BaseQuantities": {
+        "GrossVolume": 3.4764
+    },
+    "Pset_ColumnCommon": {
+        "Reference": "110 x 110",
+        "Slope": 0.0,
+        "IsExternal": false,
+        "LoadBearing": true
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Structural Columns"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "110 x 110"
+    },
+    "Pset_ReinforcementBarPitchOfColumn": {
+        "Reference": "110 x 110"
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Base Level": "Level: SSOL",
+        "Column Location Mark": "34-39",
+        "Column Style": "Vertical",
+        "Level": "Level: SSOL",
+        "Moves With Grids": true,
+        "Top Level": "Level: RDC",
+        "Top Offset": 0.0
+    },
+    "Dimensions": {
+        "Length": 3.0,
+        "Volume": 3.4764
+    },
+    "Identity Data": {
+        "Edited by": "Aurelia.D",
+        "Workset": "STRUCTURE"
+    },
+    "Other": {
+        "Category": "Structural Columns",
+        "Family": "Poteau b\u00e9ton - Chanfrein\u00e9: 110 x 110",
+        "Family and Type": "Poteau b\u00e9ton - Chanfrein\u00e9: 110 x 110",
+        "Type": "Poteau b\u00e9ton - Chanfrein\u00e9: 110 x 110",
+        "Type Id": "Poteau b\u00e9ton - Chanfrein\u00e9: 110 x 110"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Structural": {
+        "Enable Analytical Model": true,
+        "Rebar Cover - Bottom Face": "Rebar Cover Settings: Enrobage d'armature\u00a01",
+        "Rebar Cover - Other Faces": "Rebar Cover Settings: Enrobage d'armature\u00a01",
+        "Rebar Cover - Top Face": "Rebar Cover Settings: Enrobage d'armature\u00a01"
+    }
+}

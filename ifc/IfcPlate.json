@@ -1,0 +1,37 @@
+{
+    "Constraints": {
+        "Level": "Level: RDC"
+    },
+    "Dimensions": {
+        "Area": 12.8582573200001,
+        "Height": 8.78,
+        "Volume": 0.257165146400002,
+        "Width": 1.46449400000001
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Curtain Panels",
+        "Family": "Panneau syst\u00e8me1: Vitr\u00e9",
+        "Family and Type": "Panneau syst\u00e8me1: Vitr\u00e9",
+        "Host Id": "Curtain Wall: G\u00e9n\u00e9rique - Panneau simple",
+        "Type": "Panneau syst\u00e8me1: Vitr\u00e9",
+        "Type Id": "Panneau syst\u00e8me1: Vitr\u00e9"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Pset_PlateCommon": {
+        "IsExternal": true,
+        "Reference": "Vitr\u00e9",
+        "ThermalTransmittance": 6.7069
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Curtain Panels"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Vitr\u00e9"
+    }
+}

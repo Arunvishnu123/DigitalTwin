@@ -1,0 +1,47 @@
+{
+    "Constraints": {
+        "Horizontal Justification": "Center",
+        "Reference Level": "Level: R+2",
+        "Vertical Justification": "Middle",
+        "Bottom Elevation": 2.865,
+        "End Middle Elevation": 2.89,
+        "Middle Elevation": 2.89,
+        "Start Middle Elevation": 2.89,
+        "Top Elevation": 2.915
+    },
+    "Dimensions": {
+        "Height": 0.05,
+        "Length": 19.2266189990489,
+        "Size": "200 mmx50 mm\u00f8",
+        "Width": 0.2
+    },
+    "Identity Data": {
+        "Workset": "ELECTRICITE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Cable Trays",
+        "Family": "Cable Tray with Fittings: FIL CFA",
+        "Family and Type": "Cable Tray with Fittings: FIL CFA",
+        "Type": "Cable Tray with Fittings: FIL CFA",
+        "Type Id": "Cable Tray with Fittings: FIL CFA"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Pset_DistributionFlowElementCommon": {
+        "Reference": "FIL CFA"
+    },
+    "Pset_FlowSegmentDuctSegment": {
+        "Length": 19.2266189990489
+    },
+    "Pset_FlowSegmentPipeSegment": {
+        "Length": 19.2266189990489
+    },
+    "Pset_ProductRequirements": {
+        "Category": "Cable Trays"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "FIL CFA"
+    }
+}

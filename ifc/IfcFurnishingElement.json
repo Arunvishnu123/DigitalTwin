@@ -1,0 +1,38 @@
+{
+    "Pset_ProductRequirements": {
+        "Category": "Furniture"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Standard"
+    },
+    "Constraints": {
+        "Level": "Level: RDC",
+        "Moves With Nearby Elements": false,
+        "Elevation from Level": 0.0,
+        "Offset from Host": 0.0,
+        "Host": "Level : RDC"
+    },
+    "Dimensions": {
+        "Arase_inf_mur": 0.07,
+        "Arase_sup_mur": 0.2,
+        "Area": 0.724856280742294,
+        "Hauteur": 2.16,
+        "Largeur": 0.6,
+        "Profondeur": 0.129,
+        "Volume": 0.00706351389872518
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Furniture",
+        "Family": "S\u00e9parateur urinoir: Standard",
+        "Family and Type": "S\u00e9parateur urinoir: Standard",
+        "Type": "S\u00e9parateur urinoir: Standard",
+        "Type Id": "S\u00e9parateur urinoir: Standard"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    }
+}

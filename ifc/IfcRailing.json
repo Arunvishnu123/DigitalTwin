@@ -1,0 +1,57 @@
+{
+    "Pset_ProductRequirements": {
+        "Category": "Railings"
+    },
+    "Pset_QuantityTakeOff": {
+        "Reference": "Guardrail - Glass Panel"
+    },
+    "Pset_RailingCommon": {
+        "IsExternal": false,
+        "Reference": "Guardrail - Glass Panel",
+        "Height": 1.2192
+    },
+    "BaseQuantities": {
+        "Length": 2.45375629379138
+    },
+    "Constraints": {
+        "Base Offset": 0.0,
+        "Offset from Path": 0.0254
+    },
+    "Dimensions": {
+        "Length": 2.45375629379138
+    },
+    "Identity Data": {
+        "Workset": "SECOND OEUVRE",
+        "Edited by": "Aurelia.D"
+    },
+    "Other": {
+        "Category": "Railings",
+        "Family": "Railing: Guardrail - Glass Panel",
+        "Family and Type": "Railing: Guardrail - Glass Panel",
+        "Type": "Railing: Guardrail - Glass Panel",
+        "Type Id": "Railing: Guardrail - Glass Panel"
+    },
+    "Phasing": {
+        "Phase Created": "Phase 1"
+    },
+    "Construction(Type)": {
+        "Angled Joins": "Add Vertical/Horizontal Segments",
+        "Baluster Offset": -0.0254,
+        "Landing Height Adjustment": 0.0,
+        "Rail Connections": "Trim",
+        "Railing Height": 1.0668,
+        "Tangent Joins": "Extend Rails to Meet",
+        "Use Landing Height Adjustment": false
+    },
+    "Identity Data(Type)": {
+        "Edited by": "",
+        "Assembly Code": "C2010400",
+        "Assembly Description": "Stair Handrails/Balustrades",
+        "Type Name": "Guardrail - Glass Panel",
+        "Workset": "Type de garde-corps"
+    },
+    "Other(Type)": {
+        "Category": "Railings",
+        "Family Name": "Railing"
+    }
+}

@@ -2,7 +2,7 @@
 <div class="form-demo">
     <div class="flex justify-content-center">
         <div class="card">
-            <form @submit.prevent="test" class="p-fluid form ">
+            <form @submit.prevent="sendSparqlQuery" class="p-fluid form">
                 <div class="field">
                     <div>
                         <InputText v-model="restLink" id="name" placeholder="Enter the IFC element Link" />
@@ -30,18 +30,22 @@ export default {
     data() {
         return {
             restLink: null,
-            sparqlInsertQuery: null
+            sparqlInsertQuery: null,
         };
     },
 
     methods: {
-        async sendSparqlQuery() {
-            await axios.get("/").then((response => {
-                console.log(response)
-            }))
-        }
-    }
-
+     sendSparqlQuery() {
+             axios
+                .post("http://127.0.0.1:3000/updateknowledge", {
+                    restLink: this.restLink,
+                    sparqlQuery: this.sparqlInsertQuery,
+                })
+                .then((response) => {
+                    console.log(response);
+                });
+        },
+    },
 };
 </script>
 
