@@ -1,7 +1,7 @@
 export function selectObects(viewer) {
     var lastEntity = null;
 
-    viewer.scene.input.on("picked", function (coords) {
+    viewer.scene.input.on("mousemove", function (coords) {
 
         var hit = viewer.scene.pick({
             canvasPos: coords
@@ -26,4 +26,5 @@ export function selectObects(viewer) {
             }
         }
     });
+
 }

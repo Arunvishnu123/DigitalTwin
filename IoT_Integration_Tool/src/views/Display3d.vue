@@ -7,7 +7,9 @@
         <DisplayPersonData />
         <DisplayWindowStatus />
         <Tooltip />
-     
+        <ViewKnowledgeGraphVue />
+   <CreateNewThing />
+
     </w-app>
 </div>
 </template>
@@ -17,8 +19,8 @@ import NavBar from "../components/header/Header.vue";
 import Display3d from "../components/bimModel/View3DModel.vue";
 import TerminalDialog from "../components/terminalBox/TerminalDialogBox.vue";
 import Tooltip from "../components/bimModel/Tooltip.vue"
-
-
+import ViewKnowledgeGraphVue from "../components/viewKnowledgeGraph/ViewKnowledgeGraph.vue";
+import CreateNewThing from "../components/CreateKnowledgeGraphs/CreateThing.vue"
 
 import {
     TreeViewPlugin
@@ -30,6 +32,9 @@ export default {
         NavBar,
         TerminalDialog,
         Tooltip,
+        ViewKnowledgeGraphVue,
+       CreateNewThing
+
     },
     data: () => ({
         h: [1838785.4837244658, 17.222810247329033, -5156526.853220375]
@@ -40,10 +45,7 @@ export default {
             console.log("test")
         }
     },
-    mounted() {
-  
 
-    }
 };
 </script>
 
@@ -58,5 +60,4 @@ export default {
     height: 100%;
     width: 100%;
 }
-
 </style>

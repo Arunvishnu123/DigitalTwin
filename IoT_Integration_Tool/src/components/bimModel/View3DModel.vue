@@ -11,18 +11,14 @@ import {
     PerformanceModel,
     ImagePlane,
 } from "@xeokit/xeokit-sdk/";
-import * as DisplayPersonData from "../../features/clickevent/clickPerosonDetails"
 import * as display3d from "../../features/bimModel/view3D";
 import * as selectObjects from "../../features/additional/selectObjects";
 import * as ContextMenuCanvas from "../../features/contextmenu/contextMenu3DModel";
 import * as ContextMenu3DModel from "../../features/contextmenu/contextMenuObject";
 import store from "../../store/index";
-import * as ContextMenuParameters from "../../features/contextmenu/contextMenuParameters";
 import * as CreateKeyMap from "../../features/firstPersonView/keyMap"
-import * as ClickSensor from "../../features/clickevent/sensorClick"
-import * as windowClickEvent from "../../features/clickevent/windowOpenCloseDialog"
 import * as HoverOver from "../../features/hoverevent/Hover"
-import * as ClickRoomData from "../../features/clickevent/clickRoomData"
+import * as getKnowledgeGraphs from "../../features/clickEvent/clickKnowledgegraph"
 
 export default {
     data: () => ({
@@ -52,9 +48,6 @@ export default {
 
         const camera = scene.camera;
         store.state.viewer.scene.edgeMaterial.edges = false;
-      
-      
-
         const cameraFlight = store.state.viewer.cameraFlight;
         const sao = scene.sao;
         const saoParams = new(function () {
@@ -153,23 +146,15 @@ export default {
             canvasPos: coords,
             pickSurface: true  // <<------ This causes picking to find the intersection point on the entity
         });
-
-        if (pickResult) {
-            console.log("pickresult",pickResult)
-                        
-        }
     });
 
-        //CreateAnnotation.createAnnotation()
-        ClickSensor.clickSensorData()
+   
+   
         HoverOver.hoverOver()
-        windowClickEvent.clickPersonData()
-    
-    
 
-        DisplayPersonData.clickPersonData()
+    
         CreateKeyMap.keyMap()
-        ClickRoomData.clickSensorData()
+     
         
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/images/1.jpg",
@@ -191,14 +176,11 @@ export default {
                 store.state.model,
                 store.state.viewer
             );
-        } else {
-            ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
-            //ContextMenu3DModel.contextMenu3dModel(this.model, store.state.viewer);
-        }
-
+        } 
+        console.log(store.state.viewer)
         //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.model);
         window.viewer = store.state.viewer;
-
+        getKnowledgeGraphs.getKG(store.state.viewer)
         console.log("model", store.state.model.scene.objects)
     },
 

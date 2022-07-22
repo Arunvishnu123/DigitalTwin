@@ -7,8 +7,8 @@ from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,FOAF
 from ifc.readIFC import  IFCInformationExtratcion
 import time
 start_time = time.time()
-t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\finaltest")
-g = t.propSetExtraction()
+#t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\finaltest")
+#g = t.propSetExtraction()
 app = Flask(__name__)
 DEBUG = True
 CORS(app)
@@ -25,16 +25,13 @@ def createdOntology():
 
 @app.route('/updateknowledge' , methods=['GET' , 'POST'])
 def updateKnowledge():
-    if request.method == 'GET':
-        return "Helo"
 
     if request.method == 'POST':
-        sparql  =  request.form['sparqlQuery']
-        restLink  =  request.form['restLink']
+        dta = request.form
+        print(request.json)
+        return "test"
 
-        print(sparql)
-        print(restLink)
-        return sparql
+
 
 
 

@@ -31,7 +31,7 @@ export function display3d(viewer) {
         objectDefaults: {
             IfcSlab: {
                 colorize: [150, 146, 146], // Blue
-                pickable: false,
+                pickable: true,
             },
         },
     });

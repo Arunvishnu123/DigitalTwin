@@ -3,24 +3,18 @@ import {
 } from "@xeokit/xeokit-sdk/";
 import "../../assets/styles/xeokit-context-menu.css"
 import store from "../../store/index"
-import * as ContextMenuParameters from "./contextMenuParameters";
 import * as floorView from "../floorViews/floorView"
 
 export function contextMenu3dModel(model, viewer) {
     store.state.objectContextMenu = new ContextMenu({
-        items: [
-            [{
-                title: "Inspect Properties",
+        items: [[
+            {
+                title: "Add new Thing",
                 doAction: (context) => {
-                    viewer.cameraControl.navMode = "planView"
-                    console.log("doactioncontext", context)
-                    const objectId = context.entity.id;
-                    console.log(objectId)
-                    console.log(context.viewer.metaScene.metaObjects[objectId]);
-                    console.log("test")
-                    console.log("storrrrrr", store.state.model)
+                 store.state.createThing = true
                 }
-            }],
+            }
+        ] , 
             [{
                     title: "Plan View",
                     doAction: (context) => {
@@ -109,47 +103,7 @@ export function contextMenu3dModel(model, viewer) {
                     }
                 }
             ],
-            [{
-                    getTitle: (context) => {
-                        return context.viewer.localeService.translate("objectContextMenu.xrayOthers") || "X-Ray";
-                    },
-                    doAction: (context) => {
-                        const viewer = context.viewer;
-                        const scene = viewer.scene;
-                        const entity = context.entity;
-                        const metaObject = viewer.metaScene.metaObjects[entity.id];
-                        if (!metaObject) {
-                            return;
-                        }
-                        scene.setObjectsVisible(scene.objectIds, true);
-                        scene.setObjectsXRayed(scene.objectIds, true);
-                        if (!context.bimViewer.getConfig("xrayPickable")) {
-                            scene.setObjectsPickable(scene.objectIds, false);
-                        }
-                        metaObject.withMetaObjectsInSubtree((metaObject) => {
-                            const entity = scene.objects[metaObject.id];
-                            if (entity) {
-                                entity.xrayed = false;
-                                entity.pickable = true;
-                            }
-                        });
-                    }
-                },
-                {
-                    getTitle: (context) => {
-                        return context.viewer.localeService.translate("objectContextMenu.xrayNone") || "X-Ray None";
-                    },
-                    getEnabled: (context) => {
-                        return (context.viewer.scene.numXRayedObjects > 0);
-                    },
-                    doAction: (context) => {
-                        const scene = context.viewer.scene;
-                        const xrayedObjectIds = scene.xrayedObjectIds;
-                        scene.setObjectsPickable(xrayedObjectIds, true);
-                        scene.setObjectsXRayed(xrayedObjectIds, false);
-                    }
-                }
-            ],
+            
             [{
                 title: "Reset View",
                 doAction: function (context) {
@@ -162,57 +116,6 @@ export function contextMenu3dModel(model, viewer) {
                     // });
                 }
             }],
-
-            [{
-                title: "Capture Current View",
-                doAction: function (context) {
-                    const eye = store.state.viewer.camera.eye;
-                    const look = store.state.viewer.camera.look;
-                    const up = store.state.viewer.camera.up;
-                    console.log("eye", eye);
-                    console.log("look", look);
-                    console.log("up", up);
-                }
-            }],
-
-            [
-
-                {
-
-                    getTitle: (context) => {
-                        return "Fourth Floor";
-                    },
-
-                    doAction: function (context) {
-
-                    },
-
-                    items: [
-
-                        [
-
-                            {
-                                getTitle: (context) => {
-                                    return "Room No - 421"
-                                },
-
-                                doAction: function (context) {
-                                    floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
-                                    store.state.objectContextMenu.enabled = false
-                                    ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
-                                    viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
-                                    viewer.camera.look = [1838784.212, 17.40368311, -5156525.627];
-                                    viewer.camera.up = [-0.040127462, 0.990154669, -0.134102643];
-                                    store.state.model.scene.objects["295MeKx7H5KOdAaP3Utyr_"].colorize = [174, 174, 174 ]
-                                }
-                            },
-
-
-                        ]
-                    ]
-                }
-            ]
-
         ]
     });
     viewer.cameraControl.on("rightClick", function (e) {

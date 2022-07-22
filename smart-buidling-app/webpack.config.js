@@ -21,7 +21,7 @@ module.exports = {
         // open: true, // open browser after serve.
         hot: true,
         host:"localhost",
-        port:8080
+        port:8081
     },
     plugins: [
         new HtmlWebpackPlugin({

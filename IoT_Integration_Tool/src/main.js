@@ -6,6 +6,8 @@ import WaveUI from 'wave-ui';
 import 'wave-ui/dist/wave-ui.css';
 import "./fa.config"
 import shell from 'vue-shell'
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 Vue.use(shell);
 
 Vue.use(WaveUI)

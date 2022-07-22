@@ -6,13 +6,19 @@ import display from './componentModule/display';
 
 
 const store = new Vuex.Store({
+
+
+
   state: {
     // navbar drawer - dialog box control
    // openDrawer: false,
-
+   createThing:false,
     // 3d model viewer 
     viewer: null,
     model: null,
+    id:null, 
+    class:null , 
+    url:null, 
 
     //floor wise selection 
     selection: null,
