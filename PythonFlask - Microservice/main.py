@@ -5,15 +5,18 @@ from flask_cors import CORS
 from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,FOAF
 from ifc.readIFC import  IFCInformationExtratcion
-
-#t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (42)")
-#g = t.propSetExtraction()
+import time
+start_time = time.time()
+t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\finaltest")
+g = t.propSetExtraction()
 app = Flask(__name__)
 DEBUG = True
 CORS(app)
 app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 ontology = Ontology()
+print("--- %s seconds ---" % (time.time() - start_time))
+
 # get request to send the rdf graphs
 @app.route('/',methods=['GET'])
 def createdOntology():

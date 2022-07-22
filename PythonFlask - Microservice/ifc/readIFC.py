@@ -82,6 +82,7 @@ class IFCInformationExtratcion:
                         self.relatedElementList.append(relatedStoreyElement)
                 grouped_verts = []
                 grouped_faces = []
+                print(propJson)
                 self.test.createRDFGraph(i, product.GlobalId, propJson, path, self.relatedElementList , grouped_verts ,  grouped_faces  )
             ifcClassTriple.createFile(self.tripleStoreDirectory)
             print(ifcClassNumber)
