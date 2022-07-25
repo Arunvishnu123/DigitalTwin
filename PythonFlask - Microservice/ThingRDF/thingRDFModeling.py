@@ -2,7 +2,7 @@ from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,SKOS
 
 
-class ThingDescription:
+class ThingDescriptionRDF:
     def __init__(self):
         pass
 

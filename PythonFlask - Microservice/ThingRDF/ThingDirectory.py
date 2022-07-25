@@ -3,7 +3,7 @@ class ThingDirectory:
     def __init__(self):
         pass
 
-    def creation(self,ifcClass,ifcGuid,parameterName,location):
+    def creation(self,ifcClass,ifcGuid,location):
         listifcClass =os.listdir(location)
         if ifcClass in listifcClass:
           print("ifc Class exist in the thing directory")
