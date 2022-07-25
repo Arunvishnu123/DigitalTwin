@@ -37,6 +37,25 @@ def updateKnowledge():
         print(path)
         thingRDFModeling.rdfCreation(path,data["IfcClass"] ,data["IfcGuid"] ,  data["sensorType"] ,data["thingType"],data["thingEventDescription"] , data["thingHistroicalDescription"] , data["eventContentType"] ,  data["historicalContentType"] , data["eventBasedTarget"] , data["historicalTarget"] , data["eventTargetType"] ,data["historicalTargetType"])
         print(request.json)
+
+        #update RDF graphs
+
+        graph =  Graph()
+        graph.parse("http://localhost:4000/" + data["IfcClass"] + "/" + data["IfcGuid"])
+
+        url = URIRef("http://127.0.0.1:3000/" + data["IfcClass"] + "/" + data["IfcGuid"])
+        urlLocal = url + "/" + data["thingType"] + "#"
+        dogont = Namespace("http://elite.polito.it/ontologies/dogont.owl")
+        graph.bind("dogont",dogont)
+        saref = Namespace("https://saref.etsi.org/core/v3.1.1/")
+        graph.bind("saref", saref)
+        hctl = Namespace("https://www.w3.org/2019/wot/hypermedia#")
+        graph.bind("hctl", hctl)
+
+        graph.add((url, dogont.hasSensor, Literal(urlLocal)))
+        graph.add((urlLocal,saref.hasSensorType ,Literal(data["thingType"])) )
+        graph.add((urlLocal,hctl.hasTarget ,URIRef(url + '/' + data["thingType"])))
+        graph.serialize(r"C:/Users/ARUN/OneDrive/Desktop/finaltest" + "/" + data["IfcClass"] + "/" + data["IfcGuid"] + ".ttl" , format="ttl" )
         return "test"
 
 
