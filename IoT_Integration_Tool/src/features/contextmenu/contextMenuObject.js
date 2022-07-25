@@ -124,6 +124,13 @@ export function contextMenu3dModel(model, viewer) {
             canvasPos: e.canvasPos
         });
 
+        console.log("hit" , hit)
+
+        const objectId = hit.entity.id;
+        const v = viewer.metaScene.metaObjects[objectId]
+        store.state.thingIfcId= v.id
+        store.state.thingifcClass = v.type
+
         if (hit && hit.entity.isObject) {
 
             store.state.objectContextMenu.context = { // Must set context before showing menu

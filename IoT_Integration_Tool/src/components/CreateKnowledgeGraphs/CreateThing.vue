@@ -43,6 +43,7 @@
 <script>
 import store from "../../store/index";
 import axios from "axios";
+
 export default {
     data: () => ({
         thingType: null,
@@ -64,10 +65,11 @@ export default {
 
     methods: {
         async sendThing() {
+        
             await axios
                 .post("http://127.0.0.1:3000/updateknowledge", {
-                    IfcClass: store.state.class,
-                    IfcGuid: store.state.id,
+                    IfcClass: store.state.thingifcClass,
+                    IfcGuid: store.state.thingIfcId,
                     sensorType: this.sensorType,
                     thingType: this.thingType,
                     thingEventDescription: this.thingEventDescription,

@@ -16,33 +16,31 @@ import * as selectObjects from "../../features/additional/selectObjects";
 import * as ContextMenuCanvas from "../../features/contextmenu/contextMenu3DModel";
 import * as ContextMenu3DModel from "../../features/contextmenu/contextMenuObject";
 import store from "../../store/index";
-import * as CreateKeyMap from "../../features/firstPersonView/keyMap"
-import * as HoverOver from "../../features/hoverevent/Hover"
-import * as getKnowledgeGraphs from "../../features/clickEvent/clickKnowledgegraph"
+import * as CreateKeyMap from "../../features/firstPersonView/keyMap";
+import * as HoverOver from "../../features/hoverevent/Hover";
+import * as getKnowledgeGraphs from "../../features/clickEvent/clickKnowledgegraph";
+
 
 export default {
     data: () => ({
         viewer: null,
         model: null,
-        t: false
+        t: false,
     }),
-    components:{
-
-    },
+    components: {},
     mounted() {
         store.state.viewer = new Viewer({
             canvasId: "myCanvas",
             transparent: true,
             saoEnabled: true,
         });
-        console.log("test", store.state.viewer)
+        console.log("test", store.state.viewer);
 
         const performanceModel = new PerformanceModel(store.state.viewer.scene, {
             id: "model",
             isModel: true,
             rotation: [0, 0, 0],
         });
-
         const cameraControl = store.state.viewer.cameraControl;
         const scene = store.state.viewer.scene;
 
@@ -129,7 +127,6 @@ export default {
             src: "src/assets/cloudySkyBox.jpg",
             size: 1000,
         });
-        
 
         store.state.viewer.scene.input.on("picked", (e) => {
             const entity = e.entity;
@@ -137,25 +134,20 @@ export default {
             const worldPos = e.worldPos; // 3D World-space position
             const viewPos = e.viewPos; // 3D View-space position
             const worldNormal = e.worldNormal; // 3D World-space normal vector
-            console.log(e)
+            console.log(e);
         });
 
         store.state.viewer.scene.input.on("mouseclicked", (coords) => {
-
-        const pickResult = store.state.viewer.scene.pick({
-            canvasPos: coords,
-            pickSurface: true  // <<------ This causes picking to find the intersection point on the entity
+            const pickResult = store.state.viewer.scene.pick({
+                canvasPos: coords,
+                pickSurface: true, // <<------ This causes picking to find the intersection point on the entity
+            });
         });
-    });
 
-   
-   
-        HoverOver.hoverOver()
+        HoverOver.hoverOver();
 
-    
-        CreateKeyMap.keyMap()
-     
-        
+        CreateKeyMap.keyMap();
+
         new ImagePlane(store.state.viewer.scene, {
             src: "src/assets/images/1.jpg",
             size: 3000,
@@ -176,12 +168,12 @@ export default {
                 store.state.model,
                 store.state.viewer
             );
-        } 
-        console.log(store.state.viewer)
+        }
+        console.log(store.state.viewer);
         //FloorView.floorView("3_b98WEDT7feUaJ_WJeWog", this.viewer,this.model);
         window.viewer = store.state.viewer;
-        getKnowledgeGraphs.getKG(store.state.viewer)
-        console.log("model", store.state.model.scene.objects)
+        getKnowledgeGraphs.getKG(store.state.viewer);
+        console.log("model", store.state.model.scene.objects);
     },
 
     methods: {
@@ -198,7 +190,6 @@ export default {
 </script>
 
 <style scoped>
-
 #myCanvas {
     top: 0px;
     width: 100%;

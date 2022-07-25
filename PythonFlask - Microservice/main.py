@@ -32,8 +32,10 @@ def updateKnowledge():
         thingRDFModeling  =  ThingDescriptionRDF()
         thingDirectoryCreation =  ThingDirectory()
         data  = request.json
-        path = thingDirectoryCreation.creation(thingDirectoryPath , data.IfcClass , data.IfcGuid ,thingDirectoryPath )
-        thingRDFModeling.rdfCreation(path,data.IfcClass ,data.IfcGuid ,  data.sensorType ,data.thingType ,data.thingEventDescription , data.thingHistroicalDescription , data.eventContentType ,  data.historicalContentType , data.eventBasedTarget , data.historicalTarget , data.eventTargetType ,data.historicalTargetType)
+        print(data["IfcClass"])
+        path = thingDirectoryCreation.creation( data["IfcClass"] , data["IfcGuid"],thingDirectoryPath )
+        print(path)
+        thingRDFModeling.rdfCreation(path,data["IfcClass"] ,data["IfcGuid"] ,  data["sensorType"] ,data["thingType"],data["thingEventDescription"] , data["thingHistroicalDescription"] , data["eventContentType"] ,  data["historicalContentType"] , data["eventBasedTarget"] , data["historicalTarget"] , data["eventTargetType"] ,data["historicalTargetType"])
         print(request.json)
         return "test"
 

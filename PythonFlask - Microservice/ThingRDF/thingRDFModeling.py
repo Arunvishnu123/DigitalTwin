@@ -57,6 +57,7 @@ class ThingDescriptionRDF:
         thingGraph.add((historyForm, htv.methodName, Literal(historicalType)))
         thingGraph.add((historyForm, hctl.hasOperationType, td.readProperty))
         thingGraph.add((historyForm, hctl.forContentType, Literal(historicalContentType)))
-        thingGraph.serialize(directory+"/" + ifcClass+ "/"+ifcGuid + "/"+parameterName+".ttl")
+        print(thingGraph.serialize())
+        thingGraph.serialize(directory + "/"+parameterName+".ttl" ,format="ttl")
 
 

@@ -20,6 +20,9 @@ const store = new Vuex.Store({
     class:null , 
     url:null, 
 
+    thingIfcId:null , 
+    thingifcClass:null , 
+
     //floor wise selection 
     selection: null,
 
