@@ -6,16 +6,24 @@
         <w-flex column>
             <w-tag xl height="2em" class="humidity" bg-color="primary">Create New Thing</w-tag>
             <w-form @submit.prevent="sendThing">
-                <w-input v-model="thingType" class="mb6" label="Thing Type" outline> </w-input>
-                <w-textarea outline>Thing Description</w-textarea>
+              <w-divider class="ma6" color="white" />
+                <w-input v-model="thingType" class="mb6" label="Thing Type" outline>
+                </w-input>
+                <w-divider class="ma6" color="white" />
                 <w-flex>
-                    <w-input class="mb6" label="Event based target" outline> </w-input>
-                    <w-input class="mb6" label="Target type" outline> </w-input>
+                    <w-input v-model="eventBasedTarget" class="mb6" label="Event based target" outline> </w-input>
+                    <w-input v-model="eventTargetType" class="mb6" label="Target type" outline> </w-input>
+                    <w-input v-model="eventContentType" class="mb6" label="Content type" outline> </w-input>
                 </w-flex>
+                <w-textarea v-model="thingEventDescription" outline>Event based Sensor Description</w-textarea>
+                <w-divider class="ma6" color="primary" />
                 <w-flex>
-                    <w-input class="mb6" label="Histroical Target" outline> </w-input>
-                    <w-input class="mb6" label="Target type" outline> </w-input>
+                    <w-input v-model="historicalTarget" class="mb6" label="Histroical Target" outline> </w-input>
+                    <w-input v-model="historicalTargetType" class="mb6" label="Target type" outline> </w-input>
+                    <w-input v-model="historicalContentType" class="mb6" label="Content type" outline> </w-input>
                 </w-flex>
+                <w-textarea v-model="thingHistroicalDescription" outline>Historical based Sensor Description</w-textarea>
+                <w-divider class="ma6" color="white" />
                 <w-flex>
                     <w-button type="submit" class="ma1 grow" bg-color="primary">Click here to create new thing</w-button>
                 </w-flex>
@@ -31,11 +39,14 @@ import axios from "axios";
 export default {
     data: () => ({
         thingType: null,
-        thingDescription: null,
+        thingEventDescription: null,
         eventBasedTarget: null,
         eventTargetType: null,
         historicalTargetType: null,
         historicalTarget: null,
+        thingHistroicalDescription: null,
+        eventContentType: null,
+        historicalContentType: null,
     }),
     computed: {
         position() {
@@ -46,13 +57,18 @@ export default {
     methods: {
         async sendThing() {
             await axios
-                .post("http://10.103.1.107:3000/updateknowledge", {
-                    thingType:  this.thingType,
-                    thingDescription: this.thingDescription,
+                .post("http://127.0.0.1:3000/updateknowledge", {
+                    IfcClass:store.state.class,
+                    IfcGuid:store.state.id,
+                    thingType: this.thingType,
+                    thingEventDescription: this.thingEventDescription,
                     eventBasedTarget: this.eventBasedTarget,
                     eventTargetType: this.eventTargetType,
                     historicalTargetType: this.historicalTargetType,
-                    historicalTarget: this.historicalTarget
+                    historicalTarget: this.historicalTarget,
+                    thingHistroicalDescription: this.thingHistroicalDescription,
+                    eventContentType: this.eventContentType,
+                    historicalContentType: this.historicalContentType,
                 })
                 .then((response) => {
                     console.log(response);

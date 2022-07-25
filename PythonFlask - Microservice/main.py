@@ -25,9 +25,7 @@ def createdOntology():
 
 @app.route('/updateknowledge' , methods=['GET' , 'POST'])
 def updateKnowledge():
-
     if request.method == 'POST':
-        dta = request.form
         print(request.json)
         return "test"
 

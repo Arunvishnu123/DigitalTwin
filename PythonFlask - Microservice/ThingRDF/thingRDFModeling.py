@@ -6,7 +6,7 @@ class ThingDescription:
     def __init__(self):
         pass
 
-    def rdfCreation(self,ifcClass , ifcGuid , sensorType , parameterName, eventDescription , historicalDescritpion , eventContentType,historicalContentType,eventTarget , historicalTarget, eventType, historicalType):
+    def rdfCreation(self,directory,ifcClass , ifcGuid , sensorType , parameterName, eventDescription , historicalDescritpion , eventContentType,historicalContentType,eventTarget , historicalTarget, eventType, historicalType):
         thingGraph = Graph()
         # thing description
         td = Namespace('https://www.w3.org/2019/wot/td#')
@@ -57,5 +57,6 @@ class ThingDescription:
         thingGraph.add((historyForm, htv.methodName, Literal(historicalType)))
         thingGraph.add((historyForm, hctl.hasOperationType, td.readProperty))
         thingGraph.add((historyForm, hctl.forContentType, Literal(historicalContentType)))
+        thingGraph.serialize(directory+"/" + ifcClass+ "/"+ifcGuid + "/"+parameterName+".ttl")
 
 
