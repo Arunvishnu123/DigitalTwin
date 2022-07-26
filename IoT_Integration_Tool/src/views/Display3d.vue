@@ -8,7 +8,8 @@
         <DisplayWindowStatus />
         <Tooltip />
         <ViewKnowledgeGraphVue />
-   <CreateNewThing />
+        <CreateNewThing />
+        <createEmployee />
 
     </w-app>
 </div>
@@ -20,7 +21,8 @@ import Display3d from "../components/bimModel/View3DModel.vue";
 import TerminalDialog from "../components/terminalBox/TerminalDialogBox.vue";
 import Tooltip from "../components/bimModel/Tooltip.vue"
 import ViewKnowledgeGraphVue from "../components/viewKnowledgeGraph/ViewKnowledgeGraph.vue";
-import CreateNewThing from "../components/CreateKnowledgeGraphs/CreateThing.vue"
+import CreateNewThing from "../components/CreateKnowledgeGraphs/CreateThing.vue";
+import createEmployee from "../components/CreateKnowledgeGraphs/createEmployee.vue";
 
 import {
     TreeViewPlugin
@@ -33,7 +35,8 @@ export default {
         TerminalDialog,
         Tooltip,
         ViewKnowledgeGraphVue,
-       CreateNewThing
+        CreateNewThing,
+        createEmployee
 
     },
     data: () => ({

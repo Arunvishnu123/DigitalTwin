@@ -19,6 +19,7 @@ const store = new Vuex.Store({
     id:null, 
     class:null , 
     url:null, 
+    createEmployee:false,
 
     thingIfcId:null , 
     thingifcClass:null , 

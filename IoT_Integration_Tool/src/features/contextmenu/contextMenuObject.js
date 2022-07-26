@@ -15,6 +15,16 @@ export function contextMenu3dModel(model, viewer) {
                 }
             }
         ] , 
+        [
+            {
+                title: "Add new Employee",
+                doAction: (context) => {
+                 store.state.createEmployee = true
+                 console.log(store.state.createEmployee)
+                 console.log("cicksdfjsdhfdfhdsfhdfshdfsdhfhh")
+                }
+            }
+        ] ,
             [{
                     title: "Plan View",
                     doAction: (context) => {

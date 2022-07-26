@@ -7,6 +7,8 @@ from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK ,FOAF
 from ifc.readIFC import  IFCInformationExtratcion
 from ThingRDF.thingRDFModeling import ThingDescriptionRDF
 from ThingRDF.ThingDirectory import ThingDirectory
+from Employee.EmployeeRDFCreation import  EmployeeRDf
+from Employee.EmployeeDirectoryCreation import EmployeeDirectory
 import time
 start_time = time.time()
 #t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\finaltest")
@@ -56,6 +58,31 @@ def updateKnowledge():
         graph.add((urlLocal,saref.hasSensorType ,Literal(data["thingType"])) )
         graph.add((urlLocal,hctl.hasTarget ,URIRef(url + '/' + data["thingType"])))
         graph.serialize(r"C:/Users/ARUN/OneDrive/Desktop/finaltest" + "/" + data["IfcClass"] + "/" + data["IfcGuid"] + ".ttl" , format="ttl" )
+        return "test"
+
+
+@app.route('/addEmployee' , methods=['GET' , 'POST'])
+def addEmployee():
+    if request.method == 'POST':
+        baseLocation = r"C:\Users\ARUN\OneDrive\Desktop\employeeDirectory"
+        employeeData = request.json
+        print(employeeData)
+        employeeRDF =  EmployeeRDf()
+        employeeDirectory = EmployeeDirectory()
+        locationRDF = employeeDirectory.creation(baseLocation,employeeData["IfcGuid"])
+        print(locationRDF)
+        employeeRDF.creation(employeeData["IfcClass"],employeeData["IfcGuid"],employeeData["firstName"],employeeData["lastName"],employeeData["employeeTitle"], employeeData["emailID"],employeeData["employeeImage"],locationRDF)
+
+        graph = Graph()
+        graph.parse("http://localhost:4000/" + employeeData ["IfcClass"] + "/" + employeeData ["IfcGuid"])
+        url = URIRef("http://127.0.0.1:3000/" + employeeData["IfcClass"] + "/" + employeeData["IfcGuid"])
+        cwrc = Namespace("http://sparql.cwrc.ca/ontologies/cwrc#")
+        graph.bind("cwrc" , cwrc)
+        employeeUrl =  URIRef(url+"/"+"employee" + employeeData["firstName"])
+        graph.add((url, cwrc.hasEmployee,employeeUrl))
+        graph.serialize(
+            r"C:/Users/ARUN/OneDrive/Desktop/finaltest" + "/" + employeeData["IfcClass"] + "/" + employeeData["IfcGuid"] + ".ttl",
+            format="ttl")
         return "test"
 
 

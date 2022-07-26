@@ -21,6 +21,15 @@ getKG.route('/:ifcClass/:ifcGuid/:sensorType').get((req,res,next) =>{
   
 })
 
+
+getKG.route('/:ifcClass/:ifcGuid/employee/:firstName').get((req,res,next) =>{
+    let  ifcClass = req.params.ifcClass
+    let ifcGuid  = req.params.ifcGuid
+    let firstName  = req.params.firstName
+    fileEmployee = path.join("C:/Users/ARUN/OneDrive/Desktop/employeeDirectory", ifcGuid, firstName + ".ttl");
+    res.sendFile(fileEmployee)
+  
+})
 getKG.route('/:ifcClass').get((req,res,next) =>{
     let  ifcClass = req.params.ifcClass
     filePath = path.join("C:/Users/ARUN/OneDrive/Desktop/finaltest", ifcClass +  ".ttl");
