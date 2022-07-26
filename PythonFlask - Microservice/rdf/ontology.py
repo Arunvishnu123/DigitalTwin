@@ -14,7 +14,7 @@ class Ontology:
 
         # custom namespace
         myOnto = Namespace("http://10.103.1.173:8080/test.ttl")
-        onto.bind(":", myOnto)
+        onto.bind("", myOnto)
 
         #########################################################################################################################
 
@@ -653,4 +653,4 @@ class Ontology:
 
 
 
-        return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\New folder (21)\tet.ttl" , format='ttl')
+        return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\ontologyfolder\tet.ttl" , format='ttl')

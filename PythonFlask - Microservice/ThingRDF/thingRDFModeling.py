@@ -26,6 +26,9 @@ class ThingDescriptionRDF:
         # thing description
         dct = Namespace("http://purl.org/dc/terms/")
         thingGraph.bind("dct", dct)
+        # props namespace
+        props = Namespace("http://127.0.0.1:5000/test")
+        thingGraph.bind("props", props)
         url = URIRef(ifcClass + "/" + ifcGuid + "/" + sensorType )
         thingGraph.add((url, RDF.type, td.Thing))
         eventAffordance = BNode()
@@ -57,7 +60,13 @@ class ThingDescriptionRDF:
         thingGraph.add((historyForm, htv.methodName, Literal(historicalType)))
         thingGraph.add((historyForm, hctl.hasOperationType, td.readProperty))
         thingGraph.add((historyForm, hctl.forContentType, Literal(historicalContentType)))
-        print(thingGraph.serialize())
+
+        hctl = Namespace("https://www.w3.org/2019/wot/hypermedia#")
+        thingGraph.bind("hctl", hctl)
+        elementTarget  =  url + "#" + "element"
+        thingGraph.add((url,props.hasElement,URIRef(elementTarget )))
+        thingGraph.add((elementTarget,RDF.type,props[ifcClass]))
+        thingGraph.add((elementTarget,hctl.hasTarget,URIRef("http://127.0.0.1:3000/" + ifcClass + "/" + ifcGuid)))
         thingGraph.serialize(directory + "/"+parameterName+".ttl" ,format="ttl")
 
 

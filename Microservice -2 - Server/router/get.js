@@ -4,6 +4,8 @@ const getKG = express.Router();
 var fs = require('fs')
 var path = require('path') 
 
+const tes = express.Router();
+
 getKG.route('/:ifcClass/:ifcGuid').get((req,res,next) =>{
          let  ifcClass = req.params.ifcClass
          let ifcGuid  = req.params.ifcGuid
@@ -46,9 +48,10 @@ getKG.route('/ifcClass').get((req,res,next) =>{
     res.sendFile(filePath)  
 })
 
-getKG.route('/file').post((req, res, next) => {
+getKG.route('/fayol/mines/ontology/test').post((req, res, next) => {
     console.log(req.body)
-    res.send("Hello")     
+    ontologyPath = path.join("C:/Users/ARUN/OneDrive/Desktop/ontologyfolder","tet.ttl");
+    res.sendFile(ontologyPath) 
      
 
 });

@@ -19,6 +19,7 @@ CORS(app)
 app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 ontology = Ontology()
+ontology.createdOntology()
 print("--- %s seconds ---" % (time.time() - start_time))
 
 # get request to send the rdf graphs
@@ -78,7 +79,7 @@ def addEmployee():
         url = URIRef("http://127.0.0.1:3000/" + employeeData["IfcClass"] + "/" + employeeData["IfcGuid"])
         cwrc = Namespace("http://sparql.cwrc.ca/ontologies/cwrc#")
         graph.bind("cwrc" , cwrc)
-        employeeUrl =  URIRef(url+"/"+"employee" + employeeData["firstName"])
+        employeeUrl =  URIRef(url+"/"+"employee" + "/" + employeeData["firstName"])
         graph.add((url, cwrc.hasEmployee,employeeUrl))
         graph.serialize(
             r"C:/Users/ARUN/OneDrive/Desktop/finaltest" + "/" + employeeData["IfcClass"] + "/" + employeeData["IfcGuid"] + ".ttl",
