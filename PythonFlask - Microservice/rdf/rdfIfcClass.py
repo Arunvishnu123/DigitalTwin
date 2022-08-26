@@ -13,11 +13,11 @@ class IFCClass:
         self.url = URIRef("http://127.0.0.1:5000/IfcClass")
         self.location  =location
         # ifc owl ontology
-        ifcowl = Namespace("https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL")
-        self.ifcC .bind("ifcowl", ifcowl)
+        self.ifcowl = Namespace("https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL")
+        self.ifcC.bind("ifcowl", self.ifcowl)
 
     def ifcBNodeGeneration(self ,ifcClassName  , bNode , number):
-        self.ifcC.add((bNode , RDF.type , self.ifcowl[ifcClassName] ))
+        self.ifcC.add((bNode , RDF.type , self.ifcowl[ifcClassName]))
         self.ifcC.add((bNode , self.props.hasTotalElements , Literal(number, datatype=XSD['integer'])))
 
 

@@ -11,7 +11,7 @@ from Employee.EmployeeRDFCreation import  EmployeeRDf
 from Employee.EmployeeDirectoryCreation import EmployeeDirectory
 import time
 start_time = time.time()
-#t = IFCInformationExtratcion(r"C:\Users\ARUN\OneDrive\Desktop\MINESIFC.ifc" , r"C:\Users\ARUN\OneDrive\Desktop\finaltest")
+#t = IFCInformationExtratcion(r"C:\Users\ARUN\Downloads\SmallOffice_d_IFC2x3 (1).ifc" , r"C:\Users\ARUN\OneDrive\Desktop\New folder (44)")
 #g = t.propSetExtraction()
 app = Flask(__name__)
 DEBUG = True

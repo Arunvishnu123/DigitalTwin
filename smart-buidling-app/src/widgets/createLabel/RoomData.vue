@@ -58,7 +58,7 @@ export default {
             id: "myAnn",
             //entity: viewer.scene.objects["1bDMdL0k55X8oOMH5VK_cb"],
             worldPos: [1838785.0782395182, 17.683018689996043, -5156526.122360405],
-            //occludable: true,
+            occludable: true,
             markerShown: true,
             eye: [1838784.226, 17.41054783, -5156525.58],
             look: [1838784.212, 17.40368311, -5156525.627],

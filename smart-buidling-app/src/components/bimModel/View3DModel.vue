@@ -56,7 +56,7 @@ export default {
             isModel: true,
             rotation: [0, 0, 0],
         });
-
+        
         const cameraControl = store.state.viewer.cameraControl;
         const scene = store.state.viewer.scene;
 

@@ -1,5 +1,6 @@
 from rdflib import Graph, URIRef, Literal, BNode ,Namespace
 from rdflib.namespace import RDF ,XSD , OWL ,RDFS ,BRICK
+
 class Ontology:
 
     def __init__(self):
@@ -649,8 +650,5 @@ class Ontology:
         onto.add((myOnto.hasGrossCeilingArea, RDFS.comment, Literal("", lang="en")))
         onto.add((myOnto.hasGrossCeilingArea, RDFS.range, XSD.decimal))
         onto.add((myOnto.hasGrossCeilingArea, RDFS.subPropertyOf, bot.Element))
-
-
-
 
         return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\ontologyfolder\tet.ttl" , format='ttl')

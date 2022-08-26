@@ -39,6 +39,7 @@ class IFCInformationExtratcion:
             self.ifcClasses.append(product.is_a())
         self.finalIFCClass = self.getUniqueItems(self.ifcClasses)
         t = []
+        print(self.finalIFCClass)
         for i in self.finalIFCClass:
             ifcClassNumber = {}
             print(i)
@@ -51,6 +52,7 @@ class IFCInformationExtratcion:
             ifcClassTriple.addIFCClassNumber(len(products))
             ifcClassNumber["elementsCount"] = len(products)
             t.append(ifcClassNumber)
+            print()
             for product in products:
                 #settings = ifcopenshell.geom.settings()
                 #try:

@@ -18,7 +18,7 @@ const getAPI = require("./router/get")
 const getOntology = require("./router/ontology")
 
 app.use('/' , getAPI)
-app.use('/' , getOntology)
+app.use('/ontology' , getOntology)
 
 // Create port
 const port = process.env.PORT || 4000;

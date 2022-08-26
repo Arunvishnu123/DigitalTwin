@@ -48,12 +48,9 @@ getKG.route('/ifcClass').get((req,res,next) =>{
     res.sendFile(filePath)  
 })
 
-getKG.route('/fayol/mines/ontology/test').post((req, res, next) => {
-    console.log(req.body)
+getKG.route('/fayol/mines/ontology/tes').get((req, res, next) => {
     ontologyPath = path.join("C:/Users/ARUN/OneDrive/Desktop/ontologyfolder","tet.ttl");
     res.sendFile(ontologyPath) 
-     
-
 });
 
 module.exports = getKG

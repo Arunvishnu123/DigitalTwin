@@ -14,6 +14,8 @@ const store = new Vuex.Store({
     viewer: null,
     model: null,
 
+    windowControl:null,
+
     //floor wise selection 
     selection: null,
 

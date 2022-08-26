@@ -2,8 +2,8 @@
 <div>
     <div id="myAnno"></div>
     <div class="annotation-la" id="myAnnot" style="background-color: white">
-        <div class="annotation-tit">Window Status - Closed</div>
-        <w-tag v-model="tagOn"  class= "openWindow" :bg-color="tagOn ? 'red' : 'green'" dark lg>
+        <div class="annotation-tit">Window Status - {{this.test}}</div>
+        <w-tag @click="tes()" v-model="tagOn" class="openWindow" :bg-color="tagOn ? 'red' : 'green'" dark lg>
             {{ tagOn ? "Click here to Open Window" : "Window Opened" }}
         </w-tag>
         <div class="annotation-de">click on the window for more information</div>
@@ -23,9 +23,38 @@ export default {
 
     data: () => ({
         tagOn: false,
+        test: null
     }),
-    methods: {},
+    methods: {
+        tes() {
+            if (this.tagOn === false) {
+                store.state.windowImage = "src/assets/windowOpen.PNG"
+                store.state.windowOpen421FD = "Window Opened"
+                store.state.windowStatus = true
+                store.state.model.scene.objects["1jMGJTzbX0Gu65H0cXPmD5"].colorize = [0, 1, 0]
+                this.test = "Opened"
+            }
+
+            console.log(this.tagOn)
+
+            if (this.tagOn === true) {
+                store.state.windowImage = "src/assets/windowClosed.PNG"
+                store.state.windowOpen421FD = "Window Closed"
+                store.state.windowStatus = false
+                store.state.model.scene.objects["1jMGJTzbX0Gu65H0cXPmD5"].colorize = [1, 0, 0]
+                 this.test = "Closed"
+            }
+        }
+    },
+    computed: {
+        tagOn: {
+            get() {
+                return store.state.windowControl;
+            },
+        },
+    },
     mounted() {
+
         store.state.viewer.scene.ticksPerOcclusionTest = 1;
         const anno = new AnnotationsPlugin(store.state.viewer, {});
 
@@ -92,9 +121,11 @@ export default {
     align-items: center;
     cursor: pointer;
 }
-.openWindow{
-    width:100%;
+
+.openWindow {
+    width: 100%;
 }
+
 .avatar {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
 
