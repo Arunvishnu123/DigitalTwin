@@ -6,10 +6,12 @@ var path = require('path')
 
 const tes = express.Router();
 
+location ="C:/Users/ARUN/OneDrive/Desktop/BIMDirectory"
+
 getKG.route('/:ifcClass/:ifcGuid').get((req,res,next) =>{
          let  ifcClass = req.params.ifcClass
          let ifcGuid  = req.params.ifcGuid
-         filePath = path.join("C:/Users/ARUN/OneDrive/Desktop/finaltest", ifcClass , ifcGuid + ".ttl");
+         filePath = path.join(location, ifcClass , ifcGuid + ".ttl");
          res.sendFile(filePath)
        
 })
@@ -28,13 +30,13 @@ getKG.route('/:ifcClass/:ifcGuid/employee/:firstName').get((req,res,next) =>{
     let  ifcClass = req.params.ifcClass
     let ifcGuid  = req.params.ifcGuid
     let firstName  = req.params.firstName
-    fileEmployee = path.join("C:/Users/ARUN/OneDrive/Desktop/employeeDirectory", ifcGuid, firstName + ".ttl");
+    fileEmployee = path.join("C:/Users/ARUN/OneDrive/Desktop/EmployeeDirectory", ifcGuid, firstName + ".ttl");
     res.sendFile(fileEmployee)
   
 })
 getKG.route('/:ifcClass').get((req,res,next) =>{
     let  ifcClass = req.params.ifcClass
-    filePath = path.join("C:/Users/ARUN/OneDrive/Desktop/finaltest", ifcClass +  ".ttl");
+    filePath = path.join(location, ifcClass +  ".ttl");
     res.sendFile(filePath)
   
 })
@@ -44,7 +46,7 @@ getKG.route('/update').get((req,res , next) =>{
 })
 
 getKG.route('/ifcClass').get((req,res,next) =>{
-    filePath = path.join("C:/Users/ARUN/OneDrive/Desktop/finaltest/ifcClass.ttl");
+    filePath = path.join(location + "/ifcClass.ttl");
     res.sendFile(filePath)  
 })
 

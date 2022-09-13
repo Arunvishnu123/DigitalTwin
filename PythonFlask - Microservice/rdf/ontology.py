@@ -651,4 +651,4 @@ class Ontology:
         onto.add((myOnto.hasGrossCeilingArea, RDFS.range, XSD.decimal))
         onto.add((myOnto.hasGrossCeilingArea, RDFS.subPropertyOf, bot.Element))
 
-        return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\ontologyfolder\tet.ttl" , format='ttl')
+        return onto.serialize( r"C:\Users\ARUN\OneDrive\Desktop\te\ontology.ttl" , format='ttl')

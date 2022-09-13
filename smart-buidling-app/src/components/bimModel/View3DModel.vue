@@ -242,7 +242,7 @@ export default {
     width: 250px;
     height: 250px;
     bottom: 100px;
-    left: 1450px;
+    left: 2450px;
     top: 645px;
     z-index: 200000;
 }

@@ -3,6 +3,7 @@ import {
 } from "@xeokit/xeokit-sdk/";
 import "../../assets/styles/xeokit-context-menu.css"
 import store from "../../store/index"
+import * as floorView from "../floorViews/floorView"
 
 export function contextMenu3dModel(viewer) {
     const canvasContextMenu = new ContextMenu({
@@ -10,14 +11,7 @@ export function contextMenu3dModel(viewer) {
         context: {
             viewer: viewer
         },
-        items: [[
-            {
-                title: "Add new Thing",
-                doAction: (context) => {
-                 store.state.createThing = true
-                }
-            }
-        ] , 
+        items: [
             [{
                     title: "Hide All",
                     getEnabled: function (context) {
@@ -98,6 +92,27 @@ export function contextMenu3dModel(viewer) {
                         // Does nothing
                     }
                 }
+            ],
+            
+            [
+
+                {
+                    getTitle: (context) => {
+                        return "Room No - 421"
+                    },
+
+                    doAction: function (context) {
+                       floorView.floorView("3_b98WEDT7feUaJ_WJeW$i", store.state.viewer, store.state.model);
+                       // store.state.objectContextMenu.enabled = false
+                       // ContextMenuParameters.contextMenufirstFloor(store.state.viewer);
+                        viewer.camera.eye = [1838784.226, 17.41054783, -5156525.58];
+                        viewer.camera.look = [1838784.212, 17.40368311, -5156525.627];
+                        viewer.camera.up = [-0.040127462, 0.990154669, -0.134102643];
+                       // store.state.model.scene.objects["295MeKx7H5KOdAaP3Utyr_"].colorize = [174, 174, 174 ]
+                    }
+                },
+
+
             ]
         ]
     });
