@@ -11,7 +11,7 @@ Revit, and the intelligent building architecture exists in the same building to 
 
 ## Proposed Framework
 
-![alt text for screen readers](images\proposedFramework.png "Text to show on mouseover")
+![Alt text](images\proposedFramework.png)
 
 
 
