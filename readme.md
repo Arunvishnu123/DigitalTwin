@@ -11,13 +11,43 @@ Revit, and the intelligent building architecture exists in the same building to 
 
 ## Proposed Framework
 
-* 1. BIM to Modular Knowledge Graphs - Convert BIM models into modular knowledge
+1. BIM to Modular Knowledge Graphs - Convert BIM models into modular knowledge
 graphs, and all are published via REST API.
-* 2. New Knowledge Augmentation - Integrate new knowledge like IOT to the modular knowledge graphs generated from the BIM model using Linked data principles.
-* 3. Visualisation of Digital Twin - Visualise BIM in the browser using the modular knowledge
+2. New Knowledge Augmentation - Integrate new knowledge like IOT to the modular knowledge graphs generated from the BIM model using Linked data principles.
+3. Visualisation of Digital Twin - Visualise BIM in the browser using the modular knowledge
 graphs and thus produce the digital twin of the smart building.
 
 ![ScreenShot](images/proposedFramework.jpg)
+
+* Phase 1 -  BIM to Modular Knowledge Graphs
+
+
+![ScreenShot](images/uml1.PNG)
+
+* Phase 2 - New Knwoledge Augmentation 
+
+![ScreenShot](images/uml2.PNG)
+
+* Phase 3 - Visualization of Digital Twin
+
+
+![ScreenShot](images/final.PNG)
+
+![ScreenShot](images/uml3.PNG)
+
+
+## Results
+
+![ScreenShot](images/results1.PNG)
+![ScreenShot](images/result2.PNG)
+![ScreenShot](images/results3.PNG)
+![ScreenShot](images/rseults5.PNG)
+![ScreenShot](images/results6.PNG)
+
+
+
+
+
 
 
 
