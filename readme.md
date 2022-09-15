@@ -19,16 +19,16 @@ graphs and thus produce the digital twin of the smart building.
 
 ![ScreenShot](images/proposedFramework.jpg)
 
-* Phase 1 -  BIM to Modular Knowledge Graphs
+### Phase 1 -  BIM to Modular Knowledge Graphs
 
 
 ![ScreenShot](images/uml1.PNG)
 
-* Phase 2 - New Knwoledge Augmentation 
+###  Phase 2 - New Knwoledge Augmentation 
 
 ![ScreenShot](images/uml2.PNG)
 
-* Phase 3 - Visualization of Digital Twin
+### Phase 3 - Visualization of Digital Twin
 
 
 ![ScreenShot](images/final.PNG)
@@ -38,10 +38,15 @@ graphs and thus produce the digital twin of the smart building.
 
 ## Results
 
+###  Digital model visualization of Espace Fauriel building in browser
 ![ScreenShot](images/results1.PNG)
+###  Window Status monitoring of Espace Fauriel building uisng the digital model
 ![ScreenShot](images/result2.PNG)
+### Real-time Comfort parameter monitoring of Espace Fauriel building  using the digital model
 ![ScreenShot](images/results3.PNG)
+###  Historical comfort parameter monitoring of Espace Fauriel building
 ![ScreenShot](images/rseults5.PNG)
+### Occupant status monitoring of Espace Fauriel building
 ![ScreenShot](images/results6.PNG)
 
 
