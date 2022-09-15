@@ -8,3 +8,11 @@ proposed a research framework for integrating BIM and other technologies like Io
 
 We used the BIM model of the MINES Saint-Etienne Espace Fauriel building developed in Autodesk
 Revit, and the intelligent building architecture exists in the same building to validate the different phases of the framework.
+
+## Proposed Framework
+
+![alt text](images\proposedFramework.png)
+
+
+
+
