@@ -31,7 +31,7 @@ graphs and thus produce the digital twin of the smart building.
 ### Phase 3 - Visualization of Digital Twin
 
 
-![ScreenShot](images/final.PNG)
+![ScreenShot](images/final.PNG,"Work flow to visualize digital model of a building in a browser")
 
 ![ScreenShot](images/uml3.PNG)
 
