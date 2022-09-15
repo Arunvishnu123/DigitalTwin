@@ -24,15 +24,17 @@ graphs and thus produce the digital twin of the smart building.
 
 ![ScreenShot](images/uml1.PNG)
 
-###  Phase 2 - New Knwoledge Augmentation 
+###  Phase 2 - New Knowledge Augmentation 
 
 ![ScreenShot](images/uml2.PNG)
 
 ### Phase 3 - Visualization of Digital Twin
 
 
-![ScreenShot](images/final.PNG,"Work flow to visualize digital model of a building in a browser")
+#### Work flow to visualize the digital model of a building in browser
+![ScreenShot](images/final.PNG)
 
+#### Component diagram of Phase 3
 ![ScreenShot](images/uml3.PNG)
 
 
