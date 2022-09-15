@@ -11,7 +11,7 @@ Revit, and the intelligent building architecture exists in the same building to 
 
 ## Proposed Framework
 
-![title](images\proposedFramework.jpg)
+![ScreenShot](images/proposedFramework.jpg)
 
 
 
